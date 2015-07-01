@@ -14,16 +14,6 @@ import org.apache.log4j.Logger;
 import org.ncbo.stanford.obr.dao.AbstractObrDao;
 import org.ncbo.stanford.obr.dao.context.ContexDao.ContextEntry;
 import org.ncbo.stanford.obr.enumeration.ResourceType;
-import org.ncbo.stanford.obr.service.aggregation.AggregationService;
-import org.ncbo.stanford.obr.service.aggregation.impl.AggregationServiceImpl;
-import org.ncbo.stanford.obr.service.annotation.AnnotationService;
-import org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl;
-import org.ncbo.stanford.obr.service.obs.ontology.OntologyService;
-import org.ncbo.stanford.obr.service.obs.ontology.impl.OntologyServiceImpl;
-import org.ncbo.stanford.obr.service.resource.ResourceUpdateService;
-import org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl;
-import org.ncbo.stanford.obr.service.semantic.SemanticExpansionService;
-import org.ncbo.stanford.obr.service.semantic.impl.SemanticExpansionServiceImpl;
 import org.ncbo.stanford.obr.util.LoggerUtils;
 import org.ncbo.stanford.obr.util.MessageUtils;
 import org.ncbo.stanford.obr.util.helper.StringHelper;
@@ -46,12 +36,7 @@ public abstract class ResourceAccessTool implements StringHelper {
 	private Resource toolResource;
 	private String toolName;
 
-	protected static OntologyService ontlogyService= OntologyServiceImpl.getInstance();
-
 	protected ResourceUpdateService resourceUpdateService;
-	protected AnnotationService annotationService;
-	protected SemanticExpansionService semanticExpansionService;
-	protected AggregationService aggregationService;
 
 	/**
 	 * Constructs a new ResourceAccessTool associated to a new Resource constructed with the given information
@@ -68,10 +53,6 @@ public abstract class ResourceAccessTool implements StringHelper {
 		this.toolResource = new Resource(resource, resourceID, structure, mainContext);
 
 		this.resourceUpdateService = new ResourceUpdateServiceImpl(this);
-
-		this.annotationService = new AnnotationServiceImpl(this);
-		this.semanticExpansionService = new SemanticExpansionServiceImpl(this);
-		this.aggregationService= new AggregationServiceImpl(this);
 
 		// Adds the structure's contexts in OBR_CXT
 		ContextEntry context;
@@ -99,18 +80,8 @@ public abstract class ResourceAccessTool implements StringHelper {
 		return resourceUpdateService;
 	}
 
-	/**
-	 * This method gives list of local ontology ids for annotation.
-	 * This set should be provided by BIG resources for annotation
-	 *
-	 * @return {@code Set} of ontologies used for annotation
-	 */
-	public HashSet<String> getOntolgiesForAnnotation(){
-		return null;
-	}
 
-
-	/**
+    /**
 	 * @param resourceUpdateService the resourceUpdateService to set
 	 */
 	public void setResourceUpdateService(ResourceUpdateService resourceUpdateService) {
@@ -118,63 +89,7 @@ public abstract class ResourceAccessTool implements StringHelper {
 	}
 
 
-
-	/**
-	 * @return the annotationService
-	 */
-	public AnnotationService getAnnotationService() {
-		return annotationService;
-	}
-
-
-
-	/**
-	 * @param annotationService the annotationService to set
-	 */
-	public void setAnnotationService(AnnotationService annotationService) {
-		this.annotationService = annotationService;
-	}
-
-
-
-	/**
-	 * @return the semanticExpansionService
-	 */
-	public SemanticExpansionService getSemanticExpansionService() {
-		return semanticExpansionService;
-	}
-
-
-
-	/**
-	 * @param semanticExpansionService the semanticExpansionService to set
-	 */
-	public void setSemanticExpansionService(
-			SemanticExpansionService semanticExpansionService) {
-		this.semanticExpansionService = semanticExpansionService;
-	}
-
-
-
-	/**
-	 * @return the aggregationService
-	 */
-	public AggregationService getAggregationService() {
-		return aggregationService;
-	}
-
-
-
-	/**
-	 * @param aggregationService the aggregationService to set
-	 */
-	public void setAggregationService(AggregationService aggregationService) {
-		this.aggregationService = aggregationService;
-	}
-
-
-
-	/**
+    /**
 	 * Returns the log4j logger
 	 */
 	public static Logger getLogger() {
@@ -278,13 +193,6 @@ public abstract class ResourceAccessTool implements StringHelper {
 	public abstract String mainContextDescriptor();
 
 	/**
-	 * Enables to query a resource with a String as it is done online.
-	 * Returns a set of elementLocalIDs (String) which answer the query.
-	 */
-	//public abstract HashSet<String> queryOnlineResource(String query);
-
-
-	/**
 	 * Adds the Resource tool entry into Resource table (OBR_RT)
 	 *
 	 */
@@ -292,19 +200,8 @@ public abstract class ResourceAccessTool implements StringHelper {
 		this.resourceUpdateService.addResource(this.getToolResource());
 	}
 
-	/**
-	 * This method calculates number of aggregated annotations, mgrep annotations, reported annotations, isa annotations, mapping annotations
-	 * for current resource.
-	 * @param withCompleteDictionary
-	 * @param dictionary
-	 *
-	 */
-	public void calculateObrStatistics(boolean withCompleteDictionary, DictionaryBean dictionary){
-		resourceUpdateService.calculateObrStatistics(withCompleteDictionary, dictionary);
-	}
 
-
-	/**
+    /**
 	 * Constructs a <code>String</code> with all attributes in name = value format.
 	 * @return a <code>String</code> representation of this object.
 	 */
@@ -319,24 +216,7 @@ public abstract class ResourceAccessTool implements StringHelper {
 	    return retValue.toString();
 	}
 
-	/**
-	 * This method removes all the annotation for given ontology versions from annotation table,
-	 * expanded annotation table and indexing table for given ontology.
-	 *
-	 * @param {@code List} of localOntologyID containing version of given ontology.
-	 */
-	public void removeOntologies(List<String> localOntologyIDs){
-		// Remove entries from aggregation table
-		aggregationService.removeAggregation(localOntologyIDs);
-		// Remove entries from concept frequency table
-		aggregationService.removeConceptFrequncy(localOntologyIDs);
-		// Remove entries from expanded annotation table
-		semanticExpansionService.removeExpandedAnnotations(localOntologyIDs);
-		// Remove entries from annotation table.
-		annotationService.removeAnnotations(localOntologyIDs);
-	}
-
-	/**
+    /**
 	 * Method update resource table with total number of element and update date.
 	 *
 	 * @return boolean  {@code true} if updated successfully.
@@ -355,26 +235,4 @@ public abstract class ResourceAccessTool implements StringHelper {
 		return resourceUpdateService.updateResourceWorkflowInfo(this.getToolResource());
 	}
 
-	/**
-	 * This method creates temporary element table used for annotation for non annotated
-	 * element for given dictionary id.
-	 *
-	 * @param dictionaryID
-	 * @return Number of rows containing in temporary table
-	 */
-	public long createTemporaryElementTable(int dictionaryID) {
-		return annotationService.createTemporaryElementTable(dictionaryID);
-	}
-
-	public void createIndexForAnnotationTables() {
-		annotationService.createIndexForAnnotationTable();
-		semanticExpansionService.createIndexForExpandedAnnotationTables();
-	}
-
-	/**
-	 * Calculate concept frequency
-	 */
-	public void calulateConceptFrequncy() {
-		 aggregationService.calulateConceptFrequncy();
-	}
 }

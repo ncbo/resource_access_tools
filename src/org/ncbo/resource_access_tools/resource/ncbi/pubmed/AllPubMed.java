@@ -212,7 +212,7 @@ public class AllPubMed {
         esearchRequest.setTool(EUTILS_TOOL);
         esearchRequest.setDb(this.getEutilsDB());
         esearchRequest.setTerm(this.getEutilsTerm());
-        String[] resultTab = null;;
+        String[] resultTab = null;
 
 
         ESearchResult esearchResult;

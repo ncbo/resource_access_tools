@@ -237,8 +237,8 @@ public class RxrdAccessTool extends ResourceAccessTool {
 			}
 			rSet.close();
 		}
-		catch (MySQLNonTransientConnectionException e) {;
-			return this.getElementList();
+		catch (MySQLNonTransientConnectionException e) {
+            return this.getElementList();
 		}
 		catch (SQLException e) {
 			logger.error("** PROBLEM ** Cannot get localConceptIDs from "+this.getTableSQLName()+". Empty set returned.", e);
@@ -346,8 +346,8 @@ public class RxrdAccessTool extends ResourceAccessTool {
 			}
 			rSet.close();
 		}
-		catch (MySQLNonTransientConnectionException e) {;
-			this.openGetGrantIdsByFiscalYearStatement();
+		catch (MySQLNonTransientConnectionException e) {
+            this.openGetGrantIdsByFiscalYearStatement();
 			return this.getGrantIdsByFiscalYear(fiscalYear);
 		}
 		catch (SQLException e) {
@@ -391,8 +391,8 @@ public class RxrdAccessTool extends ResourceAccessTool {
 			}
 			rSet.close();
 		}
-		catch (MySQLNonTransientConnectionException e) {;
-			this.openGetGrantIdsByFiscalYearStatement();
+		catch (MySQLNonTransientConnectionException e) {
+            this.openGetGrantIdsByFiscalYearStatement();
 			return this.getFundingAmountByGrantAndYear(fiscalYear,localElementID);
 		}
 		catch (SQLException e) {
@@ -428,8 +428,8 @@ public class RxrdAccessTool extends ResourceAccessTool {
 			obrLocalElementID = rSet.getInt(1);
 			rSet.close();
 		}
-		catch (MySQLNonTransientConnectionException e) {;
-			this.openGetObrLocalElementIdStatement();
+		catch (MySQLNonTransientConnectionException e) {
+            this.openGetObrLocalElementIdStatement();
 			return this.getObrLocalElementId(localElementID);
 		}
 		catch (SQLException e) {

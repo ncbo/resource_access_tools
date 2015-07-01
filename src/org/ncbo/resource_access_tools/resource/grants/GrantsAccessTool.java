@@ -187,8 +187,8 @@ public class GrantsAccessTool extends ResourceAccessTool {
 			}
 			rSet.close();
 		}
-		catch (MySQLNonTransientConnectionException e) {;
-			return this.getElementList();
+		catch (MySQLNonTransientConnectionException e) {
+            return this.getElementList();
 		}
 		catch (SQLException e) {
 			logger.error("** PROBLEM ** Cannot get localConceptIDs from "+this.getTableSQLName()+". Empty set returned.", e);

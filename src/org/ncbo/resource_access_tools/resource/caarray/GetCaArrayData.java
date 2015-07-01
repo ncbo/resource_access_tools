@@ -57,7 +57,7 @@ public class GetCaArrayData implements StringHelper {
         Map<String, Map<String, String>> allExperiments = new HashMap<String, Map<String, String>>();
 
         try {
-            CaArrayServer server = new CaArrayServer(this.getServerHostname(), this.getServerJndiPort());
+            CaArrayServer server = new CaArrayServer(getServerHostname(), getServerJndiPort());
             server.connect();
             searchService = server.getSearchService();
             searchServiceHelper = new JavaSearchApiUtils(searchService);

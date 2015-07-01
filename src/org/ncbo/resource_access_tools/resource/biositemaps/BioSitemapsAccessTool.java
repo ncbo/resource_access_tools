@@ -293,7 +293,7 @@ public class BioSitemapsAccessTool extends ResourceAccessTool {
 				// Getting several resource types
 				for (Iterator<Resource> resourceTypeIterator = resourceDescription.getResourceType().iterator(); resourceTypeIterator
 						.hasNext();) {
-					Resource resource = (Resource) resourceTypeIterator.next();
+					Resource resource = resourceTypeIterator.next();
 
 					if(resource.getBRO_ResourceInstance().getRDFTypes()!= null
 							&& resource.getBRO_ResourceInstance().getRDFTypes().size()>0){

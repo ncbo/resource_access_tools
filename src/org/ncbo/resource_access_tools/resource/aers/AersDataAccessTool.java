@@ -25,7 +25,6 @@ import obs.obr.populate.Element.BadElementStructureException;
 
 import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
 import org.ncbo.stanford.obr.enumeration.ResourceType;
-import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
 import org.ncbo.stanford.obr.util.FileResourceParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -140,12 +139,7 @@ public class AersDataAccessTool extends AbstractXmlResourceAccessTool {
 		return updateAllElements();
 	}
 
-	@Override
-	public HashSet<String> getOntolgiesForAnnotation() {
-		//TODO : Need to add list of ontology for annotation
-		return Utilities.arrayToHashSet(ontologiesForAnnotations);
-	}
-	/**
+    /**
 	 * Update all the elements to database
 	 * @return
 	 */

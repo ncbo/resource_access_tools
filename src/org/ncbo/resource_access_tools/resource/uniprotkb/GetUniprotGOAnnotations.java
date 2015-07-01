@@ -50,8 +50,8 @@ public class GetUniprotGOAnnotations implements StringHelper{
 	//private static String SHELL_SCRIPT_PATH = new File(GetUniprotGOAnnotations.class.getResource( "getGoUniprotKbAnnot.sh" ).getFile()).getAbsolutePath();
 	//private static String COMMAND = "sh "+ SHELL_SCRIPT_PATH;
 
-	HashSet<Element>  ProteinAnnotList            = new HashSet<Element>() ;;
-	Hashtable<String, Hashtable<String, String>> allProtAnnot     = new Hashtable<String, Hashtable<String, String>>();	//<protAccession, Hashtable of attribut-values couple>
+	HashSet<Element>  ProteinAnnotList            = new HashSet<Element>() ;
+    Hashtable<String, Hashtable<String, String>> allProtAnnot     = new Hashtable<String, Hashtable<String, String>>();	//<protAccession, Hashtable of attribut-values couple>
 	Hashtable<String, String> protAnnotAttribute  = new Hashtable<String, String>();   	//<attributName, value> (a value could be a map)
 	Hashtable<String, String> protAnnotAttribute2 = new Hashtable<String, String>();   	//<attributName, value> (a value could be a map)
 	Resource resource;
@@ -114,7 +114,7 @@ public class GetUniprotGOAnnotations implements StringHelper{
 		                Iterator<VariantFeatureImpl> it = feList.iterator();
 		                StringBuffer naturalVarients = new StringBuffer();
 		                while (it.hasNext()) {
-		                    VariantFeatureImpl vf = (VariantFeatureImpl) it.next();
+		                    VariantFeatureImpl vf = it.next();
 		                    //check for unique records
 		                    if (vf.getVariantReport().getValue() != null && !vf.getVariantReport().getValue().equals("") && naturalVarients.indexOf(vf.getVariantReport().getValue()) == -1) {
 		                        naturalVarients.append(vf.getVariantReport().getValue());
@@ -134,7 +134,7 @@ public class GetUniprotGOAnnotations implements StringHelper{
 		                Iterator<MutagenFeatureImpl> mutgenListIt = mutgenList.iterator();
 		                StringBuffer mutgens = new StringBuffer();
 		                while (mutgenListIt.hasNext()) {
-		                    MutagenFeatureImpl mf = (MutagenFeatureImpl) mutgenListIt.next();
+		                    MutagenFeatureImpl mf = mutgenListIt.next();
 		                    if (mf.getMutagenReport().getValue() != null && !mf.getMutagenReport().getValue().equals("") && mutgens.indexOf(mf.getMutagenReport().getValue()) == -1) {
 		                        mutgens.append(mf.getMutagenReport().getValue());
 		                        if (mutgenListIt.hasNext()) {

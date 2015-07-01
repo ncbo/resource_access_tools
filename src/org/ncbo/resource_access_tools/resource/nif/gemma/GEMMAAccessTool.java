@@ -220,7 +220,7 @@ public class GEMMAAccessTool extends AbstractNifResourceAccessTool {
 
                                 //comma separated gene symbols
                                 String currentGeneSymbol = elementAttributes.get(Structure.generateContextName(GEMMA_RESOURCEID, GEMMA_ITEMKEYS[1]));
-                                String previousGeneSymbol = allRowsData.get(localElementId).get(Structure.generateContextName(GEMMA_RESOURCEID, GEMMA_ITEMKEYS[1]));;
+                                String previousGeneSymbol = allRowsData.get(localElementId).get(Structure.generateContextName(GEMMA_RESOURCEID, GEMMA_ITEMKEYS[1]));
 
                                 if (previousGeneSymbol.length() > 0 && currentGeneSymbol.length() > 0 && !previousGeneSymbol.contains(currentGeneSymbol)) {
                                     previousGeneSymbol += "," + currentGeneSymbol;

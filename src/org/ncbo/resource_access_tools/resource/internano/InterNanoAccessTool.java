@@ -161,7 +161,7 @@ public class InterNanoAccessTool extends AbstractXmlResourceAccessTool {
             HashSet<String> allElementsInET = this.resourceUpdateService.getAllLocalElementIDs();
             Map<String, Map<String, String>> allRowsData = new HashMap<String, Map<String, String>>();
 
-            dom = this.parseXML(service_URL);
+            dom = parseXML(service_URL);
             NodeList elementNodeList = dom.getElementsByTagName(elementTag);
 
             for (int i = 0; i < elementNodeList.getLength(); i++) {
