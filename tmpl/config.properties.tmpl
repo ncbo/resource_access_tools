@@ -1,0 +1,197 @@
+####################################################
+# Resource Index Workflow Properties
+####################################################
+# All available resource in workflow 
+resource.wp=org.ncbo.resource_access_tools.resource.wikipathways.WikiPathwaysAccessTool
+resource.geo=org.ncbo.resource_access_tools.resource.ncbi.geo.GeoAccessTool
+resource.smd=org.ncbo.resource_access_tools.resource.smd.SmdAccessTool
+resource.ae=org.ncbo.resource_access_tools.resource.arrayexpress.ArrayExpressAccessTool
+resource.bsm=org.ncbo.resource_access_tools.resource.biositemaps.BioSitemapsAccessTool
+resource.ct=org.ncbo.resource_access_tools.resource.clinicaltrials.ClinicalTrialsAccessTool
+resource.dbk=org.ncbo.resource_access_tools.resource.drugbank.DrugBankAccessTool
+resource.gm=org.ncbo.resource_access_tools.resource.goldminer.GoldminerAccessTool
+resource.micad=org.ncbo.resource_access_tools.resource.micad.MicadAccessTool
+resource.cdd=org.ncbo.resource_access_tools.resource.ncbi.cdd.CddAccessTool
+resource.gap=org.ncbo.resource_access_tools.resource.ncbi.gap.DbGapAccessTool
+resource.omim=org.ncbo.resource_access_tools.resource.ncbi.omim.OmimAccessTool
+resource.pcm=org.ncbo.resource_access_tools.resource.ncbi.pubchem.PubChemAccessTool
+resource.pc=org.ncbo.resource_access_tools.resource.pathwaycommons.PathwayCommonsAccessTool
+resource.pgdi=org.ncbo.resource_access_tools.resource.pharmgkb.disease.PgdiAccessTool
+resource.pgdr=org.ncbo.resource_access_tools.resource.pharmgkb.drug.PgdrAccessTool
+resource.pgge=org.ncbo.resource_access_tools.resource.pharmgkb.gene.PggeAccessTool
+resource.reac=org.ncbo.resource_access_tools.resource.reactome.ReactomeAccessTool
+resource.canano=org.ncbo.resource_access_tools.resource.cananolab.CaNanoLabAccessTool
+resource.rxrd=org.ncbo.resource_access_tools.resource.rxroads.RxrdAccessTool
+resource.upkb=org.ncbo.resource_access_tools.resource.uniprotkb.UpkbAnnotAccessTool
+resource.aers=org.ncbo.resource_access_tools.resource.aers.AersDataAccessTool
+resource.pm=org.ncbo.resource_access_tools.resource.ncbi.pubmed.PubMedAccessTool
+resource.grants=org.ncbo.resource_access_tools.resource.grants.GrantsAccessTool
+resource.cgl=org.ncbo.resource_access_tools.resource.clinicalguidelines.ClinicalGuidelinesAccessTool
+resource.cary=org.ncbo.resource_access_tools.resource.caarray.CaArrayAccessTool
+resource.mdb=org.ncbo.resource_access_tools.resource.nif.modeldb.ModelDBAccessTool
+resource.toxin=org.ncbo.resource_access_tools.resource.nif.toxindb.ToxinDBAccessTool
+resource.pdsp=org.ncbo.resource_access_tools.resource.nif.pdsp.PDSPAccessTool
+resource.ccdb=org.ncbo.resource_access_tools.resource.nif.ccdb.CcDBAccessTool
+resource.genet=org.ncbo.resource_access_tools.resource.nif.genenetwork.GENETAccessTool
+resource.pmh=org.ncbo.resource_access_tools.resource.nif.pubmedhealth.PMHAccessTool
+resource.agdb=org.ncbo.resource_access_tools.resource.nif.aginggenesdb.AGDBAccessTool
+resource.gemma=org.ncbo.resource_access_tools.resource.nif.gemma.GEMMAAccessTool
+resource.autdb=org.ncbo.resource_access_tools.resource.nif.autdb.AutDBAccessTool
+resource.biom=org.ncbo.resource_access_tools.resource.biomodels.BIOAccessTool
+resource.niv=org.ncbo.resource_access_tools.resource.nif.integratedvideo.NIVAccessTool
+resource.pmht=org.ncbo.resource_access_tools.resource.nif.pubmedhealth.tests.PMHTAccessTool
+resource.idv=org.ncbo.resource_access_tools.resource.nif.integrateddiseaseview.IDVAccessTool
+resource.drgdb=org.ncbo.resource_access_tools.resource.nif.drugrelatedgenedatabase.DRGDBAccessTool
+resource.bgrd=org.ncbo.resource_access_tools.resource.nif.biogrid.BGRDAccessTool
+resource.rport=org.ncbo.resource_access_tools.resource.nif.nihreporter.RPORTAccessTool
+resource.abr=org.ncbo.resource_access_tools.resource.nif.antibodyregistry.ABRAccessTool
+resource.ctdcd=org.ncbo.resource_access_tools.resource.nif.ctdchemdisease.CTDCDAccessTool
+resource.ctddp=org.ncbo.resource_access_tools.resource.nif.ctddiseasepathway.CTDDPAccessTool
+resource.ctdcg=org.ncbo.resource_access_tools.resource.nif.ctdchemgene.CTDCGAccessTool
+resource.eg=org.ncbo.resource_access_tools.resource.nif.entrezgene.EGAccessTool
+resource.ccr=org.ncbo.resource_access_tools.resource.nif.ccr.CCRAccessTool
+resource.cil=org.ncbo.resource_access_tools.resource.nif.cil.CILAccessTool
+resource.inpd=org.ncbo.resource_access_tools.resource.internano.InterNanoAccessTool
+resource.ctdc=org.ncbo.resource_access_tools.resource.nif.ctdchemicals.CTDCAccessTool
+resource.ctdd=org.ncbo.resource_access_tools.resource.nif.ctddisease.CTDDAccessTool
+resource.ctdg=org.ncbo.resource_access_tools.resource.nif.ctdgene.CTDGAccessTool
+resource.ctdgd=org.ncbo.resource_access_tools.resource.nif.ctdgenesdisease.CTDGDAccessTool
+resource.ctdgp=org.ncbo.resource_access_tools.resource.nif.ctdgenespathways.CTDGPAccessTool
+resource.ctdp=org.ncbo.resource_access_tools.resource.nif.ctdpathway.CTDPAccessTool
+resource.ctdcpe=org.ncbo.resource_access_tools.resource.nif.ctdchempathwaysenriched.CTDCPEAccessTool
+
+# Resources to be included in workflow i.e resource ids separated by comma.
+obr.resource.ids=@obrresourceids@
+
+# Resource Index Workflow flags
+
+obr.resources.process=@obrresourcesprocess@
+
+# This flag used to  re initialized all tables for resources. 
+obr.reinitialize.all=@obrreinitializeall@
+
+# Re initialized all tables except element table
+obr.reinitialize.only.annotation=@obrreinitializeonlyannotation@
+
+# Used to update element table for resources.
+obr.update.resource=@obrupdateresource@
+
+# If set then use complete dictionary for annotation otherwise only latest dictionary used. 
+obr.dictionary.complete=@obrdictionarycomplete@
+
+# Flag related to semantic expansions
+obr.expansion.relational=@obrexpansionrelational@
+obr.expansion.mapping=@obrexpansionmapping@
+obr.expansion.distance=@obrexpansiondistance@
+
+# maximum level allows for big resource
+obr.expanded.annotation.max.level=5
+
+####################################################
+# OBS Schema/Tables properties 
+####################################################
+obs.tables.prefix=obs_
+
+obs.ontology.table.suffix=ontology
+obs.concept.table.suffix=concept
+obs.term.table.suffix=term
+obs.map.table.suffix=map
+obs.mappig_type.table.suffix=mapping_type
+obs.relation.table.suffix=relation
+obs.semantic.table.suffix=semantic_type
+obs.l.semantic.table.suffix=l_semantic_type
+
+# Configuring master OBS database
+obs.master.schema.name=@obsmasterschemaname@
+obs.master.schema.host.name=@obsmasterschemahost@
+obs.master.jdbc.url=jdbc:mysql://@obsmasterschemahost@:3306/@obsmasterschemaname@
+obs.master.jdbc.username=@obsmasterjdbcusername@
+obs.master.jdbc.password=@obsmasterjdbcpassword@
+
+obs.master.ontology.status.complete=@obsmasterontologystatuscomplete@
+
+# Configure populate obs tables  
+obs.slave.populate=@obsslavepopulate@
+obs.slave.dictionary.latest=@obsslavedictionarylatest@
+
+# Remove ontology from slave obs tables and all resources tables
+obs.slave.ontology.remove=@obsslaveontologyremove@
+# If want to remove specific ontology
+obs.slave.ontology.remove.from.list=@obsslaveontologyremovefromlist@
+obs.slave.ontology.remove.list=@obsslaveontologyremovelist@
+
+# Flag for master-slave replication mechanism
+obr.database.sync=@obrdatabasesync@
+# Full path of syncronization script
+obr.database.sync.script.path=@obrdatabasesyncscriptpath@
+# Flag for replicating obs tables
+obr.database.sync.obs.tables=@obrdatabasesyncobstables@
+
+####################################################
+# Resource Index Schema/Tables properties 
+####################################################
+
+# Resource index table name properties
+obr.tables.prefix=obr_
+obr.element.table.suffix=_element
+obr.temp.element.table.suffix=_tmp
+obr.annotation.table.suffix=_annotation
+obr.isa.expanded.annotation.table.suffix=_isa_annotation
+obr.map.expanded.annotation.table.suffix=_map_annotation
+obr.distance.expanded.annotation.table.suffix=_dist_annotation
+obr.aggregation.table.suffix=_aggregation
+obr.aggregation.workflow.table.suffix=_aggregation_workflow
+obr.memory.table.suffix=_mem
+obr.concept.frequency.table.suffix=_concept_frequency
+
+obr.dictionary.table.suffix=dictionary
+obr.resource.table.suffix=resource
+obr.context.table.suffix=context
+obr.statistics.table.suffix=statistics
+obr.execution.table.suffix=execution
+
+# Maximum number of element to process
+obr.elements.process.max=15000
+
+# Configuring database 
+obr.jdbc.url=@obrjdbcurl@
+obr.jdbc.driver=@obrjdbcdriver@
+obr.jdbc.username=@obrjdbcusername@
+obr.jdbc.password=@obrjdbcpassword@
+
+# Disable/Enabled indexes for workflow
+obr.table.index.disabled=@obrtableindexdisabled@
+
+# Configuring RXRD database 
+obr.rxrd.jdbc.url=@obrrxrdjdbcurl@
+obr.rxrd.jdbc.username=@obrrxrdjdbcusername@
+obr.rxrd.jdbc.password=@obrrxrdjdbcpassword@
+
+# Configuring GRANTS database 
+obr.grants.jdbc.url=@obrgrantsjdbcurl@
+obr.grants.jdbc.username=@obrgrantsjdbcusername@
+obr.grants.jdbc.password=@obrgrantsjdbcpassword@
+
+# Configuring PubMed Resource
+obr.pm.process.xml=@obrpmprocessxml@
+obr.pm.xml.from=@obrpmxmlfrom@
+obr.pm.xml.to=@obrpmxmlto@
+
+# File parameters
+obr.local.path=files/
+obr.ncbodata.path=/srv/ncbo/share/resource_index/
+obr.mgrep.dir=mgrep/mgrep3.0/
+obr.mgrep.input.dir=mgrep/mgrepInputs/
+obr.mgrep.output.dir=mgrep/mgrepOutputs/
+obr.dictionary.dir=dictionaries/
+obr.resource.dir=resources/
+obr.result.dir=results/
+obr.blacklists.dir=blacklists/
+obr.logs.dir=logs/
+obr.logs.suffix=_resource.log
+obr.version=@obrversion@
+
+obr.svn.code.path=@obrsvncodepath@
+obr.schema.host.name=@obrschemahostname@
+obr.schema.name=@obrschemaname@
+obr.common.log.file=@obrlogfilename@
