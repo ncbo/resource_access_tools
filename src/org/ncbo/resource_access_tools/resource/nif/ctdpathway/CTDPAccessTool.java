@@ -14,18 +14,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
-
-import au.com.bytecode.opencsv.CSVReader;
 
 /**
  * AccessTool for CTD Pathways (via NIF).
- *
+ * 
  * @author r.malviya
  */
 public class CTDPAccessTool extends AbstractNifResourceAccessTool {
@@ -46,7 +42,7 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 	private static String MAIN_ITEMKEY = "Pathway";
 	private Map<String, String> localOntologyIDMap;
 	private static char seprator = '	';
-	private double MAX_ROW = 5000;
+	private double MAX_ROW = 200;
 
 	// constructors
 	public CTDPAccessTool() {
@@ -93,7 +89,7 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 	/**
 	 * This method creates map of latest version of ontology with contexts as
 	 * key. It uses virtual ontology ids associated with contexts.
-	 *
+	 * 
 	 * @param structure
 	 *            {@code Structure} for given resource
 	 * @return {@code HashMap} of latest local ontology id with context as key.
@@ -122,7 +118,7 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 
 	/**
 	 * This method is used to get all elements from resource site.
-	 *
+	 * 
 	 * @return HashSet<Element>
 	 */
 	@SuppressWarnings("resource")
@@ -136,46 +132,51 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 
 			URL csvFile = new URL(
 					"http://ctdbase.org/reports/CTD_pathways.tsv.gz");
-			CSVReader csvReader = null;
-
-			csvReader = new CSVReader(new BufferedReader(new InputStreamReader(
-					new GZIPInputStream(csvFile.openStream()))), seprator);
-
-			String[] headerRow;
-
-			while ((headerRow = csvReader.readNext()) != null) {
-				if (headerRow[0].contains("Fields:")) {
-					headerRow = csvReader.readNext();
-					headerRow = csvReader.readNext();
+			BufferedReader fileReader = new BufferedReader(
+					new InputStreamReader(new GZIPInputStream(
+							csvFile.openStream())));
+			String headerRow = "";
+			int a = 1, b = 0;
+			final String DELIMITER = "	";
+			while ((headerRow = fileReader.readLine()) != null) {
+				// Get all tokens available in line
+				String[] tokens = headerRow.split(DELIMITER);
+				if (tokens[0].equals("# PathwayName"))
+					b = a + 2;
+				if (b == a) {
 					break;
 				}
+				a++;
 			}
 
 			while (headerRow != null) {
 				int rowCount = 0;
-				while ((headerRow = csvReader.readNext()) != null) {
-
-					for (int i = 0; i < headerRow.length; i++) {
-						String localElementId = EMPTY_STRING;
+				while ((headerRow = fileReader.readLine()) != null) {
+					String[] tokens = headerRow.split(DELIMITER);
+					for (int i = 0, j = 0; i < tokens.length; i++) {
 						Map<String, String> elementAttributes = new HashMap<String, String>();
-						while (i < headerRow.length) {
-							if (i == 0)
+						String localElementId = EMPTY_STRING;
+						while (i < tokens.length) {
+
+							if (i == 1)
+								localElementId = tokens[i];
+							else {
 								elementAttributes.put(Structure
 										.generateContextName(RESOURCEID,
-												ITEMKEYS[0]), headerRow[i]);
-							else if (i == 1)
-								localElementId = headerRow[i];
+												ITEMKEYS[j]), tokens[i]);
+								j++;
+							}
 							i++;
-						}
 
+						}
 						if (allElementsInET.contains(localElementId)) {
 							continue;
 						} else {
 							rowCount++;
 							allRowsData.put(localElementId, elementAttributes);
 						}
-
 					}
+
 					if (rowCount == MAX_ROW) {
 						break;
 					}
@@ -234,6 +235,7 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 					Element myExp;
 					int nbElement = 0;
 					Iterator<Element> i = elementSet.iterator();
+
 					while (i.hasNext()) {
 						rowCount++;
 						myExp = i.next();
@@ -248,14 +250,15 @@ public class CTDPAccessTool extends AbstractNifResourceAccessTool {
 							logger.error(
 									"** PROBLEM ** Problem with id "
 											+ myExp.getLocalElementId()
-											+ " when populating the OBR_CTDP_ET table.",
+											+ " when populating the OBR_CTDCD_ET table.",
 									e);
 						}
 
 					}
 					logger.info(nbElement
-							+ " elements added to the OBR_CTDP_ET table.");
+							+ " elements added to the OBR_CTDCD_ET table.");
 				}
+
 			}
 
 		} catch (Exception e) {
