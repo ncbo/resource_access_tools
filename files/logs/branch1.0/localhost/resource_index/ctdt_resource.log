@@ -1,0 +1,674 @@
+2014-11-19 10:23:00,507 - ***************************************************** 
+2014-11-19 10:23:00,507 - ResourceAccessTool creation... 
+2014-11-19 10:23:00,866 - ** PROBLEM ** Cannot create SQL table obr_ctdt_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_annotation_concept_id(concept_id) USING BTREE, IND' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.DirectAnnotationDao.<init>(DirectAnnotationDao.java:57)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:39)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:00,960 - ** PROBLEM ** Cannot create SQL table obr_ctdt_isa_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_isa_annotation_concept_id(concept_id) USING BTREE,' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.AbstractExpandedAnnotationDao.<init>(AbstractExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.IsaExpandedAnnotationDao.<init>(IsaExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:41)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:00,975 - ** PROBLEM ** Cannot create SQL table obr_ctdt_map_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_map_annotation_concept_id(concept_id) USING BTREE,' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.AbstractExpandedAnnotationDao.<init>(AbstractExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.MapExpandedAnnotationDao.<init>(MapExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:43)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:01,007 - ** PROBLEM ** Cannot create SQL table obr_ctdt_aggregation_workflow 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE )ENGINE=MyISAM DEFAULT CHARSET=latin1' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.AggregationDao.<init>(AggregationDao.java:53)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:45)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:01,022 - ** PROBLEM ** Cannot create SQL table obr_ctdt_concept_frequency 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_concept_frequency_score(score) USING BTREE )ENGINE' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.ConceptFrequencyDao.<init>(ConceptFrequencyDao.java:40)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:47)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:01,116 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:23:01,740 - **** Resource CTDT processing 
+2014-11-19 10:23:01,740 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:23:01,881 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:23:01,881 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:23:07,470 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:23:07,470 - 0 rows found. 
+2014-11-19 10:23:07,470 - Number of new elements to dump: 0 
+2014-11-19 10:23:07,470 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:23:07,471 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 05 seconds.
+ 
+2014-11-19 10:23:07,518 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:23:07,518 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:23:07,518 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:23:07,518 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:23:07,518 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 05 seconds. 
+2014-11-19 10:30:49,263 - ***************************************************** 
+2014-11-19 10:30:49,263 - ResourceAccessTool creation... 
+2014-11-19 10:30:49,296 - No needs to alter table obr_ctdt_element 
+2014-11-19 10:30:49,311 - ** PROBLEM ** Cannot create SQL table obr_ctdt_isa_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_isa_annotation_concept_id(concept_id) USING BTREE,' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.AbstractExpandedAnnotationDao.<init>(AbstractExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.IsaExpandedAnnotationDao.<init>(IsaExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:41)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:30:49,311 - ** PROBLEM ** Cannot create SQL table obr_ctdt_map_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_map_annotation_concept_id(concept_id) USING BTREE,' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.AbstractExpandedAnnotationDao.<init>(AbstractExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.MapExpandedAnnotationDao.<init>(MapExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:43)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:30:49,327 - ** PROBLEM ** Cannot create SQL table obr_ctdt_aggregation_workflow 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE )ENGINE=MyISAM DEFAULT CHARSET=latin1' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.AggregationDao.<init>(AggregationDao.java:53)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:45)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:30:49,327 - ** PROBLEM ** Cannot create SQL table obr_ctdt_concept_frequency 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_concept_frequency_score(score) USING BTREE )ENGINE' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.ConceptFrequencyDao.<init>(ConceptFrequencyDao.java:40)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:47)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:30:49,327 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:30:49,514 - **** Resource CTDT processing 
+2014-11-19 10:30:49,514 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:30:49,530 - Resource entry updated. 
+2014-11-19 10:30:49,530 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:30:49,530 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:30:54,647 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:30:54,647 - 0 rows found. 
+2014-11-19 10:30:54,647 - Number of new elements to dump: 0 
+2014-11-19 10:30:54,647 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:30:54,647 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 05 seconds.
+ 
+2014-11-19 10:30:54,648 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:30:54,648 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:30:54,648 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:30:54,663 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:30:54,663 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 05 seconds. 
+2014-11-19 10:36:35,096 - ***************************************************** 
+2014-11-19 10:36:35,096 - ResourceAccessTool creation... 
+2014-11-19 10:36:35,144 - No needs to alter table obr_ctdt_element 
+2014-11-19 10:36:35,191 - ** PROBLEM ** Cannot create SQL table obr_ctdt_map_annotation 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_map_annotation_concept_id(concept_id) USING BTREE,' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.AbstractExpandedAnnotationDao.<init>(AbstractExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.dao.annotation.expanded.MapExpandedAnnotationDao.<init>(MapExpandedAnnotationDao.java:47)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:43)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:36:35,191 - ** PROBLEM ** Cannot create SQL table obr_ctdt_aggregation_workflow 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE )ENGINE=MyISAM DEFAULT CHARSET=latin1' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.AggregationDao.<init>(AggregationDao.java:53)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:45)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:36:35,206 - ** PROBLEM ** Cannot create SQL table obr_ctdt_concept_frequency 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_concept_frequency_score(score) USING BTREE )ENGINE' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.ConceptFrequencyDao.<init>(ConceptFrequencyDao.java:40)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:47)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:36:35,206 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:36:35,394 - **** Resource CTDT processing 
+2014-11-19 10:36:35,394 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:36:35,394 - Resource entry updated. 
+2014-11-19 10:36:35,394 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:36:35,394 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:36:40,716 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:36:40,716 - 0 rows found. 
+2014-11-19 10:36:40,716 - Number of new elements to dump: 0 
+2014-11-19 10:36:40,716 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:36:40,716 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 05 seconds.
+ 
+2014-11-19 10:36:40,717 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:36:40,717 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:36:40,717 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:36:40,717 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:36:40,717 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 05 seconds. 
+2014-11-19 10:46:30,888 - ***************************************************** 
+2014-11-19 10:46:30,888 - ResourceAccessTool creation... 
+2014-11-19 10:46:30,919 - No needs to alter table obr_ctdt_element 
+2014-11-19 10:46:30,997 - ** PROBLEM ** Cannot create SQL table obr_ctdt_aggregation_workflow 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE )ENGINE=MyISAM DEFAULT CHARSET=latin1' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.AggregationDao.<init>(AggregationDao.java:53)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:45)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:46:30,998 - ** PROBLEM ** Cannot create SQL table obr_ctdt_concept_frequency 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_concept_frequency_score(score) USING BTREE )ENGINE' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.ConceptFrequencyDao.<init>(ConceptFrequencyDao.java:40)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:47)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:46:30,998 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:46:31,201 - **** Resource CTDT processing 
+2014-11-19 10:46:31,201 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:46:31,217 - Resource entry updated. 
+2014-11-19 10:46:31,217 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:46:31,217 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:46:42,342 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:46:42,342 - 0 rows found. 
+2014-11-19 10:46:42,342 - Number of new elements to dump: 0 
+2014-11-19 10:46:42,342 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:46:42,342 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 11 seconds.
+ 
+2014-11-19 10:46:42,342 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:46:42,342 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:46:42,342 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:46:42,343 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:46:42,343 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 11 seconds. 
+2014-11-19 10:53:18,578 - ***************************************************** 
+2014-11-19 10:53:18,578 - ResourceAccessTool creation... 
+2014-11-19 10:53:18,610 - No needs to alter table obr_ctdt_element 
+2014-11-19 10:53:18,688 - ** PROBLEM ** Cannot create SQL table obr_ctdt_concept_frequency 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE, INDEX X_obr_ctdt_concept_frequency_score(score) USING BTREE )ENGINE' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1355)
+	at com.mysql.jdbc.Statement.executeUpdate(Statement.java:1270)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.executeSQLUpdate(AbstractObrDao.java:199)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:81)
+	at org.ncbo.stanford.obr.dao.aggregation.ConceptFrequencyDao.<init>(ConceptFrequencyDao.java:40)
+	at org.ncbo.stanford.obr.service.AbstractResourceService.<init>(AbstractResourceService.java:47)
+	at org.ncbo.stanford.obr.service.resource.impl.ResourceUpdateServiceImpl.<init>(ResourceUpdateServiceImpl.java:37)
+	at org.ncbo.stanford.obr.resource.ResourceAccessTool.<init>(ResourceAccessTool.java:70)
+	at org.ncbo.stanford.obr.resource.AbstractXmlResourceAccessTool.<init>(AbstractXmlResourceAccessTool.java:23)
+	at org.ncbo.stanford.obr.resource.nif.AbstractNifResourceAccessTool.<init>(AbstractNifResourceAccessTool.java:34)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.<init>(CTDCDTestAccessTool.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at java.lang.Class.newInstance0(Class.java:355)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:124)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:53:18,688 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:53:18,875 - **** Resource CTDT processing 
+2014-11-19 10:53:18,875 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:53:18,875 - Resource entry updated. 
+2014-11-19 10:53:18,891 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:53:18,891 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:53:24,226 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:53:24,226 - 0 rows found. 
+2014-11-19 10:53:24,226 - Number of new elements to dump: 0 
+2014-11-19 10:53:24,226 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:53:24,226 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 05 seconds.
+ 
+2014-11-19 10:53:24,227 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:53:24,227 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:53:24,227 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:53:24,227 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:53:24,227 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 05 seconds. 
+2014-11-19 10:56:12,131 - ***************************************************** 
+2014-11-19 10:56:12,131 - ResourceAccessTool creation... 
+2014-11-19 10:56:12,163 - No needs to alter table obr_ctdt_element 
+2014-11-19 10:56:12,241 - ResourceAccessTool CTDT created to access CTD ChemGene (via NIF) (CTDT).
+ 
+2014-11-19 10:56:12,428 - **** Resource CTDT processing 
+2014-11-19 10:56:12,428 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-11-19 10:56:12,444 - Resource entry updated. 
+2014-11-19 10:56:12,444 - *** Resource CTD ChemGene (via NIF) update processing 
+2014-11-19 10:56:12,444 - * Get All Elements for NIF CTD ChemGene ...  
+2014-11-19 10:56:17,093 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.getAllElements(CTDCDTestAccessTool.java:162)
+	at org.ncbo.stanford.obr.resource.nif.ctdchemdiseasetest.CTDCDTestAccessTool.updateResourceContent(CTDCDTestAccessTool.java:116)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-19 10:56:17,093 - 0 rows found. 
+2014-11-19 10:56:17,093 - Number of new elements to dump: 0 
+2014-11-19 10:56:17,093 - 0 elements added to the OBR_CTDCG_ET table. 
+2014-11-19 10:56:17,093 - ### Resource CTD ChemGene (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 04 seconds.
+ 
+2014-11-19 10:56:17,094 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:56:17,094 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 10:56:17,094 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-11-19 10:56:17,094 - Resource entry updated with latest dictionary ID. 
+2014-11-19 10:56:17,094 - #### Resource CTD ChemGene (via NIF) processed in: 00 hours, 00 minutes, 04 seconds. 
+2015-03-26 10:45:43,376 - ***************************************************** 
+2015-03-26 10:45:43,386 - ResourceAccessTool creation... 
+2015-03-26 10:45:56,708 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 10:46:15,371 - **** Resource CTDT processing 
+2015-03-26 10:46:15,371 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 10:46:15,504 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 10:53:39,824 - ***************************************************** 
+2015-03-26 10:53:39,825 - ResourceAccessTool creation... 
+2015-03-26 10:53:39,867 - No needs to alter table obr_ctdt_element 
+2015-03-26 10:53:39,904 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 10:53:40,228 - **** Resource CTDT processing 
+2015-03-26 10:53:40,228 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 10:53:40,247 - Resource entry updated. 
+2015-03-26 10:53:40,247 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 10:55:57,331 - ***************************************************** 
+2015-03-26 10:55:57,331 - ResourceAccessTool creation... 
+2015-03-26 10:55:57,371 - No needs to alter table obr_ctdt_element 
+2015-03-26 10:55:57,409 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 10:55:57,747 - **** Resource CTDT processing 
+2015-03-26 10:55:57,747 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 10:55:57,765 - Resource entry updated. 
+2015-03-26 10:55:57,766 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 11:02:35,743 - ***************************************************** 
+2015-03-26 11:02:35,743 - ResourceAccessTool creation... 
+2015-03-26 11:02:35,783 - No needs to alter table obr_ctdt_element 
+2015-03-26 11:02:35,820 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 11:02:36,147 - **** Resource CTDT processing 
+2015-03-26 11:02:36,147 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 11:02:36,165 - Resource entry updated. 
+2015-03-26 11:02:36,165 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 12:23:26,731 - ***************************************************** 
+2015-03-26 12:23:26,731 - ResourceAccessTool creation... 
+2015-03-26 12:23:26,773 - No needs to alter table obr_ctdt_element 
+2015-03-26 12:23:26,813 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 12:23:27,130 - **** Resource CTDT processing 
+2015-03-26 12:23:27,130 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 12:23:27,149 - Resource entry updated. 
+2015-03-26 12:23:27,149 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 12:30:41,933 - ***************************************************** 
+2015-03-26 12:30:41,934 - ResourceAccessTool creation... 
+2015-03-26 12:30:41,970 - No needs to alter table obr_ctdt_element 
+2015-03-26 12:30:41,998 - ResourceAccessTool CTDT created to access CTD Chemical (via NIF) (CTDT).
+ 
+2015-03-26 12:30:42,178 - **** Resource CTDT processing 
+2015-03-26 12:30:42,178 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-26 12:30:42,191 - Resource entry updated. 
+2015-03-26 12:30:42,191 - *** Resource CTD Chemical (via NIF) update processing 
+2015-03-26 12:30:45,063 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:48,114 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:50,181 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:52,008 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:53,815 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:55,715 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:57,525 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:30:59,357 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:01,197 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:02,995 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:04,951 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:06,877 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:08,723 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:10,516 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:12,440 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:14,347 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:16,692 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:19,322 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:21,590 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:25,205 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:27,657 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:29,947 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:32,065 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:34,004 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:35,838 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:37,749 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:39,937 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:41,926 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:44,089 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:46,353 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:50,055 - 5000 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:50,665 - 1730 elements added to the OBR_CTDCD_ET table. 
+2015-03-26 12:31:50,694 - ### Resource CTD Chemical (via NIF) updated with 0 elements in : 00 hours, 01 minutes, 08 seconds.
+ 
+2015-03-26 12:31:50,880 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;156730 
+2015-03-26 12:31:50,880 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-26 12:31:50,949 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;156730 
+2015-03-26 12:31:50,949 - *** Executing  Direct Annotation process...  
+2015-03-26 12:31:51,017 - Query :::: SELECT count(id) FROM obr_ctdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;156730 
+2015-03-26 12:31:51,017 - 	** Concept recognition with Mgrep: 
+2015-03-26 12:31:51,040 - Exporting the resource content to a file to be annotated with Mgrep... 
+2015-03-26 12:31:53,684 - 		ResourceFile created in: 00 hours, 00 minutes, 02 seconds.
+ 
+2015-03-26 12:31:53,684 - Call to Mgrep... 
+2015-03-26 12:31:53,741 - Local Mgrep execution... 
+2015-03-26 12:31:53,741 - command: files/mgrep/mgrep3.0/mgrep -w -i -f files/dictionaries/branch1.0/localhost/OBS_DICO_c035_CMP_MGREP.txt < files/mgrep/mgrepInputs/OBR_RESOURCE_CTDT_V20_MGREP.txt > files/mgrep/mgrepOutputs/OBR_RESOURCE_CTDT_V20_MGREP.txt.mgrep 
+2015-03-26 12:31:53,746 - ** PROBLEM ** Cannot create MgrepFile. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.util.mgrep.ConceptRecognitionTools.mgrepLocal(ConceptRecognitionTools.java:64)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.mgrepCall(AnnotationServiceImpl.java:153)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.conceptRecognitionWithMgrep(AnnotationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.resourceAnnotation(AnnotationServiceImpl.java:51)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.executeWorkflow(ResourceIndexWorkflowImpl.java:273)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:219)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 10 more
+2015-03-26 12:31:53,747 - 		Mgrep executed in: 00 hours, 00 minutes, 00 seconds. 
+2015-03-26 12:31:53,747 - Processing of the result file... 

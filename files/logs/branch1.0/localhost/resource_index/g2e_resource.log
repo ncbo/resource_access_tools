@@ -1,0 +1,141 @@
+2014-12-30 10:22:39,625 - ***************************************************** 
+2014-12-30 10:22:39,625 - ResourceAccessTool creation... 
+2014-12-30 10:22:40,405 - ResourceAccessTool G2E created to access Gene2ensembl (G2E).
+ 
+2014-12-30 10:22:40,889 - **** Resource G2E processing 
+2014-12-30 10:22:40,889 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-12-30 10:22:40,998 - *** Resource Gene2ensembl update processing 
+2014-12-30 10:22:45,663 - 2493 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:46,335 - 2623 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:46,756 - 2530 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:47,474 - 2819 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:48,145 - 2868 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:49,129 - 4762 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:50,159 - 4886 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:51,205 - 4806 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:52,189 - 4937 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:53,189 - 4868 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:54,159 - 4451 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:55,111 - 4465 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:56,126 - 4580 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:57,156 - 4839 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:58,359 - 4951 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:22:59,436 - 4956 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:00,513 - 5000 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:01,528 - 5000 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:02,341 - 4853 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:03,323 - 4845 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:04,560 - 4992 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:06,043 - 4975 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:07,052 - 4968 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:08,098 - 4982 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:09,331 - 4961 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:10,658 - 4948 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:12,110 - 4771 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:13,577 - 4763 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:14,702 - 4146 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:15,701 - 4195 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:16,606 - 4191 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:17,636 - 4446 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:18,558 - 4427 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:19,603 - 4588 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:20,602 - 4862 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:21,694 - 4872 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:22,678 - 4827 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:23,973 - 4818 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:24,957 - 4880 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:26,049 - 4967 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:27,095 - 4959 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:28,188 - 4937 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:29,411 - 4942 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:30,488 - 3299 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:31,176 - 2686 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:31,846 - 2633 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:32,627 - 2860 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:33,345 - 2867 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:34,126 - 3345 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:35,171 - 4462 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:36,124 - 4599 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:37,169 - 4685 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:38,387 - 4873 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:39,480 - 4982 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:40,714 - 4976 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:42,025 - 4979 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:43,259 - 4985 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:44,492 - 4983 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:46,225 - 4979 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:47,739 - 4889 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:48,972 - 4915 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:50,252 - 4759 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:51,486 - 4854 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:52,813 - 4810 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:54,093 - 4856 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:55,170 - 4871 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:56,202 - 4927 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:57,295 - 4935 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:58,544 - 4927 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:23:59,887 - 4948 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:01,136 - 4945 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:02,026 - 3541 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:02,853 - 3487 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:03,714 - 3848 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:04,542 - 3709 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:05,433 - 4012 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:06,493 - 4717 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:07,508 - 4820 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:08,617 - 4903 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:09,616 - 4935 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:10,708 - 4962 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:11,723 - 4956 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:12,785 - 4841 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:14,034 - 4907 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:15,346 - 4973 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:16,844 - 4994 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:17,703 - 4992 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:18,967 - 4998 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:20,309 - 4987 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:21,324 - 4942 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:22,402 - 4814 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:23,370 - 4787 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:24,462 - 4865 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:25,493 - 4984 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:26,835 - 4989 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:28,084 - 4997 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:29,177 - 4993 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:30,192 - 4991 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:31,129 - 2006 elements added to the OBR_G2E_ET table. 
+2014-12-30 10:24:31,145 - ### Resource Gene2ensembl updated with 0 elements in : 00 hours, 01 minutes, 50 seconds.
+ 
+2014-12-30 10:24:31,426 - Query :::: SELECT count(id) FROM obr_g2e_element WHERE dictionary_id IS NULL OR dictionary_id<20;448728 
+2014-12-30 10:24:31,426 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-12-30 10:24:31,584 - Query :::: SELECT count(id) FROM obr_g2e_element WHERE dictionary_id IS NULL OR dictionary_id<20;448728 
+2014-12-30 10:24:31,584 - *** Executing  Direct Annotation process...  
+2014-12-30 10:24:31,740 - Query :::: SELECT count(id) FROM obr_g2e_element WHERE dictionary_id IS NULL OR dictionary_id<20;448728 
+2014-12-30 10:24:31,740 - 	** Concept recognition with Mgrep: 
+2014-12-30 10:24:31,740 - Exporting the resource content to a file to be annotated with Mgrep... 
+2014-12-30 10:24:36,841 - 		ResourceFile created in: 00 hours, 00 minutes, 05 seconds.
+ 
+2014-12-30 10:24:36,841 - Call to Mgrep... 
+2014-12-30 10:24:36,842 - Local Mgrep execution... 
+2014-12-30 10:24:36,842 - command: files/mgrep/mgrep3.0/mgrep -w -i -f files/dictionaries/branch1.0/localhost/OBS_DICO_c035_CMP_MGREP.txt < files/mgrep/mgrepInputs/OBR_RESOURCE_G2E_V20_MGREP.txt > files/mgrep/mgrepOutputs/OBR_RESOURCE_G2E_V20_MGREP.txt.mgrep 
+2014-12-30 10:24:36,889 - ** PROBLEM ** Cannot create MgrepFile. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.util.mgrep.ConceptRecognitionTools.mgrepLocal(ConceptRecognitionTools.java:64)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.mgrepCall(AnnotationServiceImpl.java:153)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.conceptRecognitionWithMgrep(AnnotationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.resourceAnnotation(AnnotationServiceImpl.java:51)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.executeWorkflow(ResourceIndexWorkflowImpl.java:273)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:219)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 10 more
+2014-12-30 10:24:36,889 - 		Mgrep executed in: 00 hours, 00 minutes, 00 seconds. 
+2014-12-30 10:24:36,889 - Processing of the result file... 

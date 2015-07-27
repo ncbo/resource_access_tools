@@ -1,0 +1,1 @@
+./mgrep -w -i -f OBS_DICO_test2_MGREP.txt < Text-to-annotate.txt > result.txt

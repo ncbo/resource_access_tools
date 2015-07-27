@@ -1,0 +1,25 @@
+2015-03-17 11:50:18,949 - ***************************************************** 
+2015-03-17 11:50:18,949 - ResourceAccessTool creation... 
+2015-03-17 11:50:19,317 - ResourceAccessTool BGRDT created to access BioGRID (via NIF) (BGRDT).
+ 
+2015-03-17 11:50:19,514 - **** Resource BGRDT processing 
+2015-03-17 11:50:19,514 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-17 11:50:19,530 - *** Resource BioGRID (via NIF) update processing 
+2015-03-17 11:50:19,530 - * Get All Elements for NIF BioGRID ...  
+2015-03-17 11:50:25,045 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.biogrid.BGRDTest.getAllElements(BGRDTest.java:178)
+	at org.ncbo.stanford.obr.resource.nif.biogrid.BGRDTest.updateResourceContent(BGRDTest.java:130)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-03-17 11:50:25,046 - 0 rows found. 
+2015-03-17 11:50:25,046 - Number of new elements to dump: 0 
+2015-03-17 11:50:25,046 - 0 elements added to the OBR_BGRD_ET table. 
+2015-03-17 11:50:25,046 - ### Resource BioGRID (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 05 seconds.
+ 
+2015-03-17 11:50:25,059 - Query :::: SELECT count(id) FROM obr_bgrdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2015-03-17 11:50:25,059 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-17 11:50:25,060 - Query :::: SELECT count(id) FROM obr_bgrdt_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2015-03-17 11:50:25,060 - Resource entry updated with latest dictionary ID. 
+2015-03-17 11:50:25,060 - #### Resource BioGRID (via NIF) processed in: 00 hours, 00 minutes, 05 seconds. 

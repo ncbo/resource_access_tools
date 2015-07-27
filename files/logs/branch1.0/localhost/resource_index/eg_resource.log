@@ -1,0 +1,10 @@
+2015-03-31 18:14:06,312 - ***************************************************** 
+2015-03-31 18:14:06,313 - ResourceAccessTool creation... 
+2015-03-31 18:14:06,527 - No needs to alter table obr_eg_element 
+2015-03-31 18:14:06,592 - ResourceAccessTool EG created to access Entrez Gene (via NIF) (EG).
+ 
+2015-03-31 18:14:07,060 - **** Resource EG processing 
+2015-03-31 18:14:07,060 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-31 18:14:07,130 - Resource entry updated. 
+2015-03-31 18:14:07,130 - *** Resource Entrez Gene (via NIF) update processing 
+2015-03-31 18:14:07,131 - * Get All Elements for NIF Entrez Gene  ...  

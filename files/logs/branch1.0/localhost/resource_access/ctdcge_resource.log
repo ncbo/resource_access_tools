@@ -1,0 +1,83 @@
+2015-07-24 15:20:14,171 - ***************************************************** 
+2015-07-24 15:20:14,171 - ResourceAccessTool creation... 
+2015-07-24 15:20:14,859 - ResourceAccessTool CTDCGE created to access CTD Chem Go Enriched (via NIF) (CTDCGE).
+ 
+2015-07-24 15:20:15,343 - **** Resource CTDCGE processing 
+2015-07-24 15:20:15,343 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-07-24 15:20:15,410 - *** Resource CTD Chem Go Enriched (via NIF) update processing 
+2015-07-24 15:20:17,315 - 687 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:17,817 - 449 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:18,252 - 245 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:18,570 - 196 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:18,960 - 165 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:19,442 - 123 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:19,771 - 128 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:20,142 - 191 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:20,735 - 220 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:21,004 - 59 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:22,047 - 61 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:22,235 - 68 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:22,911 - 160 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:23,181 - 169 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:23,520 - 61 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:24,011 - 82 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:24,312 - 51 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:24,665 - 53 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:25,058 - 86 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:25,594 - 46 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:25,862 - 60 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:26,204 - 37 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:26,537 - 44 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:26,888 - 39 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:27,120 - 46 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:27,508 - 37 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:27,754 - 38 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:27,923 - 13 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:28,389 - 21 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:28,551 - 33 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:28,704 - 19 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:29,113 - 14 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:29,267 - 50 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:29,461 - 69 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:29,718 - 77 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:30,341 - 16 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:30,527 - 23 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:30,898 - 19 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:31,284 - 50 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:31,645 - 24 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:31,972 - 57 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:32,308 - 46 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:32,601 - 48 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:33,161 - 58 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:33,531 - 20 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:33,922 - 19 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:34,176 - 27 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:34,540 - 34 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:35,172 - 79 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:35,400 - 51 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:35,565 - 19 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:35,791 - 6 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:36,085 - 13 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:36,333 - 8 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:36,480 - 21 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:36,787 - 28 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:37,070 - 39 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:37,358 - 23 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:37,501 - 21 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:38,008 - 21 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:38,173 - 55 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:38,605 - 18 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:39,224 - 20 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:39,387 - 4 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:39,542 - 19 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:39,928 - 3 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:40,275 - 8 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:40,633 - 1 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:41,243 - 14 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:41,430 - 0 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:41,850 - 16 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:42,447 - 76 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:43,186 - 132 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:43,397 - 35 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:43,799 - 28 elements added to the OBR_CTDCD_ET table. 
+2015-07-24 15:20:44,103 - 19 elements added to the OBR_CTDCD_ET table. 

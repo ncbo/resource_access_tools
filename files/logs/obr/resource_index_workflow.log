@@ -1,0 +1,271 @@
+2014-11-18 13:59:55,608 - Bad Structure Exception  
+obs.obr.populate.Structure$BadStructureException: itemKeys and itemWeights do not have the same size.
+	at obs.obr.populate.Structure.<init>(Structure.java:81)
+	at obs.obr.populate.Structure.<init>(Structure.java:101)
+	at org.ncbo.stanford.obr.resource.nif.ctdgenesdisease.CTDGDAccessTool.<clinit>(CTDGDAccessTool.java:40)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:169)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:122)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-18 14:05:03,444 - Bad Structure Exception  
+obs.obr.populate.Structure$BadStructureException: itemKeys and itemOntoIds do not have the same size.
+	at obs.obr.populate.Structure.<init>(Structure.java:104)
+	at org.ncbo.stanford.obr.resource.nif.ctdgenesdisease.CTDGDAccessTool.<clinit>(CTDGDAccessTool.java:40)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:169)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:122)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-11-18 14:44:01,224 - Number of ontologies added :366 
+2014-11-18 14:44:01,288 - Number of ontologies added :206 
+2014-11-18 14:44:01,334 - ** PROBLEM ** Cannot get entries from master concept table. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.dao.obs.master.ObsMasterDao.writeQueryResultFile(ObsMasterDao.java:417)
+	at org.ncbo.stanford.obr.dao.obs.master.ObsMasterDao.writeMasterConceptEntries(ObsMasterDao.java:231)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.populateConceptsSlaveData(ObsDataPopulationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.populateObsSlaveData(ObsDataPopulationServiceImpl.java:69)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.populateObsSlaveTables(ResourceIndexWorkflowImpl.java:81)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:33)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 8 more
+2014-11-18 14:53:01,996 - Number of ontologies added :0 
+2014-11-18 14:53:01,996 - Number of ontologies added :0 
+2014-11-18 15:08:38,621 - Number of ontologies added :0 
+2014-11-18 15:08:38,621 - Number of ontologies added :0 
+2014-11-18 15:52:26,760 - Number of ontologies added :0 
+2014-11-18 15:52:26,760 - Number of ontologies added :0 
+2014-11-18 15:56:13,336 - Number of ontologies added :0 
+2014-11-18 15:56:13,336 - Number of ontologies added :0 
+2014-11-18 16:00:49,156 - Key resource.ctdgd was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-18 16:47:31,253 - Number of ontologies added :0 
+2014-11-18 16:47:31,253 - Number of ontologies added :0 
+2014-11-18 16:55:44,316 - Key resource.ctdgd was not found in resource bundle 'config' for locale 'en_US' 
+2014-11-19 08:50:51,240 - Number of ontologies added :0 
+2014-11-19 08:50:51,240 - Number of ontologies added :0 
+2014-11-19 09:36:36,781 - Number of ontologies added :0 
+2014-11-19 09:36:36,813 - Number of ontologies added :0 
+2014-11-19 09:40:48,803 - Number of ontologies added :0 
+2014-11-19 09:40:48,803 - Number of ontologies added :0 
+2014-11-19 09:42:34,049 - Number of ontologies added :0 
+2014-11-19 09:42:34,049 - Number of ontologies added :0 
+2014-11-19 09:44:50,155 - Number of ontologies added :0 
+2014-11-19 09:44:50,155 - Number of ontologies added :0 
+2014-11-19 09:50:44,479 - Number of ontologies added :0 
+2014-11-19 09:50:44,479 - Number of ontologies added :0 
+2014-11-19 10:05:51,690 - Number of ontologies added :0 
+2014-11-19 10:05:51,690 - Number of ontologies added :0 
+2014-11-19 10:06:43,164 - Number of ontologies added :0 
+2014-11-19 10:06:43,164 - Number of ontologies added :0 
+2014-11-19 10:20:02,091 - Number of ontologies added :0 
+2014-11-19 10:20:02,091 - Number of ontologies added :0 
+2014-11-19 10:57:44,616 - Number of ontologies added :0 
+2014-11-19 10:57:44,616 - Number of ontologies added :0 
+2014-11-26 11:11:58,969 - Number of ontologies added :0 
+2014-11-26 11:11:58,969 - Number of ontologies added :0 
+2014-11-26 11:25:04,063 - Number of ontologies added :0 
+2014-11-26 11:25:04,063 - Number of ontologies added :0 
+2014-11-26 11:31:50,555 - Number of ontologies added :0 
+2014-11-26 11:32:01,872 - Number of ontologies added :0 
+2014-11-28 13:36:07,580 - Number of ontologies added :0 
+2014-11-28 13:36:07,581 - Number of ontologies added :0 
+2014-12-03 17:35:07,449 - Number of ontologies added :0 
+2014-12-03 17:35:07,464 - Number of ontologies added :0 
+2014-12-08 11:35:31,213 - Number of ontologies added :0 
+2014-12-08 11:35:31,214 - Number of ontologies added :0 
+2014-12-08 11:38:45,537 - Number of ontologies added :0 
+2014-12-08 11:39:40,526 - Number of ontologies added :0 
+2014-12-09 15:49:41,388 - Number of ontologies added :0 
+2014-12-09 15:49:41,404 - Number of ontologies added :0 
+2014-12-09 16:49:52,106 - Number of ontologies added :0 
+2014-12-09 16:49:52,138 - Number of ontologies added :0 
+2014-12-12 14:39:03,028 - Number of ontologies added :0 
+2014-12-12 14:39:03,029 - Number of ontologies added :0 
+2014-12-12 16:26:20,148 - Number of ontologies added :0 
+2014-12-12 16:26:20,148 - Number of ontologies added :0 
+2014-12-29 12:03:33,961 - Key resource.gene was not found in resource bundle 'config' for locale 'en_US' 
+2014-12-31 10:54:29,827 - Key resource.g2v was not found in resource bundle 'config' for locale 'en_US' 
+2015-01-15 14:28:18,179 - CREATE TABLE obs_ontology (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, local_ontology_id VARCHAR(246) NOT NULL UNIQUE, name VARCHAR(246) NOT NULL, version VARCHAR(246) NOT NULL, description VARCHAR(246) NOT NULL, status INT(11) NOT NULL, virtual_ontology_id VARCHAR(246) NOT NULL, format VARCHAR(32) DEFAULT NULL, dictionary_id SMALLINT UNSIGNED NOT NULL, INDEX X_obs_ontology_virtualOntologyID (virtual_ontology_id), INDEX X_obs_ontology_dictionary_id (dictionary_id))ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+2015-01-15 14:28:18,305 - CREATE TABLE obs_concept (id INT(11) NOT NULL PRIMARY KEY, local_concept_id VARCHAR(246) NOT NULL UNIQUE, ontology_id INT(11) NOT NULL, is_toplevel BOOL NOT NULL, full_id TEXT, INDEX X_obs_concept_ontology_id (ontology_id), INDEX X_obs_concept_isTopLevel (is_toplevel))ENGINE=MyISAM DEFAULT CHARSET=latin1 ; 
+2015-01-15 14:28:18,351 - CREATE TABLE obs_term (id INT(11) NOT NULL PRIMARY KEY, name TEXT NOT NULL, concept_id INT(11) NOT NULL, is_preferred TINYINT(1) NOT NULL, INDEX X_obs_term_termName (name(255)), INDEX X_obs_term_concept_id (concept_id), INDEX X_obs_term_isPreferred (is_preferred)) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+2015-01-15 14:28:18,383 - CREATE TABLE obs_map (id INT(11) NOT NULL PRIMARY KEY, concept_id INT(11) NOT NULL, mapped_concept_id INT(11) NOT NULL, mapping_type VARCHAR(30) NOT NULL, INDEX X_obs_map_concept_id (concept_id), INDEX X_obs_map_mapped_concept_id (mapped_concept_id), INDEX X_obs_map_mappingType (mapping_type(10))) ENGINE=MyISAM DEFAULT CHARSET=latin1;  
+2015-01-15 14:28:18,414 - CREATE TABLE obs_mapping_type (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, mapping_type VARCHAR(30) NOT NULL, UNIQUE (mapping_type) ) ENGINE=MyISAM DEFAULT CHARSET=latin1;  
+2015-01-15 14:28:18,461 - CREATE TABLE obs_relation (id INT(11) NOT NULL PRIMARY KEY, concept_id INT(11) NOT NULL, parent_concept_id INT(11) NOT NULL, level INT(11) NOT NULL, INDEX X_obs_relation_concept_id (concept_id), INDEX X_obs_relation_parent_concept_id (parent_concept_id), INDEX X_obs_relation_level (level)) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+2015-01-15 14:28:18,492 - CREATE TABLE obs_semantic_type (id INT(11) NOT NULL PRIMARY KEY, concept_id INT(11) NOT NULL, semantic_type_id INT(11) NOT NULL, INDEX X_obs_semantic_type_concept_id (concept_id), INDEX X_obs_semantic_type_semantic_type_id (semantic_type_id))ENGINE=MyISAM DEFAULT CHARSET=latin1 ; 
+2015-01-15 14:28:18,539 - CREATE TABLE obs_l_semantic_type (id INT(11) NOT NULL PRIMARY KEY, semantic_type varchar(32) NOT NULL, description varchar(256) DEFAULT NULL)ENGINE=MyISAM DEFAULT CHARSET=latin1 ; 
+2015-02-23 15:20:25,447 - Number of ontologies added :366 
+2015-02-23 15:20:25,771 - Number of ontologies added :206 
+2015-02-23 15:20:32,242 - ** PROBLEM ** Cannot get entries from master concept table. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.dao.obs.master.ObsMasterDao.writeQueryResultFile(ObsMasterDao.java:417)
+	at org.ncbo.stanford.obr.dao.obs.master.ObsMasterDao.writeMasterConceptEntries(ObsMasterDao.java:231)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.populateConceptsSlaveData(ObsDataPopulationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.populateObsSlaveData(ObsDataPopulationServiceImpl.java:69)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.populateObsSlaveTables(ResourceIndexWorkflowImpl.java:81)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:33)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 8 more
+2015-02-23 15:43:48,980 - Number of ontologies added :0 
+2015-02-23 15:43:48,981 - Number of ontologies added :0 
+2015-03-13 16:02:39,599 - ** PROBLEM ** Cannot create connection to database jdbc:mysql://ncboprod-ridb1.sunet:3306/resource_index 
+com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.UnknownHostException
+MESSAGE: ncboprod-ridb1.sunet
+
+STACKTRACE:
+
+java.net.UnknownHostException: ncboprod-ridb1.sunet
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:849)
+	at java.net.InetAddress.getAddressFromNameService(InetAddress.java:1200)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1153)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1083)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1019)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:246)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2744)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1553)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.createConnection(AbstractObrDao.java:116)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:75)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.<init>(DictionaryDao.java:47)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.<init>(DictionaryDao.java:46)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao$DictionaryDaoHolder.<clinit>(DictionaryDao.java:76)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.getInstance(DictionaryDao.java:83)
+	at org.ncbo.stanford.obr.dao.DaoFactory.<clinit>(DaoFactory.java:30)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.loadObsSlaveTablesIntoMemory(ObsDataPopulationServiceImpl.java:330)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.loadObsSlaveTablesIntoMemory(ResourceIndexWorkflowImpl.java:93)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:45)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 2 ms ago.
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2820)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1553)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.createConnection(AbstractObrDao.java:116)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.<init>(AbstractObrDao.java:75)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.<init>(DictionaryDao.java:47)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.<init>(DictionaryDao.java:46)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao$DictionaryDaoHolder.<clinit>(DictionaryDao.java:76)
+	at org.ncbo.stanford.obr.dao.dictionary.DictionaryDao.getInstance(DictionaryDao.java:83)
+	at org.ncbo.stanford.obr.dao.DaoFactory.<clinit>(DaoFactory.java:30)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.loadObsSlaveTablesIntoMemory(ObsDataPopulationServiceImpl.java:330)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.loadObsSlaveTablesIntoMemory(ResourceIndexWorkflowImpl.java:93)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:45)
+2015-03-13 16:09:12,079 - Key resource.ctdcge  was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-13 16:46:25,249 - Problem in calling LoadObsSlaveTablesIntoMemeoryProcedure 
+com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: Connection reset
+
+STACKTRACE:
+
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:1994)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2411)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2916)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3256)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1313)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:874)
+	at com.mysql.jdbc.CallableStatement.execute(CallableStatement.java:752)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.callLoadObsSlaveTablesIntoMemoryProcedure(AbstractObrDao.java:259)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.loadObsSlaveTablesIntoMemory(ObsDataPopulationServiceImpl.java:330)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.loadObsSlaveTablesIntoMemory(ResourceIndexWorkflowImpl.java:93)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:45)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 156840 ms ago.
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2622)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2916)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3256)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1313)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:874)
+	at com.mysql.jdbc.CallableStatement.execute(CallableStatement.java:752)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.callLoadObsSlaveTablesIntoMemoryProcedure(AbstractObrDao.java:259)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.loadObsSlaveTablesIntoMemory(ObsDataPopulationServiceImpl.java:330)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.loadObsSlaveTablesIntoMemory(ResourceIndexWorkflowImpl.java:93)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:45)
+2015-03-26 10:44:31,030 - Key resource.ctdt was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-30 14:11:29,424 - Number of ontologies added :0 
+2015-03-30 14:11:29,443 - Number of ontologies added :0 
+2015-04-03 11:08:52,038 - Number of ontologies added :0 
+2015-04-03 11:08:52,047 - Number of ontologies added :0 
+2015-07-15 13:36:32,214 - Number of ontologies added :0 
+2015-07-15 13:36:32,229 - Number of ontologies added :0 
+2015-07-16 17:05:05,154 - Problem in calling LoadObsSlaveTablesIntoMemeoryProcedure 
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: FUNCTION load_obs_tables_into_memory does not exist
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3250)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3179)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1207)
+	at com.mysql.jdbc.DatabaseMetaData.getCallStmtParameterTypes(DatabaseMetaData.java:1604)
+	at com.mysql.jdbc.DatabaseMetaData.getProcedureColumns(DatabaseMetaData.java:4009)
+	at com.mysql.jdbc.CallableStatement.determineParameterTypes(CallableStatement.java:702)
+	at com.mysql.jdbc.CallableStatement.<init>(CallableStatement.java:513)
+	at com.mysql.jdbc.Connection.parseCallableStatement(Connection.java:4536)
+	at com.mysql.jdbc.Connection.prepareCall(Connection.java:4610)
+	at com.mysql.jdbc.Connection.prepareCall(Connection.java:4584)
+	at org.ncbo.stanford.obr.dao.AbstractObrDao.callLoadObsSlaveTablesIntoMemoryProcedure(AbstractObrDao.java:258)
+	at org.ncbo.stanford.obr.service.obs.impl.ObsDataPopulationServiceImpl.loadObsSlaveTablesIntoMemory(ObsDataPopulationServiceImpl.java:330)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.loadObsSlaveTablesIntoMemory(ResourceIndexWorkflowImpl.java:91)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:45)
+2015-07-23 11:50:40,999 - Number of ontologies added :366 
+2015-07-23 11:50:41,107 - Number of ontologies added :366 
+2015-07-23 11:50:41,125 - ** PROBLEM ** Cannot get entries from master concept table. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.resource_access_tools.dao.obs.master.ObsMasterDao.writeQueryResultFile(ObsMasterDao.java:417)
+	at org.ncbo.resource_access_tools.dao.obs.master.ObsMasterDao.writeMasterConceptEntries(ObsMasterDao.java:231)
+	at org.ncbo.resource_access_tools.service.obs.impl.ObsDataPopulationServiceImpl.populateConceptsSlaveData(ObsDataPopulationServiceImpl.java:124)
+	at org.ncbo.resource_access_tools.service.obs.impl.ObsDataPopulationServiceImpl.populateObsSlaveData(ObsDataPopulationServiceImpl.java:69)
+	at org.ncbo.resource_access_tools.service.workflow.impl.ResourceIndexWorkflowImpl.populateObsSlaveTables(ResourceIndexWorkflowImpl.java:79)
+	at org.ncbo.resource_access_tools.Main.main(Main.java:22)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 8 more

@@ -1,0 +1,76 @@
+2014-09-29 09:48:11,095 - ***************************************************** 
+2014-09-29 09:48:11,095 - ResourceAccessTool creation... 
+2014-09-29 09:48:11,175 - No needs to alter table obr_pm_element 
+2014-09-29 09:48:11,267 - ResourceAccessTool PM created to access PubMed (PM).
+ 
+2014-09-29 09:48:11,573 - **** Resource PM processing 
+2014-09-29 09:48:11,573 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-09-29 09:48:11,632 - Resource entry updated. 
+2014-09-29 09:48:11,644 - *** Resource PubMed update processing 
+2014-09-29 09:48:11,644 - Updating PM elements with XML file: medline11n0001.xml 
+2014-09-29 09:48:11,671 - ** PROBLEM ** Cannot find XML file to parse. 
+java.io.FileNotFoundException: E:\Stanford_workspace\resource_index_workflow\trunk\files\resources\pubmed\medline11n0001.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:70)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:161)
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.aliasi.corpus.XMLParser.parse(XMLParser.java:101)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.loadXML(PubMedAccessTool.java:494)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.updateWithXMLFiles(PubMedAccessTool.java:448)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.downloadResourceContent(PubMedAccessTool.java:426)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.updateResourceContent(PubMedAccessTool.java:170)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-09-29 09:48:11,673 - ### Resource PubMed updated with 0 elements in : 00 hours, 00 minutes, 00 seconds.
+ 
+2014-09-29 09:48:11,730 - Query :::: SELECT count(id) FROM obr_pm_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-09-29 09:48:11,730 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-09-29 09:48:11,731 - Query :::: SELECT count(id) FROM obr_pm_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-09-29 09:48:11,749 - Resource entry updated with latest dictionary ID. 
+2014-09-29 09:48:11,749 - #### Resource PubMed processed in: 00 hours, 00 minutes, 00 seconds. 
+2014-09-30 14:49:59,821 - ***************************************************** 
+2014-09-30 14:49:59,838 - ResourceAccessTool creation... 
+2014-09-30 14:50:00,004 - No needs to alter table obr_pm_element 
+2014-09-30 14:50:00,154 - ResourceAccessTool PM created to access PubMed (PM).
+ 
+2014-09-30 14:50:00,438 - **** Resource PM processing 
+2014-09-30 14:50:00,438 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2014-09-30 14:50:00,512 - Resource entry updated. 
+2014-09-30 14:50:00,545 - *** Resource PubMed update processing 
+2014-09-30 14:50:00,545 - Updating PM elements with XML file: medline11n0001.xml 
+2014-09-30 14:50:00,600 - ** PROBLEM ** Cannot find XML file to parse. 
+java.io.FileNotFoundException: E:\Stanford_workspace\resource_index_workflow\trunk\files\resources\pubmed\medline11n0001.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:70)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:161)
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.aliasi.corpus.XMLParser.parse(XMLParser.java:101)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.loadXML(PubMedAccessTool.java:494)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.updateWithXMLFiles(PubMedAccessTool.java:448)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.downloadResourceContent(PubMedAccessTool.java:426)
+	at org.ncbo.stanford.obr.resource.ncbi.pubmed.PubMedAccessTool.updateResourceContent(PubMedAccessTool.java:170)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2014-09-30 14:50:00,621 - ### Resource PubMed updated with 0 elements in : 00 hours, 00 minutes, 00 seconds.
+ 
+2014-09-30 14:50:00,661 - Query :::: SELECT count(id) FROM obr_pm_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-09-30 14:50:00,661 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2014-09-30 14:50:00,662 - Query :::: SELECT count(id) FROM obr_pm_element WHERE dictionary_id IS NULL OR dictionary_id<20;0 
+2014-09-30 14:50:00,663 - Resource entry updated with latest dictionary ID. 
+2014-09-30 14:50:00,663 - #### Resource PubMed processed in: 00 hours, 00 minutes, 00 seconds. 

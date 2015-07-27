@@ -1,0 +1,285 @@
+2015-02-05 11:01:48,656 - ***************************************************** 
+2015-02-05 11:01:48,656 - ResourceAccessTool creation... 
+2015-02-05 11:01:49,081 - No needs to alter table obr_rport_element 
+2015-02-05 11:01:49,191 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-05 11:01:49,640 - **** Resource RPORT processing 
+2015-02-05 11:01:49,640 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-05 11:01:49,744 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-05 11:01:49,744 - * Get All Elements for NIH RePORTER ...  
+2015-02-05 11:02:08,091 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.getAllElements(RPORTAccessTool.java:167)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.updateResourceContent(RPORTAccessTool.java:122)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-02-05 11:02:08,091 - 0 rows found. 
+2015-02-05 11:02:08,092 - Number of new elements to dump: 0 
+2015-02-05 11:02:08,092 - 0 elements added to the OBR_RPORT_ET table. 
+2015-02-05 11:02:08,092 - ### Resource NIH RePORTER (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 18 seconds.
+ 
+2015-02-05 11:21:07,876 - ***************************************************** 
+2015-02-05 11:21:07,876 - ResourceAccessTool creation... 
+2015-02-05 11:21:07,913 - No needs to alter table obr_rport_element 
+2015-02-05 11:21:07,943 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-05 11:21:08,263 - **** Resource RPORT processing 
+2015-02-05 11:21:08,263 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-05 11:21:08,281 - Resource entry updated. 
+2015-02-05 11:21:08,282 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-05 11:21:17,936 - * Get All Elements for NIH RePORTER ...  
+2015-02-05 11:24:14,932 - ***************************************************** 
+2015-02-05 11:24:14,932 - ResourceAccessTool creation... 
+2015-02-05 11:24:14,968 - No needs to alter table obr_rport_element 
+2015-02-05 11:24:15,001 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-05 11:24:15,314 - **** Resource RPORT processing 
+2015-02-05 11:24:15,315 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-05 11:24:15,333 - Resource entry updated. 
+2015-02-05 11:24:15,333 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-05 11:24:56,520 - * Get All Elements for NIH RePORTER ...  
+2015-02-05 11:30:34,916 - ***************************************************** 
+2015-02-05 11:30:34,917 - ResourceAccessTool creation... 
+2015-02-05 11:30:34,952 - No needs to alter table obr_rport_element 
+2015-02-05 11:30:34,981 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-05 11:30:35,159 - **** Resource RPORT processing 
+2015-02-05 11:30:35,159 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-05 11:30:35,173 - Resource entry updated. 
+2015-02-05 11:30:35,173 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-05 11:30:35,173 - * Get All Elements for NIH RePORTER ...  
+2015-02-05 11:30:43,581 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.getAllElements(RPORTAccessTool.java:169)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.updateResourceContent(RPORTAccessTool.java:124)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-02-05 11:30:43,582 - 0 rows found. 
+2015-02-05 11:30:43,582 - Number of new elements to dump: 0 
+2015-02-05 11:30:43,582 - 0 elements added to the OBR_RPORT_ET table. 
+2015-02-05 11:30:43,583 - ### Resource NIH RePORTER (via NIF) updated with 0 elements in : 00 hours, 00 minutes, 08 seconds.
+ 
+2015-02-06 08:55:32,272 - ***************************************************** 
+2015-02-06 08:55:32,282 - ResourceAccessTool creation... 
+2015-02-06 08:55:32,533 - No needs to alter table obr_rport_element 
+2015-02-06 08:55:33,015 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 08:55:33,550 - **** Resource RPORT processing 
+2015-02-06 08:55:33,550 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 08:55:33,658 - Resource entry updated. 
+2015-02-06 08:55:33,659 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 08:55:49,744 - * Get All Elements for NIH RePORTER ...  
+2015-02-06 08:57:11,824 - ***************************************************** 
+2015-02-06 08:57:11,824 - ResourceAccessTool creation... 
+2015-02-06 08:57:11,864 - No needs to alter table obr_rport_element 
+2015-02-06 08:57:11,894 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 08:57:12,213 - **** Resource RPORT processing 
+2015-02-06 08:57:12,213 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 08:57:12,231 - Resource entry updated. 
+2015-02-06 08:57:12,232 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 08:57:15,679 - * Get All Elements for NIH RePORTER ...  
+2015-02-06 10:39:22,322 - ***************************************************** 
+2015-02-06 10:39:22,331 - ResourceAccessTool creation... 
+2015-02-06 10:39:22,490 - No needs to alter table obr_rport_element 
+2015-02-06 10:39:22,676 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 10:39:23,236 - **** Resource RPORT processing 
+2015-02-06 10:39:23,236 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 10:39:23,333 - Resource entry updated. 
+2015-02-06 10:39:23,334 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 10:39:27,186 - * Get All Elements for NIH RePORTER ...  
+2015-02-06 10:44:10,304 - ** PROBLEM ** Problem in getting rows. 
+java.lang.NullPointerException
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.getAllElements(RPORTAccessTool.java:167)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.updateResourceContent(RPORTAccessTool.java:122)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-02-06 10:44:10,868 - 0 rows found. 
+2015-02-06 10:44:13,431 - Number of new elements to dump: 0 
+2015-02-06 10:44:32,118 - 0 elements added to the OBR_RPORT_ET table. 
+2015-02-06 12:26:07,176 - ***************************************************** 
+2015-02-06 12:26:07,192 - ResourceAccessTool creation... 
+2015-02-06 12:26:07,257 - No needs to alter table obr_rport_element 
+2015-02-06 12:26:07,313 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 12:26:07,638 - **** Resource RPORT processing 
+2015-02-06 12:26:07,639 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 12:26:07,696 - Resource entry updated. 
+2015-02-06 12:26:07,697 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 12:26:13,563 - * Get All Elements for NIH RePORTER ...  
+2015-02-06 12:26:37,960 - ** PROBLEM ** Problem in getting rows. 
+java.net.MalformedURLException: no protocol: •	http://nif-services.neuinfo.org/servicesv1/v1/federation/data/nif-0000-10319-1?q=*&count=10&offset=0
+	at java.net.URL.<init>(URL.java:567)
+	at java.net.URL.<init>(URL.java:464)
+	at java.net.URL.<init>(URL.java:413)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.getAllElements(RPORTAccessTool.java:169)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.updateResourceContent(RPORTAccessTool.java:128)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-02-06 12:27:11,855 - ***************************************************** 
+2015-02-06 12:27:11,855 - ResourceAccessTool creation... 
+2015-02-06 12:27:11,894 - No needs to alter table obr_rport_element 
+2015-02-06 12:27:11,925 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 12:27:12,245 - **** Resource RPORT processing 
+2015-02-06 12:27:12,245 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 12:27:12,263 - Resource entry updated. 
+2015-02-06 12:27:12,263 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 12:27:19,719 - * Get All Elements for NIH RePORTER ...  
+2015-02-06 12:29:36,554 - ***************************************************** 
+2015-02-06 12:29:36,555 - ResourceAccessTool creation... 
+2015-02-06 12:29:36,593 - No needs to alter table obr_rport_element 
+2015-02-06 12:29:36,624 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-06 12:29:36,942 - **** Resource RPORT processing 
+2015-02-06 12:29:36,943 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-06 12:29:36,960 - Resource entry updated. 
+2015-02-06 12:29:36,960 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-06 12:29:42,961 - * Get All Elements for NIH RePORTER ...  
+2015-02-13 11:51:13,498 - ***************************************************** 
+2015-02-13 11:51:13,505 - ResourceAccessTool creation... 
+2015-02-13 11:51:14,018 - No needs to alter table obr_rport_element 
+2015-02-13 11:51:14,316 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-13 11:51:15,112 - **** Resource RPORT processing 
+2015-02-13 11:51:15,112 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-13 11:51:15,234 - Resource entry updated. 
+2015-02-13 11:51:15,234 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-13 11:51:23,688 - * Get All Elements for NIH RePORTER ...  
+2015-02-13 12:04:40,669 - ***************************************************** 
+2015-02-13 12:04:40,669 - ResourceAccessTool creation... 
+2015-02-13 12:04:40,707 - No needs to alter table obr_rport_element 
+2015-02-13 12:04:40,740 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-02-13 12:04:41,055 - **** Resource RPORT processing 
+2015-02-13 12:04:41,056 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-13 12:04:41,074 - Resource entry updated. 
+2015-02-13 12:04:41,074 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-02-13 12:04:41,074 - * Get All Elements for NIH RePORTER ...  
+2015-03-16 12:49:38,732 - ***************************************************** 
+2015-03-16 12:49:38,766 - ResourceAccessTool creation... 
+2015-03-16 12:49:45,069 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-03-16 12:49:45,267 - **** Resource RPORT processing 
+2015-03-16 12:49:45,267 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-16 12:49:45,893 - Resource entry updated. 
+2015-03-16 12:49:46,196 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-03-16 12:49:46,196 - * Get All Elements for NIH RePORTER ...  
+2015-03-16 12:50:38,816 - ** PROBLEM ** Problem in getting rows. 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 8
+	at java.lang.String.substring(String.java:1935)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.getAllElements(RPORTAccessTool.java:204)
+	at org.ncbo.stanford.obr.resource.nif.nihreporter.RPORTAccessTool.updateResourceContent(RPORTAccessTool.java:124)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-03-16 12:50:38,817 - 485 rows found. 
+2015-03-16 12:50:38,817 - Number of new elements to dump: 485 
+2015-03-16 12:53:06,472 - 485 elements added to the OBR_RPORT_ET table. 
+2015-03-16 12:53:07,056 - ### Resource NIH RePORTER (via NIF) updated with 485 elements in : 00 hours, 03 minutes, 20 seconds.
+ 
+2015-03-16 12:53:07,703 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;485 
+2015-03-16 12:53:07,703 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-16 12:53:08,013 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;485 
+2015-03-16 12:53:08,013 - *** Executing  Direct Annotation process...  
+2015-03-16 12:53:08,307 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;485 
+2015-03-16 12:53:08,307 - 	** Concept recognition with Mgrep: 
+2015-03-16 12:53:08,307 - Exporting the resource content to a file to be annotated with Mgrep... 
+2015-03-16 12:53:19,019 - 		ResourceFile created in: 00 hours, 00 minutes, 10 seconds.
+ 
+2015-03-16 12:53:19,019 - Call to Mgrep... 
+2015-03-16 12:53:19,021 - Local Mgrep execution... 
+2015-03-16 12:53:19,021 - command: files/mgrep/mgrep3.0/mgrep -w -i -f files/dictionaries/branch1.0/localhost/OBS_DICO_ad63_CMP_MGREP.txt < files/mgrep/mgrepInputs/OBR_RESOURCE_RPORT_V23_MGREP.txt > files/mgrep/mgrepOutputs/OBR_RESOURCE_RPORT_V23_MGREP.txt.mgrep 
+2015-03-16 12:53:19,024 - ** PROBLEM ** Cannot create MgrepFile. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.util.mgrep.ConceptRecognitionTools.mgrepLocal(ConceptRecognitionTools.java:64)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.mgrepCall(AnnotationServiceImpl.java:153)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.conceptRecognitionWithMgrep(AnnotationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.resourceAnnotation(AnnotationServiceImpl.java:51)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.executeWorkflow(ResourceIndexWorkflowImpl.java:273)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:219)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 10 more
+2015-03-16 12:53:19,025 - 		Mgrep executed in: 00 hours, 00 minutes, 00 seconds. 
+2015-03-16 12:53:19,025 - Processing of the result file... 
+2015-03-17 11:07:46,736 - ***************************************************** 
+2015-03-17 11:07:46,751 - ResourceAccessTool creation... 
+2015-03-17 11:07:51,963 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-03-17 11:07:52,181 - **** Resource RPORT processing 
+2015-03-17 11:07:52,181 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-03-17 11:07:52,719 - Resource entry updated. 
+2015-03-17 11:07:52,974 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-03-17 11:07:52,974 - * Get All Elements for NIH RePORTER ...  
+2015-03-17 11:08:16,974 - 976 rows found. 
+2015-03-17 11:08:16,974 - Number of new elements to dump: 976 
+2015-03-17 11:12:33,699 - 976 elements added to the OBR_RPORT_ET table. 
+2015-03-17 11:12:34,211 - ### Resource NIH RePORTER (via NIF) updated with 976 elements in : 00 hours, 04 minutes, 41 seconds.
+ 
+2015-03-17 11:12:34,743 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;976 
+2015-03-17 11:12:34,743 - Key obr.statistics.populate was not found in resource bundle 'config' for locale 'en_US' 
+2015-03-17 11:12:35,003 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;976 
+2015-03-17 11:12:35,003 - *** Executing  Direct Annotation process...  
+2015-03-17 11:12:35,263 - Query :::: SELECT count(id) FROM obr_rport_element WHERE dictionary_id IS NULL OR dictionary_id<23;976 
+2015-03-17 11:12:35,264 - 	** Concept recognition with Mgrep: 
+2015-03-17 11:12:35,264 - Exporting the resource content to a file to be annotated with Mgrep... 
+2015-03-17 11:12:49,463 - 		ResourceFile created in: 00 hours, 00 minutes, 14 seconds.
+ 
+2015-03-17 11:12:49,463 - Call to Mgrep... 
+2015-03-17 11:12:49,464 - Local Mgrep execution... 
+2015-03-17 11:12:49,464 - command: files/mgrep/mgrep3.0/mgrep -w -i -f files/dictionaries/branch1.0/localhost/OBS_DICO_ad63_CMP_MGREP.txt < files/mgrep/mgrepInputs/OBR_RESOURCE_RPORT_V23_MGREP.txt > files/mgrep/mgrepOutputs/OBR_RESOURCE_RPORT_V23_MGREP.txt.mgrep 
+2015-03-17 11:12:49,467 - ** PROBLEM ** Cannot create MgrepFile. 
+java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:459)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:466)
+	at org.ncbo.stanford.obr.util.mgrep.ConceptRecognitionTools.mgrepLocal(ConceptRecognitionTools.java:64)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.mgrepCall(AnnotationServiceImpl.java:153)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.conceptRecognitionWithMgrep(AnnotationServiceImpl.java:124)
+	at org.ncbo.stanford.obr.service.annotation.impl.AnnotationServiceImpl.resourceAnnotation(AnnotationServiceImpl.java:51)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.executeWorkflow(ResourceIndexWorkflowImpl.java:273)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:219)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 10 more
+2015-03-17 11:12:49,468 - 		Mgrep executed in: 00 hours, 00 minutes, 00 seconds. 
+2015-03-17 11:12:49,468 - Processing of the result file... 
+2015-04-02 16:06:40,907 - ***************************************************** 
+2015-04-02 16:06:40,907 - ResourceAccessTool creation... 
+2015-04-02 16:06:41,398 - No needs to alter table obr_rport_element 
+2015-04-02 16:06:41,461 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-04-02 16:06:41,921 - **** Resource RPORT processing 
+2015-04-02 16:06:41,921 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-04-02 16:06:42,001 - Resource entry updated. 
+2015-04-02 16:06:42,001 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-04-02 16:06:42,001 - * Get All Elements for NIH RePORTER ...  
+2015-04-03 10:05:25,725 - ***************************************************** 
+2015-04-03 10:05:25,737 - ResourceAccessTool creation... 
+2015-04-03 10:05:25,839 - No needs to alter table obr_rport_element 
+2015-04-03 10:05:25,853 - ResourceAccessTool RPORT created to access NIH RePORTER (via NIF) (RPORT).
+ 
+2015-04-03 10:05:26,317 - **** Resource RPORT processing 
+2015-04-03 10:05:26,317 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-04-03 10:05:26,390 - Resource entry updated. 
+2015-04-03 10:05:26,390 - *** Resource NIH RePORTER (via NIF) update processing 
+2015-04-03 10:05:26,390 - * Get All Elements for NIH RePORTER ...  

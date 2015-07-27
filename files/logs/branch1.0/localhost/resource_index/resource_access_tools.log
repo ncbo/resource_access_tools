@@ -1,0 +1,24 @@
+2015-07-23 14:50:10,772 - Populating obs slave memory tables starts 
+2015-07-23 14:53:27,325 - Populating obs slave memory tables starts 
+2015-07-23 15:18:19,749 - ***********************************************
+ 
+2015-07-23 15:18:19,750 - The Resources index Workflow Started.
+ 
+2015-07-23 15:18:22,274 - Start processing Resource CTD Chem Go Enriched (via NIF)(CTDCGE)....
+ 
+2015-07-23 15:18:22,397 - 
+ 
+2015-07-23 15:32:03,824 - Problem in creating resource tool for resource id : CTDCGE 
+java.lang.NullPointerException
+	at org.ncbo.resource_access_tools.service.annotation.impl.AnnotationServiceImpl.processMgrepFile(AnnotationServiceImpl.java:168)
+	at org.ncbo.resource_access_tools.service.annotation.impl.AnnotationServiceImpl.conceptRecognitionWithMgrep(AnnotationServiceImpl.java:132)
+	at org.ncbo.resource_access_tools.service.annotation.impl.AnnotationServiceImpl.resourceAnnotation(AnnotationServiceImpl.java:51)
+	at org.ncbo.resource_access_tools.service.workflow.impl.ResourceIndexWorkflowImpl.executeWorkflow(ResourceIndexWorkflowImpl.java:272)
+	at org.ncbo.resource_access_tools.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:217)
+	at org.ncbo.resource_access_tools.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:126)
+	at org.ncbo.resource_access_tools.Main.main(Main.java:35)
+2015-07-23 15:32:03,942 - Resources index Workflow completed in : 00 hours, 13 minutes, 44 seconds. 
+2015-07-23 15:32:03,942 - ***********************************************
+ 
+2015-07-23 15:39:48,148 - Populating obs slave memory tables starts 
+2015-07-23 15:42:27,674 - Populating obs slave memory tables starts 

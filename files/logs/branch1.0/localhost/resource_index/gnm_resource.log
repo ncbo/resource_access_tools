@@ -1,0 +1,41 @@
+2015-01-21 13:01:47,425 - ***************************************************** 
+2015-01-21 13:01:47,425 - ResourceAccessTool creation... 
+2015-01-21 13:01:48,142 - No needs to alter table obr_gnm_element 
+2015-01-21 13:01:48,626 - ResourceAccessTool GNM created to access gnm (GNM).
+ 
+2015-01-21 13:01:48,814 - **** Resource GNM processing 
+2015-01-21 13:01:48,814 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-01-21 13:01:48,939 - *** Resource gnm update processing 
+2015-01-21 13:01:53,400 - ** PROBLEM ** Problem in getting rows. 
+java.io.IOException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:137)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:58)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:68)
+	at org.ncbo.stanford.obr.resource.nif.genagemodel.GNMAccessTool.getAllElements(GNMAccessTool.java:143)
+	at org.ncbo.stanford.obr.resource.nif.genagemodel.GNMAccessTool.updateResourceContent(GNMAccessTool.java:124)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-01-21 13:01:53,401 - ### Resource gnm updated with 0 elements in : 00 hours, 00 minutes, 04 seconds.
+ 
+2015-01-21 13:09:03,365 - ***************************************************** 
+2015-01-21 13:09:03,365 - ResourceAccessTool creation... 
+2015-01-21 13:09:03,396 - No needs to alter table obr_gnm_element 
+2015-01-21 13:09:03,427 - ResourceAccessTool GNM created to access gnm (GNM).
+ 
+2015-01-21 13:09:03,755 - **** Resource GNM processing 
+2015-01-21 13:09:03,755 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-01-21 13:09:03,756 - Resource entry updated. 
+2015-01-21 13:09:03,756 - *** Resource gnm update processing 
+2015-01-21 13:16:00,953 - ** PROBLEM ** Problem in getting rows. 
+java.io.IOException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:137)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:58)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:68)
+	at org.ncbo.stanford.obr.resource.nif.genagemodel.GNMAccessTool.getAllElements(GNMAccessTool.java:143)
+	at org.ncbo.stanford.obr.resource.nif.genagemodel.GNMAccessTool.updateResourceContent(GNMAccessTool.java:124)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.resourceProcessing(ResourceIndexWorkflowImpl.java:195)
+	at org.ncbo.stanford.obr.service.workflow.impl.ResourceIndexWorkflowImpl.startResourceIndexWorkflow(ResourceIndexWorkflowImpl.java:127)
+	at org.ncbo.stanford.obr.populate.main.PopulateResourceIndex.main(PopulateResourceIndex.java:46)
+2015-01-21 13:16:09,216 - ### Resource gnm updated with 0 elements in : 00 hours, 07 minutes, 03 seconds.
+ 

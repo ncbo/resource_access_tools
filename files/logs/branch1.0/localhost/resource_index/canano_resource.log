@@ -1,0 +1,44 @@
+2015-02-02 16:05:39,391 - ***************************************************** 
+2015-02-02 16:05:39,391 - ResourceAccessTool creation... 
+2015-02-02 16:05:39,466 - No needs to alter table obr_canano_element 
+2015-02-02 16:05:39,586 - ResourceAccessTool CANANO created to access caNanoLab (CANANO).
+ 
+2015-02-02 16:05:39,599 - **** Resource CANANO processing 
+2015-02-02 16:05:39,600 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-02 16:05:39,681 - *** Resource caNanoLab update processing 
+2015-02-03 14:04:25,538 - ***************************************************** 
+2015-02-03 14:04:25,548 - ResourceAccessTool creation... 
+2015-02-03 14:04:26,776 - No needs to alter table obr_canano_element 
+2015-02-03 14:04:27,080 - ResourceAccessTool CANANO created to access caNanoLab (CANANO).
+ 
+2015-02-03 14:04:27,085 - **** Resource CANANO processing 
+2015-02-03 14:04:27,085 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-03 14:04:27,194 - Resource entry updated. 
+2015-02-03 14:04:27,221 - *** Resource caNanoLab update processing 
+2015-02-03 14:24:21,191 - ***************************************************** 
+2015-02-03 14:24:21,191 - ResourceAccessTool creation... 
+2015-02-03 14:24:21,225 - No needs to alter table obr_canano_element 
+2015-02-03 14:24:21,258 - ResourceAccessTool CANANO created to access caNanoLab (CANANO).
+ 
+2015-02-03 14:24:21,258 - **** Resource CANANO processing 
+2015-02-03 14:24:21,258 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-03 14:24:21,278 - Resource entry updated. 
+2015-02-03 14:24:21,278 - *** Resource caNanoLab update processing 
+2015-02-03 14:24:48,797 - ***************************************************** 
+2015-02-03 14:24:48,797 - ResourceAccessTool creation... 
+2015-02-03 14:24:48,832 - No needs to alter table obr_canano_element 
+2015-02-03 14:24:48,867 - ResourceAccessTool CANANO created to access caNanoLab (CANANO).
+ 
+2015-02-03 14:24:48,867 - **** Resource CANANO processing 
+2015-02-03 14:24:48,868 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-03 14:24:48,889 - Resource entry updated. 
+2015-02-03 14:24:48,890 - *** Resource caNanoLab update processing 
+2015-02-03 14:25:28,030 - ***************************************************** 
+2015-02-03 14:25:28,030 - ResourceAccessTool creation... 
+2015-02-03 14:25:28,063 - No needs to alter table obr_canano_element 
+2015-02-03 14:25:28,096 - ResourceAccessTool CANANO created to access caNanoLab (CANANO).
+ 
+2015-02-03 14:25:28,096 - **** Resource CANANO processing 
+2015-02-03 14:25:28,096 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
+2015-02-03 14:25:28,116 - Resource entry updated. 
+2015-02-03 14:25:28,116 - *** Resource caNanoLab update processing 
