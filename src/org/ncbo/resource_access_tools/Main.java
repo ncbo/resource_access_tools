@@ -31,7 +31,7 @@ public class Main {
 			// Populate resource index data
 			if(processResources){
 				// Loading obs slave table
-				resourceIndexWorkflow.loadObsSlaveTablesIntoMemory();
+				//resourceIndexWorkflow.loadObsSlaveTablesIntoMemory();
 				resourceIndexWorkflow.startResourceIndexWorkflow();
 			}
 		   
