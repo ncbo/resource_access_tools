@@ -4,18 +4,18 @@
  */
 package org.ncbo.resource_access_tools.resource.nif.ctdchemdisease;
 
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
+
 import org.jsoup.Jsoup;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -62,7 +62,7 @@ public class CTDCDAccessTool extends AbstractNifResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
+       // localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
     }
 
     @Override
@@ -93,25 +93,7 @@ public class CTDCDAccessTool extends AbstractNifResourceAccessTool {
         return MAIN_ITEMKEY;
     }
 
-    /**
-     * This method creates map of latest version of ontology with contexts as key.
-     * It uses virtual ontology ids associated with contexts.
-     *
-     * @param structure {@code Structure} for given resource
-     * @return {@code HashMap} of latest local ontology id with context as key.
-     */
-    public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
-        HashMap<String, String> localOntologyIDMap = new HashMap<String, String>();
-        String virtualOntologyID;
-        for (String contextName : structure.getOntoIds().keySet()) {
-            virtualOntologyID = structure.getOntoIds().get(contextName);
-            if (!virtualOntologyID.equals(Structure.FOR_CONCEPT_RECOGNITION)
-                    && !virtualOntologyID.equals(Structure.NOT_FOR_ANNOTATION)) {
-                localOntologyIDMap.put(contextName, ontlogyService.getLatestLocalOntologyID(virtualOntologyID));
-            }
-        }
-        return localOntologyIDMap;
-    }
+
 
     @Override
     public int updateResourceContent() {
@@ -164,9 +146,9 @@ public class CTDCDAccessTool extends AbstractNifResourceAccessTool {
             do {
                 Document dom = queryFederation(nifId, query, offset, rowCount);
                 if (dom != null) {
-                    Node tableData = dom.getFirstChild().getChildNodes().item(1);
+                    Node tableData = dom.getFirstChild().getChildNodes().item(2);
                     //get total records
-                    totalCount = Integer.parseInt(tableData.getAttributes().getNamedItem(resultCount).getNodeValue());
+                    totalCount = 100;//Integer.parseInt(tableData.getAttributes().getNamedItem(resultCount).getNodeValue());
                     offset += rowCount;
 
                     Node results = tableData.getChildNodes().item(1);

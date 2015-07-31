@@ -14,11 +14,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
 
 /**
@@ -56,7 +54,7 @@ public class CTDCAccessTool extends AbstractNifResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
+        //localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
     }
 
     @Override
@@ -94,7 +92,7 @@ public class CTDCAccessTool extends AbstractNifResourceAccessTool {
      * @param structure {@code Structure} for given resource
      * @return {@code HashMap} of latest local ontology id with context as key.
      */
-    public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
+    /*public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
         HashMap<String, String> localOntologyIDMap = new HashMap<String, String>();
         String virtualOntologyID;
         for (String contextName : structure.getOntoIds().keySet()) {
@@ -105,7 +103,7 @@ public class CTDCAccessTool extends AbstractNifResourceAccessTool {
             }
         }
         return localOntologyIDMap;
-    }
+    }*/
 
     @Override
     public int updateResourceContent() {

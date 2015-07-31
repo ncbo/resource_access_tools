@@ -1,53 +1,29 @@
 package org.ncbo.resource_access_tools.resource.ncbi.pubmed;
 
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.AbstractType;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.DateCreatedType;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.EFetchPubmedServiceLocator;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.EFetchRequest;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.EFetchResult;
-import gov.nih.nlm.ncbi.www.soap.eutils.EUtilsServiceSoap;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.KeywordType;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.MeshHeadingType;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.OtherAbstractType;
-import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.PubmedArticleType;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.rmi.RemoteException;
-import java.util.Calendar;
-import java.util.HashSet;
-
-import javax.xml.rpc.ServiceException;
-
-import obs.common.utils.ExecutionTimer;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
-import org.ncbo.resource_access_tools.resource.ncbi.AbstractNcbiResourceAccessTool;
-import org.ncbo.stanford.obr.util.FileResourceParameters;
-import org.ncbo.stanford.obr.util.MessageUtils;
-
-import com.aliasi.medline.MedlineParser;
 import gov.nih.nlm.ncbi.www.soap.eutils.EUtilsServiceLocator;
+import gov.nih.nlm.ncbi.www.soap.eutils.EUtilsServiceSoap;
 import gov.nih.nlm.ncbi.www.soap.eutils.esearch.ESearchRequest;
 import gov.nih.nlm.ncbi.www.soap.eutils.esearch.ESearchResult;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import java.io.*;
-import java.net.URLConnection;
-import javax.xml.parsers.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.rpc.ServiceException;
+
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 /**
  * This class is responsible for getting all the data elements for

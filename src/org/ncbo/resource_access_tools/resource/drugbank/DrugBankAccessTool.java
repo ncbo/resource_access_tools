@@ -8,12 +8,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import obs.common.utils.UnzipUtils;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.common.utils.UnzipUtils;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 /**
@@ -292,12 +291,12 @@ public class DrugBankAccessTool  extends ResourceAccessTool {
 									//reads next line
 									line = bufferReader.readLine().toString().trim();
 								}
-								//checks category length greater than 0
-								if(category.length()>0){
+								//checks category length greater than 0 rajesh
+								/*if(category.length()>0){
 									String value=category.substring(0, category.length()-1);
 									//Mapping target go classification from GO resource access tool.
 									targets_classfication = resourceUpdateService.mapTermsToLocalConceptIDs(value, DBK_ONTOIDS[5], COMMA_STRING);
-								}
+								}*/
 
 							}else if(line.startsWith(CHEBIID_)){
 								//checks ChEBI ID

@@ -12,13 +12,12 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-
 import org.bioontology.biositemaps.api.BioSitemap;
 import org.bioontology.biositemaps.api.Resource;
 import org.bioontology.biositemaps.api.ResourceDescription;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 import edu.stanford.smi.protegex.owl.model.impl.DefaultOWLNamedClass;
@@ -133,7 +132,6 @@ public class BioSitemapsAccessTool extends ResourceAccessTool {
 
 		List<String> biositesmaps= getBiositemaps();
 		// Get latest local onotlogy for given  virtual ontology id
-		String latestLocalOntologyID= resourceUpdateService.getLatestLocalOntologyID(BSM_ONTOIDS[3]);
 
 		// Process each biositemap URL
 		for (Iterator<String> biositemapIterator = biositesmaps.iterator(); biositemapIterator.hasNext();) {
@@ -167,14 +165,7 @@ public class BioSitemapsAccessTool extends ResourceAccessTool {
 					    	 keywords= EMPTY_STRING;
 					    }
 
-					    // Extraction of resource type
-					    if(resourceDescription.hasBROResourceType()){
-					    	resource_type = getResourceType(resourceDescription, latestLocalOntologyID);
-					    }else{
-					    	resource_type = EMPTY_STRING;
-					    }
-
-					   // Extracting localElementID
+					    // Extracting localElementID
 					    rdfID = resourceDescription.getInstanceName();
 					    if(rdfID.contains(HASH_STRING)){
 					    	rdfID=rdfID.split(HASH_STRING)[1];
@@ -294,7 +285,7 @@ public class BioSitemapsAccessTool extends ResourceAccessTool {
 				for (Iterator<Resource> resourceTypeIterator = resourceDescription.getResourceType().iterator(); resourceTypeIterator
 						.hasNext();) {
 					Resource resource = resourceTypeIterator.next();
-
+                    //rajesh
 					if(resource.getBRO_ResourceInstance().getRDFTypes()!= null
 							&& resource.getBRO_ResourceInstance().getRDFTypes().size()>0){
 

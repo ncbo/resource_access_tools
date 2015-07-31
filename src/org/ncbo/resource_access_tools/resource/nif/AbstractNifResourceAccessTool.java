@@ -4,15 +4,20 @@
  */
 package org.ncbo.resource_access_tools.resource.nif;
 
+
+
+
+
+import javax.ws.rs.core.MediaType;
+
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
 import org.w3c.dom.Document;
+
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
-import javax.ws.rs.core.MediaType;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
-import obs.common.utils.ExecutionTimer;
-import obs.obr.populate.Structure;
-import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
 
 /**
  * Abstract class for all NIF resources.

@@ -5,11 +5,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
 import org.apache.log4j.Logger;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 import edu.wustl.obr.QueryExecutor;

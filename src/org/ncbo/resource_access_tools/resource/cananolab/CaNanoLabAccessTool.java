@@ -5,9 +5,8 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.List;
 
-import obs.obr.populate.Structure;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 import edu.wustl.utill.CaNanoLabContextDetail;

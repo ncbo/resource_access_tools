@@ -6,12 +6,11 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-
 import org.apache.log4j.Logger;
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 public class MicadReadWeb implements StringHelper {
 

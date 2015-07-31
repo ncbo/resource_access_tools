@@ -1,6 +1,6 @@
 package org.ncbo.resource_access_tools.service.workflow;
 
-import org.ncbo.resource_access_tools.dao.execution.ExecutionDao.ExecutionEntry;
+import org.ncbo.resource_access_tools.execution.ExecutionEntry;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 /**
@@ -18,13 +18,13 @@ public interface ResourceIndexWorkflow {
 	 * 
 	 * <p>This method compares slave and master ontology tables and populate newly added data in slave tables.
 	 */
-	public void populateObsSlaveTables() throws Exception;
+	//public void populateObsSlaveTables() throws Exception;
 	
 	/**
 	 * This method load obs table and stuff into memory.  
 	 * It creates obs tables with MEMORY storage engine.
 	 */
-	public void loadObsSlaveTablesIntoMemory() throws Exception;
+	//public void loadObsSlaveTablesIntoMemory() throws Exception;
 	
 	/**
 	 * This method includes complete resource index workflow. It process resources and 
@@ -50,7 +50,7 @@ public interface ResourceIndexWorkflow {
 	 * 
 	 * <p>This method ensures to keep only the latest version of ontologies.	  
 	 */
-	public void removeOntologyDuplicates();	
+	//public void removeOntologyDuplicates();	
 	
 	/**
 	 * This step execute replication mechanism between resource index 
@@ -58,6 +58,6 @@ public interface ResourceIndexWorkflow {
 	 * 
 	 * @param replicateObsTables a {@code boolean} decide to copy obs tables or not . 
 	 */
-	public void executeSyncronizationScript(boolean replicateObsTables)throws Exception;
+	//public void executeSyncronizationScript(boolean replicateObsTables)throws Exception;
 	
 }

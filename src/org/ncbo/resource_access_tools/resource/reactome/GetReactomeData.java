@@ -4,11 +4,6 @@ import java.util.HashSet;
 
 import javax.xml.namespace.QName;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
 import org.apache.axis.client.Call;
 import org.apache.axis.client.Service;
 import org.apache.axis.encoding.ser.ArrayDeserializerFactory;
@@ -18,8 +13,12 @@ import org.apache.axis.encoding.ser.BeanSerializerFactory;
 import org.apache.axis.encoding.ser.EnumDeserializerFactory;
 import org.apache.axis.encoding.ser.EnumSerializerFactory;
 import org.apache.log4j.Logger;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 import org.reactome.cabig.domain.CatalystActivity;
 import org.reactome.cabig.domain.Complex;
 import org.reactome.cabig.domain.DatabaseCrossReference;

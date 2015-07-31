@@ -1,25 +1,19 @@
 package org.ncbo.resource_access_tools.resource.uniprotkb;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import obs.obr.populate.Element;
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.apache.log4j.Logger;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
+
 import uk.ac.ebi.kraken.interfaces.uniprot.UniProtEntry;
 import uk.ac.ebi.kraken.interfaces.uniprot.dbx.go.Go;
 import uk.ac.ebi.kraken.interfaces.uniprot.features.FeatureType;

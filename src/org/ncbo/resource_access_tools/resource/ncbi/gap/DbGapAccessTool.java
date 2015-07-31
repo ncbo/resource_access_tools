@@ -11,11 +11,10 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ncbi.AbstractNcbiResourceAccessTool;
 
 /**
@@ -186,7 +185,9 @@ public class DbGapAccessTool extends AbstractNcbiResourceAccessTool {
 								else if(GAP_TAGNAME_STUDY_NAME.equalsIgnoreCase(itemType.getName())){
 									// 1st element of docSumItems contains study name context
 									eltStructure.putContext(Structure.generateContextName(GAP_RESOURCEID, GAP_ITEMKEYS[1]),getItemTypeContent(itemType));
-								}else if(GAP_TAGNAME_STUDY_LIST.equalsIgnoreCase(itemType.getName())){
+								}
+								//rajesh
+								/*else if(GAP_TAGNAME_STUDY_LIST.equalsIgnoreCase(itemType.getName())){
 
 									String diseaseList = getItemTypeContent(itemType, COMMA_STRING);
 									String concepts_MSH = resourceUpdateService.mapTermsToVirtualLocalConceptIDs(diseaseList, GAP_ONTOIDS[2], COMMA_STRING);
@@ -215,7 +216,7 @@ public class DbGapAccessTool extends AbstractNcbiResourceAccessTool {
 									}
 									eltStructure.putContext(Structure.generateContextName(GAP_RESOURCEID, GAP_ITEMKEYS[4]), concepts_13578);
 
-								}
+								}*/
 							}
 
 							if(localElementID != null){

@@ -39,7 +39,7 @@ import com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException;
  * @created 20-Aug-2008
  *
  */
-public abstract class AbstractObrDao implements DaoFactory, StringHelper{
+public abstract class AbstractObrDao implements StringHelper{
 	
 	protected static Logger logger = Logger.getLogger(AbstractObrDao.class);
 	

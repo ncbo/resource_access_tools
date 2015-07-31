@@ -10,10 +10,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
 
 /**
  * AccessTool for the resource CaArray.
@@ -45,7 +46,6 @@ public class CaArrayAccessTool extends ResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        localOntologyIDMap = createLocalOntologyIDMap(CARY_STRUCTURE);
     }
 
     @Override
@@ -128,23 +128,4 @@ public class CaArrayAccessTool extends ResourceAccessTool {
         return elementList;
     }
 
-    /**
-     * This method creates map of latest version of ontology with contexts as key.
-     * It uses virtual ontology ids associated with contexts.
-     *
-     * @param structure {@code Structure} for given resource
-     * @return {@code HashMap} of latest local ontology id with context as key.
-     */
-    public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
-        HashMap<String, String> localOntologyIDMap = new HashMap<String, String>();
-        String virtualOntologyID;
-        for (String contextName : structure.getOntoIds().keySet()) {
-            virtualOntologyID = structure.getOntoIds().get(contextName);
-            if (!virtualOntologyID.equals(Structure.FOR_CONCEPT_RECOGNITION)
-                    && !virtualOntologyID.equals(Structure.NOT_FOR_ANNOTATION)) {
-                localOntologyIDMap.put(contextName, ontlogyService.getLatestLocalOntologyID(virtualOntologyID));
-            }
-        }
-        return localOntologyIDMap;
-    }
 }

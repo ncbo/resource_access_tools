@@ -13,9 +13,6 @@ import java.util.Hashtable;
 import java.util.Iterator;
 
 import org.ncbo.resource_access_tools.dao.AbstractObrDao;
-import org.ncbo.resource_access_tools.dao.annotation.DirectAnnotationDao;
-import org.ncbo.resource_access_tools.dao.annotation.DirectAnnotationDao.DirectAnnotationEntry;
-import org.ncbo.resource_access_tools.enumeration.WorkflowStatusEnum;
 import org.ncbo.resource_access_tools.populate.Element;
 import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.util.MessageUtils;
@@ -116,7 +113,7 @@ public class ElementDao extends AbstractObrDao {
 	private void alterElementTable() {		
 		String query = "ALTER TABLE " + this.getTableSQLName() +" ADD (" + this.contextsForCreateQuery() + ");";
 		try{
-			this.executeSQLUpdate(query);
+			this.executeSQLUpdate(query);//full form of element table rajesh
 		}
 		catch(MySQLSyntaxErrorException e){
 			//e.printStackTrace();
@@ -390,9 +387,9 @@ public class ElementDao extends AbstractObrDao {
 		
 		//loads the contextName-contextID in a temporary structure to avoid querying the DB when executing the resultset streaming
 		Hashtable<String, Integer> contexts = new Hashtable<String, Integer>();
-		for(String contextName: structure.getContextNames()){
+		/*for(String contextName: structure.getContextNames()){
 			contexts.put(contextName, contextTableDao.getContextIDByContextName(contextName));
-		}
+		}*/
 		
 		try{
 			FileWriter foutstream = new FileWriter(mgrepResourceFile);
@@ -482,72 +479,7 @@ public class ElementDao extends AbstractObrDao {
 		return nbUpdated;
 	}
 	
-	/**
-	 * Add the reported annotations that pre-exist in the resource.
-	 * Reported annotations come from context with staticOntologyID in _CXT that is not null or -1. 
-	 * 
-	 * @param directAnnotationDao 
-	 * @param useTemporaryElementTable 
-	 * 
-	 */
-	public long addExistingAnnotations(int dictionaryID, Structure structure, String contextName, String localOntologyID, boolean isNewVirsion, DirectAnnotationDao directAnnotationDao){		
-		
-		HashSet<DirectAnnotationEntry> reportedAnnotations = new HashSet<DirectAnnotationEntry>();
-		long nbReportedAnnotations =0 ;
-		try{				
-			StringBuffer queryb = new StringBuffer();
-			queryb.append("SELECT local_element_id, ");
-			queryb.append(contextName+" FROM ");
-			queryb.append(this.getTableSQLName());			 
-			queryb.append(" WHERE dictionary_id IS NULL ");
-			
-			if(isNewVirsion){
-				queryb.append("OR dictionary_id<");
-				queryb.append(dictionaryID);
-			} 
-			
-			queryb.append(";");		
-			ResultSet rSet = this.executeSQLQuery(queryb.toString());
-			while(rSet.next()){
-				String localElementID = rSet.getString(1);		
-				String annotationSet  = rSet.getString(2);
-				String[] splittedLocalConceptIDs = annotationSet.split(GT_SEPARATOR_STRING);
-				for (int i =0;i<splittedLocalConceptIDs.length;i++){			
-					try{
-						//if the this is a valid localConceptID (to exclude case with "" or " " in the reported annotation column
-						if(splittedLocalConceptIDs[i].matches(".*/.*")){
-						reportedAnnotations.add(
-								new DirectAnnotationEntry(localElementID, 
-										splittedLocalConceptIDs[i].replace(structure.getOntoID(contextName), localOntologyID),
-										contextName, 
-										dictionaryID,  // dictionaryID for existing annotations
-										WorkflowStatusEnum.DIRECT_ANNOTATION_DONE.getStatus()));// for now the semantic distance expansion is not done
-						}
-					}
-					catch (Exception e) {
-						logger.error("** PROBLEM ** Problem with existing annotations of element: "+ localElementID +" on table " + this.getTableSQLName() +".", e);
-					}
-				}
-				
-				if(reportedAnnotations.size()>1000){
-					nbReportedAnnotations+= directAnnotationDao.addEntries(reportedAnnotations);
-					reportedAnnotations.clear();
-				}
-				
-			}
-			rSet.close();
-			if(reportedAnnotations.size()>0){
-				nbReportedAnnotations+= directAnnotationDao.addEntries(reportedAnnotations);
-				reportedAnnotations.clear();
-			}
-				 
-		}
-		catch(SQLException e){
-			logger.error("** PROBLEM ** Cannot report annotation from the table "+this.getTableSQLName()+". Empty set returned.", e);
-		}
-		
-		return nbReportedAnnotations;
-	}
+	
 	
 	/**
 	 * This method get local element id for last element.

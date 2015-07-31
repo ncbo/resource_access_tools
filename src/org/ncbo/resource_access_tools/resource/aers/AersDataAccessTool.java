@@ -17,15 +17,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Properties;
 
-import obs.common.utils.UnzipUtils;
-import obs.common.utils.Utilities;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
+import org.ncbo.resource_access_tools.common.utils.UnzipUtils;
+import org.ncbo.resource_access_tools.common.utils.Utilities;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
-import org.ncbo.stanford.obr.util.FileResourceParameters;
+import org.ncbo.resource_access_tools.util.FileResourceParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 /**

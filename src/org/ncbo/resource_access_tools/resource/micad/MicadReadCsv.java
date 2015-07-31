@@ -7,12 +7,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.StringTokenizer;
 
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 
 public class MicadReadCsv {

@@ -1,9 +1,6 @@
 package org.ncbo.resource_access_tools.populate;
 
-import org.ncbo.resource_access_tools.common.beans.AnnotationBean;
-import org.ncbo.resource_access_tools.common.beans.ReportedContextBean;
 import org.ncbo.resource_access_tools.oba.ObaWeight;
-import org.ncbo.resource_access_tools.oba.ObaWeight.NonValidParameterException;
 
 /**
 * This class is used as a set of parameters to score annotations for OBR.
@@ -43,32 +40,6 @@ public class ObrWeight extends ObaWeight {
 		 return reportedDA;
 	 }
 	 
-	 /**
-	  * Returns the weight of the given annotation according to the ObrWeight parameters.
-	  */
-	 @Override
-	 public int weight(AnnotationBean annotation){
-		 String contextType = annotation.getContext().getContextName();
-		 if(contextType.equals(ReportedContextBean.REPORTED_CTX)){
-			 return this.reportedDA;
-		 }
-		 else{
-			 return super.weight(annotation);
-		 }
-	 }
-
-	 /**
-	  * Returns the weight of the given annotation according to the ObrWeight parameters
-	  * and a given context weight.
-	  */
-	 public float weight(AnnotationBean annotation, float contextWeight){
-		 String contextType = annotation.getContext().getContextName();
-		 if(contextType.equals(ReportedContextBean.REPORTED_CTX)){
-			 return this.reportedDA*contextWeight;
-		 }
-		 else{
-			 return super.weight(annotation)*contextWeight;
-		 }
-	 }
+	
 
 }

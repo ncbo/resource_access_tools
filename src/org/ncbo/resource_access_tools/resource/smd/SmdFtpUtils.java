@@ -13,7 +13,7 @@ import java.util.List;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.log4j.Logger;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 /**
  * SmdFtpUtils is utility class for SMD FTP site

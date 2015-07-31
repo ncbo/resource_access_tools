@@ -4,18 +4,18 @@
  */
 package org.ncbo.resource_access_tools.resource.nif.autdb;
 
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
-import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
+
 import org.jsoup.Jsoup;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.resource.nif.AbstractNifResourceAccessTool;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -59,7 +59,6 @@ public class AutDBAccessTool extends AbstractNifResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        localOntologyIDMap = createLocalOntologyIDMap(AUTDB_STRUCTURE);
     }
 
     @Override
@@ -88,26 +87,6 @@ public class AutDBAccessTool extends AbstractNifResourceAccessTool {
     @Override
     public String mainContextDescriptor() {
         return AUTDB_MAIN_ITEMKEY;
-    }
-
-    /**
-     * This method creates map of latest version of ontology with contexts as key.
-     * It uses virtual ontology ids associated with contexts.
-     *
-     * @param structure {@code Structure} for given resource
-     * @return {@code HashMap} of latest local ontology id with context as key.
-     */
-    public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
-        HashMap<String, String> localOntologyIDMap = new HashMap<String, String>();
-        String virtualOntologyID;
-        for (String contextName : structure.getOntoIds().keySet()) {
-            virtualOntologyID = structure.getOntoIds().get(contextName);
-            if (!virtualOntologyID.equals(Structure.FOR_CONCEPT_RECOGNITION)
-                    && !virtualOntologyID.equals(Structure.NOT_FOR_ANNOTATION)) {
-                localOntologyIDMap.put(contextName, ontlogyService.getLatestLocalOntologyID(virtualOntologyID));
-            }
-        }
-        return localOntologyIDMap;
     }
 
     @Override

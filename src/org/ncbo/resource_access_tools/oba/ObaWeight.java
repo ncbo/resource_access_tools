@@ -1,9 +1,5 @@
 package org.ncbo.resource_access_tools.oba;
 
-import org.ncbo.resource_access_tools.common.beans.AnnotationBean;
-import org.ncbo.resource_access_tools.common.beans.IsaContextBean;
-import org.ncbo.resource_access_tools.common.beans.MappingContextBean;
-import org.ncbo.resource_access_tools.common.beans.MgrepContextBean;
 
 /**
  * This class is used as a set of parameters to score annotations for OBA.
@@ -99,30 +95,6 @@ import org.ncbo.resource_access_tools.common.beans.MgrepContextBean;
 		}
 	}
 	
-	/**
-	 * Returns the weight of the given annotation according to the ObaWeight parameters.
-	 */ 
-	public int weight(AnnotationBean annotation){
-		String contextType = annotation.getContext().getContextName();
-		if(contextType.equals(MgrepContextBean.MGREP_CTX)){
-			MgrepContextBean context = (MgrepContextBean)annotation.getContext();
-			if(annotation.getConcept().getPreferredName().equals(context.getTermName())){
-				return this.preferredNameDA;
-			}
-			else{
-				return this.synonymDA;
-			}
-		}
-		if(contextType.equals(IsaContextBean.ISA_CTX)){
-			IsaContextBean context = (IsaContextBean)annotation.getContext();
-			return getIsaEAByLevel(context.getLevel());
-		}
-		if(contextType.equals(MappingContextBean.MAPPING_CTX)){
-			return this.mappingEA;
-		}
-		return -1;
-	}
-
 	private static int function1(int level){
 		if(level<2){
 			return 8;

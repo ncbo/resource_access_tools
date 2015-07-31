@@ -11,11 +11,10 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ncbi.AbstractNcbiResourceAccessTool;
 
 /**
@@ -190,7 +189,8 @@ public class GeoAccessTool extends AbstractNcbiResourceAccessTool {
 						else if(GEO_ITEMKEYS[2].equals(docSumItem.getName())){
 							//  docSumItems contains summary context
 							eltStructure.putContext(Structure.generateContextName(GEO_RESOURCEID, GEO_ITEMKEYS[2]), getItemTypeContent(docSumItem));
-						}else if(GEO_TAXON_STRING.equals(docSumItem.getName())){
+						}//rajesh
+						/*else if(GEO_TAXON_STRING.equals(docSumItem.getName())){
 							//  element of docSumItems contains organism context
 							String organism = getItemTypeContent(docSumItem) ;
 							String concepts = resourceUpdateService.mapTermsToVirtualLocalConceptIDs(organism, GEO_ONTOIDS[3], SEMICOLON_STRING);
@@ -201,7 +201,7 @@ public class GeoAccessTool extends AbstractNcbiResourceAccessTool {
 							}
 							eltStructure.putContext(Structure.generateContextName(GEO_RESOURCEID, GEO_ITEMKEYS[3]), concepts);
 
-						}else if(GEO_ENTRY_TYPE_STRING.equals(docSumItem.getName())){
+						}*/else if(GEO_ENTRY_TYPE_STRING.equals(docSumItem.getName())){
 							entryType = getItemTypeContent(docSumItem);
 
 							// if the entryType is GDS then append 'GDS' before element id

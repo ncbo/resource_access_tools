@@ -24,14 +24,14 @@ import java.util.Iterator;
 import javax.xml.rpc.ServiceException;
 
 import obs.common.utils.ExecutionTimer;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
 
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ncbi.AbstractNcbiResourceAccessTool;
-import org.ncbo.stanford.obr.util.FileResourceParameters;
-import org.ncbo.stanford.obr.util.MessageUtils;
+import org.ncbo.resource_access_tools.util.FileResourceParameters;
+import org.ncbo.resource_access_tools.util.MessageUtils;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 

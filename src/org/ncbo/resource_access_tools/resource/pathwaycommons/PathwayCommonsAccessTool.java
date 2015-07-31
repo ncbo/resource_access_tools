@@ -10,17 +10,15 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import obs.common.utils.UnzipUtils;
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
 import org.biopax.paxtools.io.jena.JenaIOHandler;
 import org.biopax.paxtools.model.BioPAXLevel;
 import org.biopax.paxtools.model.Model;
 import org.biopax.paxtools.model.level2.pathway;
-import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.common.utils.UnzipUtils;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 
 /**

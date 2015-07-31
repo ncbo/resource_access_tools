@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-
-import org.ncbo.stanford.obr.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.enumeration.ResourceType;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.resource.AbstractXmlResourceAccessTool;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -166,11 +165,12 @@ public class ArrayExpressAccessTool extends AbstractXmlResourceAccessTool {
 							description+= BLANK_SPACE + node.getChildNodes().item(j).getTextContent();
 						}
 					}
-				}else if(AE_ITEMKEYS[2].equals(nodeName)){// Extracting species
+					//rajesh
+				}/*else if(AE_ITEMKEYS[2].equals(nodeName)){// Extracting species
 					species=  resourceUpdateService.mapTermsToVirtualLocalConceptIDs(node.getTextContent(), AE_ONTOIDS[2], null);
 				}else if(AE_EXPERIMENT_TYPE.equals(nodeName)){ // Extracting experiment type
 					experimentType=  resourceUpdateService.mapTermsToVirtualLocalConceptIDs(node.getTextContent(), AE_ONTOIDS[3], null);
-				}
+				}*/
 			}
 
 			this.eltInfo.put(ELT_ACCNUM, accession);

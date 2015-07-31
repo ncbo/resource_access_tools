@@ -1,17 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
+s * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package org.ncbo.resource_access_tools.resource.caarray;
 
-import java.util.HashSet;
-import java.util.Map;
-import org.apache.log4j.Logger;
-import obs.obr.populate.Element;
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
 import gov.nih.nci.caarray.external.v1_0.experiment.Experiment;
 import gov.nih.nci.caarray.external.v1_0.query.BiomaterialSearchCriteria;
 import gov.nih.nci.caarray.external.v1_0.query.KeywordSearchCriteria;
@@ -21,8 +13,18 @@ import gov.nih.nci.caarray.services.external.v1_0.CaArrayServer;
 import gov.nih.nci.caarray.services.external.v1_0.search.JavaSearchApiUtils;
 import gov.nih.nci.caarray.services.external.v1_0.search.SearchApiUtils;
 import gov.nih.nci.caarray.services.external.v1_0.search.SearchService;
+
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 /**
  * This class enables to get all CaArray resource experiments data by using service API.

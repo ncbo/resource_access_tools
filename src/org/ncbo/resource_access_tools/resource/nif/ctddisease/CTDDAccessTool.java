@@ -66,7 +66,6 @@ public class CTDDAccessTool extends AbstractNifResourceAccessTool {
 		} catch (MalformedURLException e) {
 			logger.error(EMPTY_STRING, e);
 		}
-		localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
 	}
 
 	@Override
@@ -95,28 +94,6 @@ public class CTDDAccessTool extends AbstractNifResourceAccessTool {
 	@Override
 	public String mainContextDescriptor() {
 		return MAIN_ITEMKEY;
-	}
-
-	/**
-	 * This method creates map of latest version of ontology with contexts as
-	 * key. It uses virtual ontology ids associated with contexts.
-	 * 
-	 * @param structure
-	 *            {@code Structure} for given resource
-	 * @return {@code HashMap} of latest local ontology id with context as key.
-	 */
-	public HashMap<String, String> createLocalOntologyIDMap(Structure structure) {
-		HashMap<String, String> localOntologyIDMap = new HashMap<String, String>();
-		String virtualOntologyID;
-		for (String contextName : structure.getOntoIds().keySet()) {
-			virtualOntologyID = structure.getOntoIds().get(contextName);
-			if (!virtualOntologyID.equals(Structure.FOR_CONCEPT_RECOGNITION)
-					&& !virtualOntologyID.equals(Structure.NOT_FOR_ANNOTATION)) {
-				localOntologyIDMap.put(contextName, ontlogyService
-						.getLatestLocalOntologyID(virtualOntologyID));
-			}
-		}
-		return localOntologyIDMap;
 	}
 
 	@Override
