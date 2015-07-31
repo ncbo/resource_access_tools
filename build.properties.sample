@@ -77,13 +77,6 @@ obs.master.ontology.status.complete=28
 obs.slave.populate=false
 obs.slave.dictionary.latest=false
 
-# Remove ontology from slave obs tables and all resources tables
-obs.slave.ontology.remove=false
-# If want to remove specific ontology
-obs.slave.ontology.remove.from.list=false
-obs.slave.ontology.remove.list=list_of_local_ontology_ids
-
-
 # Resource Index Workflow flags
 
 obr.resources.process=true
@@ -97,25 +90,8 @@ obr.reinitialize.only.annotation=false
 # Used to update element table for resources.
 obr.update.resource=true
 
-# If set then use complete dictionary for annoation otherwise only latest dictionary used. 
-obr.dictionary.complete=false
-
-# Flag related to semantic expansions
-obr.expansion.relational=true
-obr.expansion.mapping=true
-obr.expansion.distance=true
-
 # Disable/Enabled indexes for workflow
 obr.table.index.disabled=false
-
-# Flag for master-slave replication mechanism
-obr.database.sync=false
-
-# Full path of syncronization script
-obr.database.sync.script.path=/path/to/script/script_name.sh
-
-# Flag for replicating obs tables
-obr.database.sync.obs.tables=false
 
 # Resources to be included in workflow i.e resource ids separated by comma.
 #obr.resource.ids=GEO,AE,CT,GM,OMIM,CDD,PGDI,PGDR,PGGE,REAC,RXRD,UPKB,WP,BSM,DBK,SMD,CANANO,PC,PCM,GAP,MICAD,PM,AERS,GRANTS,CGL

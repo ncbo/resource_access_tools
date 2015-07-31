@@ -12,8 +12,6 @@
 		<property name="classes.dir" value="${build.dir}/classes" />
 		<property name="lib.dir" value="${web.dir}/WEB-INF/lib" />
 		<property name="tmpl.dir" value="tmpl" />	 
-		<property name="protege.lib.dir" value="${shared.lib.dir}/protege_jars"/>
-		<property name="cananolab.lib.dir" value="${shared.lib.dir}/cananolab_jars"/>
 		<property name="config.dir" value="${basedir}/conf"/>	
 	<fileset id="shared.jars" dir="${shared.lib.dir}">
 			<include name="*.jar"/>
@@ -22,32 +20,9 @@
 			<exclude name="oro-2.0.8.jar"/>		 
 			<exclude name="OntologyAccess*.jar"/>
 		</fileset>	
-		<fileset id="protege.jars" dir="${protege.lib.dir}">
-			<include name="*.jar"/>
-			<exclude name="commons-lang-2.0.jar"/>
-			<exclude name="edtftpj-1.5.2.jar"/>
-			<exclude name="ekitspell.jar"/>
-			<exclude name="icu4j-3.4.4.jar"/>
-			<exclude name="jena-2.3.jar"/>
-			<exclude name="lucene-core-2.0.0.jar"/>		 
-		</fileset>
 		
-		<fileset id="cananolab.jars" dir="${cananolab.lib.dir}">
-			<include name="*.jar"/>		 	 
-		</fileset>
 	<path id="master-classpath">
 			<fileset refid="shared.jars" /> 	
-			<fileset refid="protege.jars" /> 		
-			<fileset refid="cananolab.jars" /> 	
-	    
-			<fileset dir="${ontologyaccess.dir}/dist">
-				<include name="**/*.jar"/>
-			</fileset> 
-			
-			<fileset dir="${obs.common.dir}/dist">
-				<include name="**/*.jar"/>
-			</fileset> 
-
 			<pathelement path="${classes.dir}" /> 
 		</path>
 	<target name="usage">
@@ -58,7 +33,6 @@
 			<echo message="Available targets are:"/>
 			<echo message=""/>
 			<echo message="build               --> build project."/>
-			<echo message="build_dependencies  --> builds OntologyAccess project."/>
 			<echo message="clean               --> delete old resources."/>
 			<echo message="dist                --> Create exceution environment for project."/>		
 			<echo message="all                 --> Execute dist and build." />
@@ -136,20 +110,8 @@
 					<filter token="obrexpansionrelational" value="${obr.expansion.relational}" />
 					<filter token="obrexpansionmapping" value="${obr.expansion.mapping}" />
 					<filter token="obrexpansiondistance" value="${obr.expansion.distance}" />
-					<filter token="obrlogfilename" value="${obr.app.logfile.name}" />
-					 
-					<!--Remove ontology from slave obs tables and all resources tables-->
-					<filter token="obsslaveontologyremove" value="${obs.slave.ontology.remove}" />
-					<filter token="obsslaveontologyremovefromlist" value="${obs.slave.ontology.remove.from.list}" />
-					<filter token="obsslaveontologyremovelist" value="${obs.slave.ontology.remove.list}" />
-				 
-					<!--Enable/disable replication machanism -->
-					<filter token="obrtableindexdisabled" value="${obr.table.index.disabled}" />
-	 
-					<!--Enable/disable replication machanism -->
-					<filter token="obrdatabasesync" value="${obr.database.sync}" />
-					<filter token="obrdatabasesyncscriptpath" value="${obr.database.sync.script.path}" />
-					<filter token="obrdatabasesyncobstables" value="${obr.database.sync.obs.tables}" />
+					<filter token="obrlogfilename" value="${obr.app.logfile.name}" />					 
+					
 				</filterset>
 			</copy>	 
 		</target>
@@ -187,9 +149,7 @@
 				<!-- Copy all jar files required to lib directory -->
 				<mkdir dir="${dist.dir}/lib"/>
 				<copy todir="${dist.dir}/lib">					
-					<fileset refid="cananolab.jars" /> 	
 					<fileset refid="shared.jars" /> 	
-					<fileset refid="protege.jars" />						 
 				</copy>
 				
 				<!-- Copy properties folder containg all properties files to dist directory -->
