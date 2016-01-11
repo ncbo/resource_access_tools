@@ -4,7 +4,7 @@ package org.ncbo.resource_access_tools.common.utils;
  * Simply used for to measure execution time.
  */
 
-class ExecutionTimer {
+public class ExecutionTimer {
     private long start;
     private long end;
 
@@ -20,16 +20,16 @@ class ExecutionTimer {
         end = System.currentTimeMillis();
     }
 
-    private long duration() {
+    public long duration() {
         return (end - start);
     }
 
-    private void reset() {
+    public void reset() {
         start = 0;
         end = 0;
     }
 
-    private String millisecondsToTimeString(long duration) {
+    public String millisecondsToTimeString(long duration) {
         long time = duration / 1000;
         String seconds = Integer.toString((int) (time % 60));
         String minutes = Integer.toString((int) ((time % 3600) / 60));

@@ -17,7 +17,7 @@ import java.util.HashSet;
 public abstract class AbstractNcbiResourceAccessTool extends ResourceAccessTool {
 
     private final EUtilsServiceLocator toolService;
-    private final EUtilsServiceSoap toolEutils;
+    private EUtilsServiceSoap toolEutils = null;
 
     protected static final String EUTILS_EMAIL = "jonquet@stanford.edu";
     protected static final String EUTILS_TOOL = "ontrez";

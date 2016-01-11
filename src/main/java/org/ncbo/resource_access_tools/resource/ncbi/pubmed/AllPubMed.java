@@ -31,7 +31,7 @@ import java.util.logging.SimpleFormatter;
 class AllPubMed {
 
     private final EUtilsServiceLocator toolService;
-    private final EUtilsServiceSoap toolEutils;
+    private EUtilsServiceSoap toolEutils = null;
     private static final String EUTILS_EMAIL = "jonquet@stanford.edu";
     private static final String EUTILS_TOOL = "ontrez";
     private static final int EUTILS_MAX = 500;

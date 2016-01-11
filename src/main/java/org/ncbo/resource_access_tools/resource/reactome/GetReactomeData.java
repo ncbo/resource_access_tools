@@ -15,6 +15,7 @@ import org.reactome.servlet.InstanceNotFoundException;
 import org.reactome.servlet.ReactomeRemoteException;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.ServiceException;
 import java.util.HashSet;
 
 /**
@@ -241,7 +242,7 @@ class GetReactomeData implements StringHelper {
      * @return
      * @throws Exception
      */
-    private Call createCall(String callName) {
+    private Call createCall(String callName) throws ServiceException {
         if (caBIOService == null) {
             caBIOService = new Service(SERVICE_URL_NAME + "?wsdl",
                     new QName(SERVICE_URL_NAME,

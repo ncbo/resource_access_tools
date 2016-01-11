@@ -46,7 +46,7 @@ public class Structure {
      * Weights are instantiated with the default value.
      * OntoIds are instantiated with the FOR_CONCEPT_RECOGNITION value.
      */
-    private Structure(String[] itemKeys, String resourceId) {
+    public Structure(String[] itemKeys, String resourceId) {
         this.resourceId = resourceId;
         this.contexts = new HashMap<String, String>(itemKeys.length);
         this.weights = new HashMap<String, Double>(itemKeys.length);

@@ -7,6 +7,7 @@ import org.ncbo.resource_access_tools.dao.context.ContextDao;
 import org.ncbo.resource_access_tools.enumeration.ResourceType;
 import org.ncbo.resource_access_tools.populate.Resource;
 import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.service.OntologyService;
 import org.ncbo.resource_access_tools.service.resource.ResourceUpdateService;
 import org.ncbo.resource_access_tools.service.resource.impl.ResourceUpdateServiceImpl;
 import org.ncbo.resource_access_tools.util.LoggerUtils;
@@ -35,6 +36,7 @@ public abstract class ResourceAccessTool implements StringHelper {
     private final String toolName;
 
     protected ResourceUpdateService resourceUpdateService;
+    protected OntologyService ontlogyService;
 
     /**
      * Constructs a new ResourceAccessTool associated to a new Resource constructed with the given information

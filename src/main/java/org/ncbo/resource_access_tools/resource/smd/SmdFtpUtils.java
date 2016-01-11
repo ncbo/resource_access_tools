@@ -192,7 +192,11 @@ class SmdFtpUtils implements StringHelper {
         String description = null;
 
         // Retrieve meta data file in output stream
-        ftpClient.retrieveFile(expSetMetaFile, outputStream);
+        try {
+            ftpClient.retrieveFile(expSetMetaFile, outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         // Create reader for output stream of meta data file.
         BufferedReader resultReader = new BufferedReader(new InputStreamReader(
                 new ByteArrayInputStream(outputStream.toByteArray())));

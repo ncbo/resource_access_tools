@@ -3,12 +3,14 @@ package org.ncbo.resource_access_tools.resource.ncbi.pubmed;
 import com.aliasi.medline.*;
 import com.aliasi.util.Files;
 import gov.nih.nlm.ncbi.www.soap.eutils.efetch_pubmed.*;
+import org.ncbo.resource_access_tools.common.utils.ExecutionTimer;
 import org.ncbo.resource_access_tools.enumeration.ResourceType;
 import org.ncbo.resource_access_tools.populate.Element;
 import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 import org.ncbo.resource_access_tools.populate.Structure;
 import org.ncbo.resource_access_tools.resource.ncbi.AbstractNcbiResourceAccessTool;
 import org.ncbo.resource_access_tools.util.FileResourceParameters;
+import org.ncbo.resource_access_tools.util.MessageUtils;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -22,6 +24,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.HashSet;
 
 /**
  * PubMedAccessTool is responsible for getting data elements for
@@ -412,19 +415,13 @@ public class PubMedAccessTool extends AbstractNcbiResourceAccessTool {
         MedlineDbLoader dbLoader;
 
         for (int i = fromNumber; i <= upToNumber; i++) {
-            try {
-                xmlFile = new File(PM_FOLDER + PM_FILE_PREFIX_2010 + this.numberString(i) + ".xml");
-                logger.info("Updating " + this.getToolResource().getResourceId() + " elements with XML file: " + xmlFile.getName());
-                dbLoader = new MedlineDbLoader(this);
-                //parse using lingpipe SAX XML parser
-                loadXML(dbLoader, xmlFile);
-                logger.info("Number of elements in this file " + dbLoader.getNbCitation());
-                nbElement += dbLoader.getNbCitation();
-            } catch (IOException e) {
-                logger.error("** PROBLEM ** Cannot find XML file to parse.", e);
-            } catch (SAXException e) {
-                logger.error("** PROBLEM ** Cannot parse the XML.", e);
-            }
+            xmlFile = new File(PM_FOLDER + PM_FILE_PREFIX_2010 + this.numberString(i) + ".xml");
+            logger.info("Updating " + this.getToolResource().getResourceId() + " elements with XML file: " + xmlFile.getName());
+            dbLoader = new MedlineDbLoader(this);
+            //parse using lingpipe SAX XML parser
+            loadXML(dbLoader, xmlFile);
+            logger.info("Number of elements in this file " + dbLoader.getNbCitation());
+            nbElement += dbLoader.getNbCitation();
         }
         return nbElement;
     }
@@ -460,10 +457,15 @@ public class PubMedAccessTool extends AbstractNcbiResourceAccessTool {
      * @throws SAXException
      */
     private static void loadXML(MedlineDbLoader dbLoader, File file) {
-        String url = Files.fileToURLName(file);
-        InputSource inSource = new InputSource(url);
-        medlineParser.setHandler(dbLoader);
-        medlineParser.parse(inSource);
+        String url = null;
+        try {
+            url = Files.fileToURLName(file);
+            InputSource inSource = new InputSource(url);
+            medlineParser.setHandler(dbLoader);
+            medlineParser.parse(inSource);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

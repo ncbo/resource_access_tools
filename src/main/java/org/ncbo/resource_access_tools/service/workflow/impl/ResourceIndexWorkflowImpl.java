@@ -5,7 +5,7 @@ import org.ncbo.resource_access_tools.dao.DaoFactory;
 import org.ncbo.resource_access_tools.dao.execution.ExecutionDao.ExecutionEntry;
 import org.ncbo.resource_access_tools.resource.ResourceAccessTool;
 import org.ncbo.resource_access_tools.service.workflow.ResourceIndexWorkflow;
-import org.ncbo.resource_access_tools.util.ExecutionTimer;
+import org.ncbo.resource_access_tools.common.utils.ExecutionTimer;
 import org.ncbo.resource_access_tools.util.MessageUtils;
 import org.ncbo.resource_access_tools.util.StringUtilities;
 
