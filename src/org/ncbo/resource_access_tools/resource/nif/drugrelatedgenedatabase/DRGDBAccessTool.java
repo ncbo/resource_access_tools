@@ -151,7 +151,7 @@ public class DRGDBAccessTool extends AbstractNifResourceAccessTool {
             //parsing data
             do {
                 //Document dom = queryFederation(Database, Indexable, query, offset, rowCount);
-            	Document dom = queryFederation(nifId, query, offset, rowCount);
+            	Document dom = queryFederation(nifId, query, offset);
 
             	if (dom != null) {
                     Node tableData = dom.getFirstChild().getChildNodes().item(2);

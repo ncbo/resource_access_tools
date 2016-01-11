@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 
 /**

@@ -11,18 +11,18 @@ import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException;
 
 /**
- * This class is a representation for the the OBR DB OBR_PGDI_CTX table. The table contains 
+ * This class is a representation for the the OBR DB OBR_PGDI_CTX table. The table contains
  * the following columns:
- * 
+ *
  * <ul>
  * <li> id 			        SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
  * <li> name  	            VARCHAR(100) NOT NULL UNIQUE,
  * <li> weight  	            FLOAT NOT NULL ,
  * <li> static_ontology_id            VARCHAR(XX) NOT NULL. 		//This attribute is used when the context is an existing annotation. Then it is the static ontology ID to which this annot refers to.
  * </ul>
- *  
+ *
  * @author Adrien Coulet
- * @version OBR_v0.2		
+ * @version OBR_v0.2
  * @created 12-Nov-2008
  *
  */
@@ -32,9 +32,9 @@ public class ContexDao extends AbstractObrDao {
 
 	private static PreparedStatement addEntryStatement;
 	private static PreparedStatement getContextIDByContextNameStatement;
-	
+
 	private ContexDao() {
-		super(EMPTY_STRING, TABLE_SUFFIX);		 
+		super(EMPTY_STRING, TABLE_SUFFIX);
 	}
 
 	@Override
@@ -66,20 +66,20 @@ public class ContexDao extends AbstractObrDao {
 	}
 
 	/**
-	 * Returns a ContexDao object by creating one if a singleton not already exists.
+	 * Returns a ContextDao object by creating one if a singleton not already exists.
 	 */
 	public static ContexDao getInstance(){
 		return ContexDaoHolder.CONTEXT_DAO_INSTANCE;
-	} 
+	}
 
-	/****************************************** FUNCTIONS ON THE TABLE ***************************/ 
-	
+	/****************************************** FUNCTIONS ON THE TABLE ***************************/
+
 	@Override
 	protected void openAddEntryStatement(){
 		StringBuffer queryb = new StringBuffer();
 		queryb.append("INSERT INTO ");
 		queryb.append(this.getTableSQLName());
-		queryb.append(" (name, weight, static_ontology_id) VALUES (?,?,?)");	
+		queryb.append(" (name, weight, static_ontology_id) VALUES (?,?,?)");
 		addEntryStatement = this.prepareSQLStatement(queryb.toString());
 	}
 
@@ -103,13 +103,13 @@ public class ContexDao extends AbstractObrDao {
 		catch (MySQLIntegrityConstraintViolationException e){
 			//logger.error("Table " + this.getTableSQLName() + " already contains an entry for the concept: " + entry.getLocalConceptID() +".");
 		}
-		catch (SQLException e) {			 
+		catch (SQLException e) {
 			logger.error("** PROBLEM ** Cannot add an entry on table " + this.getTableSQLName(), e);
 			logger.error(entry.toString());
 		}
-		return inserted;	
+		return inserted;
 	}
-	
+
 	private void openGetContextIDByContextNameStatement(){
 		StringBuffer queryb = new StringBuffer();
 		queryb.append("SELECT id FROM ");
@@ -138,15 +138,15 @@ public class ContexDao extends AbstractObrDao {
 			logger.error("** PROBLEM ** Cannot get contextID from "+this.getTableSQLName()+" for "+contextName+". -1 returned.", e);
 		}
 		return contextID;
-	}	
+	}
 
 	/********************************* ENTRY CLASS *****************************************************/
 
 	/**
 	 * This class is a representation for a OBR_CTX table entry.
-	 * 
+	 *
 	 * @author Adrien Coulet
-	 * @version OBR_v0.2		
+	 * @version OBR_v0.2
 	 * @created 12-Nov-2008
 	 */
 	public static class ContextEntry {
@@ -154,26 +154,26 @@ public class ContexDao extends AbstractObrDao {
 		private String contextName;
 		private Double contextWeight;
 		private String contextOnto;
-		
+
 		public ContextEntry(String contextName, double contextWeight, String contextOnto) {
 			super();
 			this.contextName   = contextName;
 			this.contextWeight = contextWeight;
 			this.contextOnto   = contextOnto;
 		}
-		
+
 		public String getContextName() {
 			return contextName;
 		}
-		
+
 		public Double getContextWeight() {
 			return contextWeight;
 		}
-		
+
 		public String getContextOnto() {
 			return contextOnto;
 		}
-		
+
 		public String toString(){
 			StringBuffer sb = new StringBuffer();
 			sb.append("ContextEntry: [");
@@ -189,11 +189,11 @@ public class ContexDao extends AbstractObrDao {
 
 	/**
 	 * This method loads obr_context table into memory.
-	 * @param resourceID 
-	 * 
+	 * @param resourceID
+	 *
 	 */
-	public void loadTableIntoMemory(String resourceID) {		 
-		callStoredProcedure("load_context_table_into_memory", resourceID);
+	public void loadTableIntoMemory(String resourceID) {
+		callStoredProcedure(resourceID);
 		logger.info("\t" +this.getTableSQLName()+ " loaded in to memory.");
 	}
 }

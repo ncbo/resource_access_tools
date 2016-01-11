@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 
-import org.ncbo.resource_access_tools.common.beans.DictionaryBean;
 import org.ncbo.resource_access_tools.dao.AbstractObrDao;
 import org.ncbo.resource_access_tools.dao.term.TermDao;
 import org.ncbo.resource_access_tools.util.FileResourceParameters;
@@ -21,31 +20,31 @@ import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException;
 
 /**
-* This class is a representation for the the OBS DB OBS_DVT table. The table contains 
+* This class is a representation for the the OBS DB OBS_DVT table. The table contains
 * the following columns:
 * <ul>
  * <li> dictionaryID 	SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
  * <li> dictionaryName 	CHAR(13) NOT NULL UNIQUE),
  * <li> dictionaryDate 	DATETIME NOT NULL.
 * </ul>
-*  
+*
 * @author Clement Jonquet
-* @version OBS_v1		
+* @version OBS_v1
 * @created 25-Sept-2008
 *
 */
 public class DictionaryDao extends AbstractObrDao {
 
 	protected static final String TABLE_SUFFIX = MessageUtils.getMessage("obr.dictionary.table.suffix");
-	
+
 	private static PreparedStatement addEntryStatement;
 	private static PreparedStatement getLastDictionaryBeanStatement;
 	private static PreparedStatement deleteEntryStatement;
-	
+
 	private DictionaryDao() {
 		super(EMPTY_STRING, TABLE_SUFFIX );
 	}
-	
+
 	@Override
 	protected String creationQuery(){
 		return "CREATE TABLE " + this.getTableSQLName() +" (" +
@@ -54,15 +53,15 @@ public class DictionaryDao extends AbstractObrDao {
 					"date_created DATETIME" +
 				") ENGINE=MyISAM DEFAULT CHARSET=latin1;";
 	}
-	
+
 	@Override
 	protected void openPreparedStatements(){
 		super.openPreparedStatements();
 		this.openAddEntryStatement();
 		this.openDeleteEntryStatement();
-		this.openGetLastDictionaryBeanStatement();		 
+		this.openGetLastDictionaryBeanStatement();
 	}
-	
+
 	@Override
 	protected void closePreparedStatements() throws SQLException {
 		super.closePreparedStatements();
@@ -70,7 +69,7 @@ public class DictionaryDao extends AbstractObrDao {
 		getLastDictionaryBeanStatement.close();
 		deleteEntryStatement.close();
 	}
-	
+
 	private static class DictionaryDaoHolder {
 		private final static DictionaryDao DICTIOANRY_DAO_INSTANCE = new DictionaryDao();
 	}
@@ -81,9 +80,9 @@ public class DictionaryDao extends AbstractObrDao {
 	public static DictionaryDao getInstance(){
 		return DictionaryDaoHolder.DICTIOANRY_DAO_INSTANCE;
 	}
-	
-	/****************************************** FUNCTIONS ON THE TABLE ***************************/ 
-	
+
+	/****************************************** FUNCTIONS ON THE TABLE ***************************/
+
 	@Override
 	protected void openAddEntryStatement(){
 		StringBuffer queryb = new StringBuffer();
@@ -92,8 +91,8 @@ public class DictionaryDao extends AbstractObrDao {
 		queryb.append(" (name, date_created) VALUES (?,NOW());");
 		addEntryStatement = this.prepareSQLStatement(queryb.toString());
 	}
-	
- 
+
+
 	protected void openDeleteEntryStatement(){
 		StringBuffer queryb = new StringBuffer();
 		queryb.append("DELETE DT FROM ");
@@ -101,7 +100,7 @@ public class DictionaryDao extends AbstractObrDao {
 		queryb.append(" DT WHERE DT.id= ? ;");
 		deleteEntryStatement = this.prepareSQLStatement(queryb.toString());
 	}
-	
+
 	/**
 	 * Add an new entry in corresponding SQL table.
 	 * @return True if the entry was added to the SQL table, false if a problem occurred during insertion.
@@ -124,9 +123,9 @@ public class DictionaryDao extends AbstractObrDao {
 			logger.error("** PROBLEM ** Cannot add an entry on table " + this.getTableSQLName(), e);
 			logger.error(dictionaryName);
 		}
-		return inserted;	
+		return inserted;
 	}
-	
+
 	/**
 	 * Add an new entry in corresponding SQL table.
 	 * @return True if the entry was added to the SQL table, false if a problem occurred during insertion.
@@ -141,13 +140,13 @@ public class DictionaryDao extends AbstractObrDao {
 		catch (MySQLNonTransientConnectionException e) {
 			this.openDeleteEntryStatement();
 			return this.deleteEntry(dictionaryID);
-		} 
-		catch (SQLException e) {
-			logger.error("** PROBLEM ** Cannot delete an entry on table " + this.getTableSQLName(), e);			 
 		}
-		return deleted;	
+		catch (SQLException e) {
+			logger.error("** PROBLEM ** Cannot delete an entry on table " + this.getTableSQLName(), e);
+		}
+		return deleted;
 	}
-	
+
 	private void openGetLastDictionaryBeanStatement(){
 		StringBuffer queryb = new StringBuffer();
 		queryb.append("SELECT id, name, date_created  FROM ");
@@ -157,7 +156,7 @@ public class DictionaryDao extends AbstractObrDao {
 		queryb.append(");");
 		getLastDictionaryBeanStatement = this.prepareSQLStatement(queryb.toString());
 	}
-	
+
 	public DictionaryBean getLastDictionaryBean(){
 		DictionaryBean dictionary;
 		try {
@@ -181,25 +180,25 @@ public class DictionaryDao extends AbstractObrDao {
 			dictionary = null;
 		}
 		return dictionary;
-	} 
+	}
 
-	
+
 	/*
 	 * Moving methods from ObsOntologiesAccessTool
-	 * 
+	 *
 	 */
-	
+
 	public static String dictionaryFileName(DictionaryBean dictionary){
 		logger.info("Mgrep file created ::"+FileResourceParameters.dictionaryFolder()+dictionary.getDictionaryName()+"_MGREP.txt");
 		return FileResourceParameters.dictionaryFolder() + dictionary.getDictionaryName() + "_MGREP.txt";
 	}
-	
+
 	public static String completeDictionaryFileName(DictionaryBean dictionary){
 		return FileResourceParameters.dictionaryFolder() + dictionary.getDictionaryName() + "_CMP_MGREP.txt";
 	}
-	
+
 	/**
-	 * Adds to the query to create the dictionary a restriction on the terms selected 
+	 * Adds to the query to create the dictionary a restriction on the terms selected
 	 * according to a given blacklist.
 	 */
 	private String blackListFilter(){
@@ -229,26 +228,26 @@ public class DictionaryDao extends AbstractObrDao {
 		sb.append(")");
 		return sb.toString();
 	}
-	
+
 	/**
 	 * Write the given file with the [id name] couples present in the corresponding SQL table
 	 * for a given dictionaryID. Used to generate a dictionary file for Mgrep.
 	 * @return The number of lines written in the given file.
 	 */
 	public long writeDictionaryFile(File file, int dictionaryID){
-		StringBuffer queryb = new StringBuffer();		 
+		StringBuffer queryb = new StringBuffer();
 		queryb.append("SELECT TT.id, TT.name FROM ");
 		queryb.append(termDao.getTableSQLName());
 		queryb.append(" TT, ");
 		queryb.append(conceptDao.getMemoryTableSQLName());
 		queryb.append(" CT, ");
 		queryb.append(ontologyDao.getMemoryTableSQLName());
-		queryb.append(" OT WHERE TT.concept_id=CT.id AND CT.ontology_id=OT.id AND TT.");		 
+		queryb.append(" OT WHERE TT.concept_id=CT.id AND CT.ontology_id=OT.id AND TT.");
 		queryb.append(this.blackListFilter());
 		queryb.append(" AND OT.dictionary_id = ");
 		queryb.append(dictionaryID);
-		queryb.append("; "); 
-		
+		queryb.append("; ");
+
 		long nbLines = 0;
 		try{
 			ResultSet couplesSet = this.executeSQLQuery(queryb.toString());
@@ -261,21 +260,21 @@ public class DictionaryDao extends AbstractObrDao {
 		}
 		return nbLines;
 	}
-	
+
 	/**
 	 * Write the given file with all the [id name] couples present in the corresponding SQL table.
 	 * Used to generate a complete dictionary file for Mgrep.
 	 * @return The number of lines written in the given file.
 	 */
 	public long writeDictionaryFile(File file){
-		
-		StringBuffer queryb = new StringBuffer();		 
+
+		StringBuffer queryb = new StringBuffer();
 		queryb.append("SELECT id, name FROM ");
 		queryb.append(TermDao.name());
-		queryb.append(" TT WHERE TT.");		 
+		queryb.append(" TT WHERE TT.");
 		queryb.append(this.blackListFilter());
-		queryb.append("; "); 
-		
+		queryb.append("; ");
+
 		long nbLines = 0;
 		try{
 			ResultSet couplesSet = this.executeSQLQuery(queryb.toString());
@@ -287,8 +286,8 @@ public class DictionaryDao extends AbstractObrDao {
 			logger.error("** PROBLEM ** Cannot write complete dictionary file " + file.getName(), e);
 		}
 		return nbLines;
-	} 
-	
+	}
+
 	private long writeFile(File file, ResultSet couplesSet) throws IOException, SQLException {
 		long nbLines = 0;
 		FileWriter fstream = new FileWriter(file);
@@ -311,5 +310,5 @@ public class DictionaryDao extends AbstractObrDao {
 		fstream.close();
 		return nbLines;
 	}
-		
+
 }

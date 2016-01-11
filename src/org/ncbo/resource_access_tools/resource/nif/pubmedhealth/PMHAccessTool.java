@@ -144,7 +144,7 @@ public class PMHAccessTool extends AbstractNifResourceAccessTool {
 
             //parsing data
             do {
-                Document dom = queryFederation(nifId, query, offset, rowCount);
+                Document dom = queryFederation(nifId, query, offset);
                 if (dom != null) {
                     Node tableData = dom.getFirstChild().getChildNodes().item(1);
                     //get total records

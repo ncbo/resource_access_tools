@@ -7,18 +7,18 @@ import java.util.Hashtable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import obs.obr.populate.Element;
-import obs.obr.populate.Resource;
-import obs.obr.populate.Structure;
-import obs.obr.populate.Element.BadElementStructureException;
+import org.ncbo.resource_access_tools.populate.Element;
+import org.ncbo.resource_access_tools.populate.Resource;
+import org.ncbo.resource_access_tools.populate.Structure;
+import org.ncbo.resource_access_tools.populate.Element.BadElementStructureException;
 
 import org.apache.log4j.Logger;
 import org.ncbo.resource_access_tools.resource.pharmgkb.drug.GetPgkbDrugData;
 import org.ncbo.resource_access_tools.resource.pharmgkb.gene.GetPgkbGeneData;
 import org.ncbo.resource_access_tools.resource.pharmgkb.drug.GetPgkbDrugData;
 import org.ncbo.resource_access_tools.resource.pharmgkb.gene.GetPgkbGeneData;
-import org.ncbo.stanford.obr.util.ProcessExecutor;
-import org.ncbo.stanford.obr.util.helper.StringHelper;
+import org.ncbo.resource_access_tools..ncbo.stanford.obr.util.ProcessExecutor;
+import org.ncbo.resource_access_tools.util.helper.StringHelper;
 
 
 /**

@@ -16,11 +16,11 @@ import org.ncbo.resource_access_tools.util.StringUtilities;
 
 /**
  * A service  {@code ResourceIndexWorkflowImpl} is main service for workflow execution
- * it includes methods for populating slave obs tables and processing different resource tools with 
+ * it includes methods for populating slave obs tables and processing different resource tools with
  * population of elements and indexing them using slave obs tables.
- * 
+ *
  * <p>Also, it includes functionality for removing duplicate ontologies.
- *  
+ *
  * @author Kuladip Yadav
  */
 public class ResourceIndexWorkflowImpl implements ResourceIndexWorkflow {
@@ -37,25 +37,25 @@ public class ResourceIndexWorkflowImpl implements ResourceIndexWorkflow {
 //			logger.error("Problem in creating SQL log file.", e);
 //		}
 	}
-	
+
 	/**
-	 * This method includes complete resource index workflow. It process resources and 
+	 * This method includes complete resource index workflow. It process resources and
 	 * update elements for them and annotated them using obs tables.
-	 * 
+	 *
 	 * <P>This methods process all the resources included in properties file.
-	 * 
+	 *
 	 */
 	//start
-	public void startResourceIndexWorkflow() { 
+	public void startResourceIndexWorkflow() {
 		ExecutionTimer workflowTimer = new ExecutionTimer();
 		workflowTimer.start();
-		// gets all resource ids for processing, 
+		// gets all resource ids for processing,
 		String[] resourceIDs = StringUtilities.splitSecure(MessageUtils
-				.getMessage("obr.resource.ids"), ",");		
-		//Initialize the Execution timer 		
-		ExecutionTimer timer = new ExecutionTimer();	
+				.getMessage("obr.resource.ids"));
+		//Initialize the Execution timer
+		ExecutionTimer timer = new ExecutionTimer();
 		logger.info("***********************************************\n");
-		logger.info("The Resources index Workflow Started.\n");	
+		logger.info("The Resources index Workflow Started.\n");
 		for (String resourceID : resourceIDs) {
 			ResourceAccessTool resourceAccessTool = null;
 			ExecutionEntry executionEntry= new ExecutionEntry();
@@ -65,7 +65,7 @@ public class ResourceIndexWorkflowImpl implements ResourceIndexWorkflow {
 				// Create resource tool object using reflection.
 				resourceAccessTool = (ResourceAccessTool) Class.forName(
 						MessageUtils.getMessage("resource."
-								+ resourceID.toLowerCase())).newInstance();				 
+								+ resourceID.toLowerCase())).newInstance();
 				logger.info("Start processing Resource " + resourceAccessTool.getToolResource().getResourceName() + "("+ resourceAccessTool.getToolResource().getResourceId() + ")....\n");
 				timer.start();
 				resourceProcessing(resourceAccessTool, executionEntry);
@@ -85,15 +85,15 @@ public class ResourceIndexWorkflowImpl implements ResourceIndexWorkflow {
 
 	/**
 	 * This method process individual resource and update elements for it.
-	 * Also it annotate that elements using obs tables and index them. 
-	 * 
-	 * @param resourceAccessTool a {@code ResourceAccessTool} to be processed. 
-	 * @param executionEntry 
+	 * Also it annotate that elements using obs tables and index them.
+	 *
+	 * @param resourceAccessTool a {@code ResourceAccessTool} to be processed.
+	 * @param executionEntry
 	 */
 	public void resourceProcessing(ResourceAccessTool resourceAccessTool, ExecutionEntry executionEntry) {
 		ExecutionTimer timer = new ExecutionTimer();
 		ExecutionTimer timer1 = new ExecutionTimer();
-		
+
 		boolean reInitializeAllTables =Boolean.parseBoolean(MessageUtils.getMessage("obr.reinitialize.all")) ;
 		boolean reInitializeAllTablesExceptElement = Boolean.parseBoolean(MessageUtils
 				.getMessage("obr.reinitialize.only.annotation")) ;
@@ -101,49 +101,49 @@ public class ResourceIndexWorkflowImpl implements ResourceIndexWorkflow {
 		// value for withCompleteDictionary parameter.
 		boolean withCompleteDictionary = Boolean.parseBoolean(MessageUtils
 				.getMessage("obr.dictionary.complete"));
-		
+
 		// Creating logger for resourceAcessTool
 		Logger toolLogger = ResourceAccessTool.getLogger();
 		timer1.start();
 		toolLogger.info("**** Resource "
 				+ resourceAccessTool.getToolResource().getResourceId() + " processing");
-		toolLogger.info("Workflow Parameters[withCompleteDictionary= " 	+ withCompleteDictionary 
-									+ ", updateResource= " + updateResource 
+		toolLogger.info("Workflow Parameters[withCompleteDictionary= " 	+ withCompleteDictionary
+									+ ", updateResource= " + updateResource
 									+ ", reInitializeAllTables= " + reInitializeAllTables
 									+ ", reInitializeAllTablesExceptElement= " + reInitializeAllTablesExceptElement
 									+ " ]");
 		// Re-initialized tables
 		if (reInitializeAllTables) {
 			resourceAccessTool.reInitializeAllTables();
-		} 
+		}
 
 		logger.info("\n");
 		if(resourceAccessTool.numberOfElement()==0){
 			executionEntry.setFirstExecution(true);
 		}
-		// Update resource for new elements 
+		// Update resource for new elements
 		if (updateResource) {
 			timer.start();
 			toolLogger.info("*** Resource "
 					+ resourceAccessTool.getToolResource().getResourceName() + " update processing");
 			int nbElement = resourceAccessTool.updateResourceContent();
 			//resourceAccessTool.updateResourceUpdateInfo();
-			
+
 			timer.end();
 			toolLogger.info("### Resource "
 					+ resourceAccessTool.getToolResource().getResourceName()
-					+ " updated with " + nbElement + " elements in : " + timer.millisecondsToTimeString(timer.duration()) +"\n");				 
+					+ " updated with " + nbElement + " elements in : " + timer.millisecondsToTimeString(timer.duration()) +"\n");
 		}
 		timer1.end();
 		toolLogger.info("#### Resource " + resourceAccessTool.getToolResource().getResourceName()
 				+ " processed in: "
-				+ timer1.millisecondsToTimeString(timer1.duration()));		
+				+ timer1.millisecondsToTimeString(timer1.duration()));
 	}
 	//end
-	
-	
- 
-	
-	
- 
+
+
+
+
+
+
 }

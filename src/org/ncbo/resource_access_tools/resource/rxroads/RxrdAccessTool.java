@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 
 import org.ncbo.resource_access_tools.dao.AbstractObrDao;
-import org.ncbo.resource_access_tools.dao.context.ContexDao;
+import org.ncbo.resource_access_tools.dao.context.ContextDao;
 import org.ncbo.resource_access_tools.enumeration.ResourceType;
 import org.ncbo.resource_access_tools.populate.Element;
 import org.ncbo.resource_access_tools.populate.Structure;
@@ -193,7 +193,7 @@ public class RxrdAccessTool extends ResourceAccessTool {
 						int nbContext = 0;
 						Structure grantStruc = myGrant.getElementStructure();
 						for (String contextName: grantStruc.getContextNames()){
-							if(AbstractObrDao.contextTableDao.addEntry(new ContexDao.ContextEntry(contextName,
+							if(AbstractObrDao.contextTableDao.addEntry(new ContextDao.ContextEntry(contextName,
 									this.getToolResource().getResourceStructure().getWeight(contextName),
 									this.getToolResource().getResourceStructure().getOntoID(contextName)))){ // the itemkey that are already annotations are then associated to the staticOntologyID of this ontology
 								nbContext++;
