@@ -1,9 +1,0 @@
-2015-04-03 11:19:31,130 - ***************************************************** 
-2015-04-03 11:19:31,130 - ResourceAccessTool creation... 
-2015-04-03 11:19:31,491 - No needs to alter table obr_ae_element 
-2015-04-03 11:19:31,564 - ResourceAccessTool AE created to access ArrayExpress (AE).
- 
-2015-04-03 11:19:31,577 - **** Resource AE processing 
-2015-04-03 11:19:31,577 - Workflow Parameters[withCompleteDictionary= true, updateResource= true, reInitializeAllTables= false, reInitializeAllTablesExceptElement= false ] 
-2015-04-03 11:19:31,633 - Resource entry updated. 
-2015-04-03 11:19:31,634 - *** Resource ArrayExpress update processing 
