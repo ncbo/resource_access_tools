@@ -7,6 +7,10 @@
     <name>Resource Access Tools</name>
     <url>http://github.com/ncbo/resource_access_tools</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <!-- Non-Maven in-project dependencies -->
         <dependency>
@@ -447,6 +451,17 @@
             <artifactId>commons-net</artifactId>
             <version>2.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>3.0</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
