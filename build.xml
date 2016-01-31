@@ -7,15 +7,8 @@
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="tmpl.dir" value="tmpl"/>
     <property name="config.dir" value="${basedir}/conf"/>
-    <fileset id="lib.dir" dir="lib">
-        <include name="*.jar"/>
-    </fileset>
-    <fileset id="shared.jars" dir="${basedir}/non_maven_lib">
-        <include name="*.jar"/>
-    </fileset>
 
     <path id="master-classpath">
-        <fileset refid="shared.jars"/>
         <pathelement path="${classes.dir}"/>
     </path>
 
@@ -90,10 +83,6 @@
                 <filter token="obsmasterjdbcusername" value="${obs.master.jdbc.username}"/>
                 <filter token="obsmasterjdbcpassword" value="${obs.master.jdbc.password}"/>
                 <filter token="obsmasterontologystatuscomplete" value="${obs.master.ontology.status.complete}"/>
-
-                <!-- For populate slave obs tables from master database.			r-->
-                <filter token="obsslavepopulate" value="${obs.slave.populate}"/>
-                <filter token="obsslavedictionarylatest" value="${obs.slave.dictionary.latest}"/>
 
                 <!-- Resource Index workflow parameter -->
                 <filter token="obrresourcesprocess" value="${obr.resources.process}"/>
