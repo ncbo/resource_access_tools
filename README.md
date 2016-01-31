@@ -6,7 +6,7 @@ The code was stripped out and we attempted to remove anything that didn't direct
 
 ## Config
 
-There is a configuration file located in `src/main/filters` that allows you to designate the Resource to process and databse username and password information. You shouldn't need to tweak this much, mainly just these two settings unless you hit problems.
+There is a configuration file located in `src/main/filters` that allows you to designate the Resource to process and database username and password information. You shouldn't need to tweak this much, mainly just these two settings unless you hit problems.
 
 ## Local Maven External Libraries
 
@@ -23,6 +23,6 @@ You can use Maven to compile and package a runnable jar file. There is a jar pro
 
 ## Run
 
-Running the proejct requires access to a MySQL database (configured as above) and the source files for the RATs you are going to process. Check the source files for each RAT for more information.
+Running the project requires access to a MySQL database (configured as above) and the source files for the RATs you are going to process. Check the source files for each RAT for more information.
 
 - java -jar target/resource-access-tools-1.0-SNAPSHOT-jar-with-dependencies.jar
