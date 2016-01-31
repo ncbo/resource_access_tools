@@ -1,186 +1,168 @@
-<?xml version="1.0"?> 
-<!-- ====================================================================== 
-     Build script for Resource Index Workflow  
-                   
-     kyadav                                                                
-     ====================================================================== -->
+<?xml version="1.0"?>
 <project name="resource_access_tools" basedir="." default="dist">
-	<property file="build.properties" />
+    <property file="build.properties"/>
 
-	<property name="build.dir" value="build" />
-		<property name="dist.dir" value="dist" /> 
-		<property name="classes.dir" value="${build.dir}/classes" />
-		<property name="lib.dir" value="${web.dir}/WEB-INF/lib" />
-		<property name="tmpl.dir" value="tmpl" />	 
-		<property name="config.dir" value="${basedir}/conf"/>	
-	<fileset id="shared.jars" dir="${shared.lib.dir}">
-			<include name="*.jar"/>
-			<exclude name="com.noelios.restlet.ext.httpclient_*.jar"/>
-			<exclude name="commons-httpclient-3.1.jar"/>			
-			<exclude name="oro-2.0.8.jar"/>		 
-			<exclude name="OntologyAccess*.jar"/>
-		</fileset>	
-		
-	<path id="master-classpath">
-			<fileset refid="shared.jars" /> 	
-			<pathelement path="${classes.dir}" /> 
-		</path>
-	<target name="usage">
-			<echo message="" />
-			<echo message="${app.name} build file" />
-			<echo message="-----------------------------------" />
-			<echo message="" />		 
-			<echo message="Available targets are:"/>
-			<echo message=""/>
-			<echo message="build               --> build project."/>
-			<echo message="clean               --> delete old resources."/>
-			<echo message="dist                --> Create exceution environment for project."/>		
-			<echo message="all                 --> Execute dist and build." />
-	 		<echo message="" />
-		</target>
-	
-	<target name="clean" depends="usage">		 
-			<delete dir="${build.dir}" />
-			<delete dir="${dist.dir}" />			 	
-		</target> 
-	
-	<target name="prepare" description="Create configuration files using templates" depends="clean">
-			<mkdir dir="${build.dir}" />
-			
-			<copy file="${tmpl.dir}/log4j.dtd" tofile="${config.dir}/log4j.dtd" overwrite="true" />
-			
-			<copy file="${tmpl.dir}/log4j.xml.tmpl" tofile="${config.dir}/log4j.xml" overwrite="true">
-				<filterset>
-					<filter token="logfilepath" value="${obr.app.logfilepath}${obr.app.logfile.name}" />
-					<filter token="maxlogfilesize" value="${obr.app.maxlogfilesize}" />
-					<filter token="maxlogbackupindex" value="${obr.app.maxlogbackupindex}" />
-					<filter token="obrlevel" value="${obr.app.log.obslevel}" />
-					<filter token="deflevel" value="${obr.app.log.deflevel}" />
-				</filterset>
-			</copy>
-			
-			<copy file="${tmpl.dir}/config.properties.tmpl" tofile="${config.dir}/config.properties" overwrite="true">
-				<filterset>	
-					<!-- For resource_index database 						-->
-					<filter token="obrjdbcdriver" value="${obr.jdbc.driver}" />
-					<filter token="obrjdbcurl" value="${obr.jdbc.url}" />
-					<filter token="obrjdbcusername" value="${obr.jdbc.username}" />
-					<filter token="obrjdbcpassword" value="${obr.jdbc.password}" />
-					<filter token="obrschemahostname" value="${obr.schema.host.name}" />
-					<filter token="obrschemaname" value="${obr.schema.name}" />
-					<filter token="obsschemaname" value="${obs.schema.name}" />
-					
-					<filter token="obrsvncodepath" value="${obr.svn.code.path}" />		
-					<filter token="obrversion" value="${obr.version}" />	
-					
-					<filter token="obrresourceids" value="${obr.resource.ids}" />
-					
-					<!-- For rxrd resource access tool database 						-->
-					<filter token="obrrxrdjdbcurl" value="${obr.rxrd.jdbc.url}" />
-					<filter token="obrrxrdjdbcusername" value="${obr.rxrd.jdbc.username}" />
-					<filter token="obrrxrdjdbcpassword" value="${obr.rxrd.jdbc.password}" />
-					
-					<!-- For grants resource access tool database 						-->
-					<filter token="obrgrantsjdbcurl" value="${obr.grants.jdbc.url}" />
-					<filter token="obrgrantsjdbcusername" value="${obr.grants.jdbc.username}" />
-					<filter token="obrgrantsjdbcpassword" value="${obr.grants.jdbc.password}" />
-		  
-					<!-- For PubMed resource access tool  						-->
-					<filter token="obrpmprocessxml" value="${obr.pm.process.xml}" />
-					<filter token="obrpmxmlfrom" value="${obr.pm.xml.from}" />
-					<filter token="obrpmxmlto" value="${obr.pm.xml.to}" />
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="tmpl.dir" value="tmpl"/>
+    <property name="config.dir" value="${basedir}/conf"/>
+    <fileset id="lib.dir" dir="lib">
+        <include name="*.jar"/>
+    </fileset>
+    <fileset id="shared.jars" dir="${basedir}/non_maven_lib">
+        <include name="*.jar"/>
+    </fileset>
 
-					<!-- For obs master database						-->
-					<filter token="obsmasterschemaname" value="${obs.master.schema.name}" />
-					<filter token="obsmasterschemahost" value="${obs.master.schema.host.name}" />
-					<filter token="obsmasterjdbcusername" value="${obs.master.jdbc.username}" />
-					<filter token="obsmasterjdbcpassword" value="${obs.master.jdbc.password}" />
-					<filter token="obsmasterontologystatuscomplete" value="${obs.master.ontology.status.complete}" />
-					 
-					<!-- For populate slave obs tables from master database.			r-->
-					<filter token="obsslavepopulate" value="${obs.slave.populate}" />
-					<filter token="obsslavedictionarylatest" value="${obs.slave.dictionary.latest}" />
-					 
-					<!-- Resource Index workflow parameter -->
-					<filter token="obrresourcesprocess" value="${obr.resources.process}" />
-					<filter token="obrreinitializeall" value="${obr.reinitialize.all}" />
-					<filter token="obrreinitializeonlyannotation" value="${obr.reinitialize.only.annotation}" />
-					<filter token="obrupdateresource" value="${obr.update.resource}" />
-					<filter token="obrdictionarycomplete" value="${obr.dictionary.complete}" />
-					<filter token="obrexpansionrelational" value="${obr.expansion.relational}" />
-					<filter token="obrexpansionmapping" value="${obr.expansion.mapping}" />
-					<filter token="obrexpansiondistance" value="${obr.expansion.distance}" />
-					<filter token="obrlogfilename" value="${obr.app.logfile.name}" />					 
-					
-				</filterset>
-			</copy>	 
-		</target>
-	
-		
-	<!-- ================================= 
-				      target: build	                        
-				 ================================= -->
-		<target name="build" depends="prepare">
-			<mkdir dir="${dist.dir}"/>
-			<mkdir dir="${build.dir}"/>
-			<mkdir dir="${build.dir}/classes"/>
-			
-		</target>
-	
-	<!-- ================================= 
-		          target: dist              
-		         ================================= -->
-		<target name="dist" depends="build" description="Create exceution environment for project">
-			<mkdir dir="${dist.dir}"/>
-				<!-- Create jar file  -->
-				<jar destfile="${dist.dir}/${app.name}.jar" >
-					<fileset dir="${build.dir}/classes">
-						<include name="**/*.*"/>
-					</fileset>		
-					<!-- Copy all properties from src dierctories. -->
-					<fileset dir="${src.dir}">
-						<include name="**/*.properties"/>
-					</fileset>	
-				</jar>		
-				<!-- Copy shell scripts and bash script to dist directory -->
-			 
-				<copy file="${basedir}/run.sh" todir="${dist.dir}" />	
-				   
-				<!-- Copy all jar files required to lib directory -->
-				<mkdir dir="${dist.dir}/lib"/>
-				<copy todir="${dist.dir}/lib">					
-					<fileset refid="shared.jars" /> 	
-				</copy>
-				
-				<!-- Copy properties folder containg all properties files to dist directory -->
-				<mkdir dir="${dist.dir}/conf"/>
-				<copy todir="${dist.dir}/conf">
-					<fileset dir="${config.dir}">
-						<include name="*.*"/>
-					</fileset>			 		 
-				</copy>	
-				
-				<!-- Copy all perl scripts and shell scripts requied from src directory -->
-				<mkdir dir="${dist.dir}/script"/>
-				<copy todir="${dist.dir}/script">
-					<fileset dir="${src.scripts.dir}">
-						<include name="**/*.pl"/>
-						<include name="**/*.sh"/>
-					</fileset>			 		 
-				</copy> 
-				
-				<!-- Copy xslt folder to files/xslt in dist directory -->
-				<mkdir dir="${dist.dir}/files"/>
-				<copy todir="${dist.dir}/files">
-					<fileset dir="${basedir}/files"/>
-				</copy>
-			
-		</target> 
-		
-		<!-- ================================= 
-		          target: all              
-		         ================================= -->
-	    <target name="all" depends="dist" description="This will excute target build and dist">
-	    </target>
-  
+    <path id="master-classpath">
+        <fileset refid="shared.jars"/>
+        <pathelement path="${classes.dir}"/>
+    </path>
+
+    <target name="usage">
+        <echo message=""/>
+        <echo message="${app.name} build file"/>
+        <echo message="-----------------------------------"/>
+        <echo message=""/>
+        <echo message="Available targets are:"/>
+        <echo message=""/>
+        <echo message="build               --> build project."/>
+        <echo message="clean               --> delete old resources."/>
+        <echo message="dist                --> Create exceution environment for project."/>
+        <echo message="all                 --> Execute dist and build."/>
+        <echo message=""/>
+    </target>
+
+    <target name="clean" depends="usage">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="prepare" description="Create configuration files using templates" depends="clean">
+        <mkdir dir="${build.dir}"/>
+
+        <copy file="${tmpl.dir}/log4j.dtd" tofile="${config.dir}/log4j.dtd" overwrite="true"/>
+
+        <copy file="${tmpl.dir}/log4j.xml.tmpl" tofile="${config.dir}/log4j.xml" overwrite="true">
+            <filterset>
+                <filter token="logfilepath" value="${obr.app.logfilepath}${obr.app.logfile.name}"/>
+                <filter token="maxlogfilesize" value="${obr.app.maxlogfilesize}"/>
+                <filter token="maxlogbackupindex" value="${obr.app.maxlogbackupindex}"/>
+                <filter token="obrlevel" value="${obr.app.log.obslevel}"/>
+                <filter token="deflevel" value="${obr.app.log.deflevel}"/>
+            </filterset>
+        </copy>
+
+        <copy file="${tmpl.dir}/config.properties.tmpl" tofile="${config.dir}/config.properties" overwrite="true">
+            <filterset>
+                <!-- For resource_index database 						-->
+                <filter token="obrjdbcdriver" value="${obr.jdbc.driver}"/>
+                <filter token="obrjdbcurl" value="${obr.jdbc.url}"/>
+                <filter token="obrjdbcusername" value="${obr.jdbc.username}"/>
+                <filter token="obrjdbcpassword" value="${obr.jdbc.password}"/>
+                <filter token="obrschemahostname" value="${obr.schema.host.name}"/>
+                <filter token="obrschemaname" value="${obr.schema.name}"/>
+                <filter token="obsschemaname" value="${obs.schema.name}"/>
+
+                <filter token="obrsvncodepath" value="${obr.svn.code.path}"/>
+                <filter token="obrversion" value="${obr.version}"/>
+
+                <filter token="obrresourceids" value="${obr.resource.ids}"/>
+
+                <!-- For rxrd resource access tool database 						-->
+                <filter token="obrrxrdjdbcurl" value="${obr.rxrd.jdbc.url}"/>
+                <filter token="obrrxrdjdbcusername" value="${obr.rxrd.jdbc.username}"/>
+                <filter token="obrrxrdjdbcpassword" value="${obr.rxrd.jdbc.password}"/>
+
+                <!-- For grants resource access tool database 						-->
+                <filter token="obrgrantsjdbcurl" value="${obr.grants.jdbc.url}"/>
+                <filter token="obrgrantsjdbcusername" value="${obr.grants.jdbc.username}"/>
+                <filter token="obrgrantsjdbcpassword" value="${obr.grants.jdbc.password}"/>
+
+                <!-- For PubMed resource access tool  						-->
+                <filter token="obrpmprocessxml" value="${obr.pm.process.xml}"/>
+                <filter token="obrpmxmlfrom" value="${obr.pm.xml.from}"/>
+                <filter token="obrpmxmlto" value="${obr.pm.xml.to}"/>
+
+                <!-- For obs master database						-->
+                <filter token="obsmasterschemaname" value="${obs.master.schema.name}"/>
+                <filter token="obsmasterschemahost" value="${obs.master.schema.host.name}"/>
+                <filter token="obsmasterjdbcusername" value="${obs.master.jdbc.username}"/>
+                <filter token="obsmasterjdbcpassword" value="${obs.master.jdbc.password}"/>
+                <filter token="obsmasterontologystatuscomplete" value="${obs.master.ontology.status.complete}"/>
+
+                <!-- For populate slave obs tables from master database.			r-->
+                <filter token="obsslavepopulate" value="${obs.slave.populate}"/>
+                <filter token="obsslavedictionarylatest" value="${obs.slave.dictionary.latest}"/>
+
+                <!-- Resource Index workflow parameter -->
+                <filter token="obrresourcesprocess" value="${obr.resources.process}"/>
+                <filter token="obrreinitializeall" value="${obr.reinitialize.all}"/>
+                <filter token="obrreinitializeonlyannotation" value="${obr.reinitialize.only.annotation}"/>
+                <filter token="obrupdateresource" value="${obr.update.resource}"/>
+                <filter token="obrdictionarycomplete" value="${obr.dictionary.complete}"/>
+                <filter token="obrexpansionrelational" value="${obr.expansion.relational}"/>
+                <filter token="obrexpansionmapping" value="${obr.expansion.mapping}"/>
+                <filter token="obrexpansiondistance" value="${obr.expansion.distance}"/>
+                <filter token="obrlogfilename" value="${obr.app.logfile.name}"/>
+            </filterset>
+        </copy>
+    </target>
+
+
+    <!-- =================================
+                      target: build
+                 ================================= -->
+    <target name="build" depends="prepare">
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.dir}/classes"/>
+    </target>
+
+    <!-- =================================
+                  target: dist
+                 ================================= -->
+    <target name="dist" depends="build" description="Create exceution environment for project">
+        <mkdir dir="${dist.dir}"/>
+        <!-- Create jar file  -->
+        <jar destfile="${dist.dir}/${app.name}.jar">
+            <fileset dir="target/classes">
+                <include name="**/*.*"/>
+            </fileset>
+            <!-- Copy all properties from src dierctories. -->
+            <fileset dir="${src.dir}">
+                <include name="**/*.properties"/>
+            </fileset>
+        </jar>
+
+        <!-- Copy shell scripts and bash script to dist directory -->
+        <copy file="${basedir}/run.sh" todir="${dist.dir}"/>
+
+        <!-- Copy all jar files required to lib directory -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy todir="${dist.dir}/lib">
+            <fileset refid="shared.jars"/>
+            <fileset refid="lib.dir"/>
+        </copy>
+
+        <!-- Copy properties folder containg all properties files to dist directory -->
+        <mkdir dir="${dist.dir}/conf"/>
+        <copy todir="${dist.dir}/conf">
+            <fileset dir="${config.dir}">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy xslt folder to files/xslt in dist directory -->
+        <mkdir dir="${dist.dir}/files"/>
+        <copy todir="${dist.dir}/files">
+            <fileset dir="${basedir}/files"/>
+        </copy>
+    </target>
+
+    <!-- =================================
+              target: all
+             ================================= -->
+    <target name="all" depends="dist" description="This will excute target build and dist">
+    </target>
 </project>
