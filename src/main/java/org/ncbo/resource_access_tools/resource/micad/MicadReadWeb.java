@@ -74,7 +74,7 @@ class MicadReadWeb implements StringHelper {
 
         String[] parts = new String[6];
         String htmlText = null;
-        String[] temp = new String[2];
+        String[] temp;
 
         try {
 
@@ -83,7 +83,7 @@ class MicadReadWeb implements StringHelper {
                 logger.error(">> Anable to get sections for residing in the MICAD website for ID : " + id);
                 return parts;
             }
-            String line = null;
+            String line;
 
             //read each line of html file and add all of it to htmlText
             while ((line = bufRdr.readLine()) != null)

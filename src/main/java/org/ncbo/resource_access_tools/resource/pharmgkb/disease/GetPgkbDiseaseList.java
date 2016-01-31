@@ -39,13 +39,13 @@ class GetPgkbDiseaseList implements StringHelper {
     // method
     public HashSet<String> getList() {
         Runtime runtime = Runtime.getRuntime();
-        Process process = null;
+        Process process;
         try {
             process = runtime.exec(COMMAND);
             //InputStream results = process.getInputStream();
 
             BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String resultLine = EMPTY_STRING;
+            String resultLine;
             try {
                 Pattern diseasePattern = Pattern.compile("^(PA\\d*), Disease, (.*), ([0-1]{1}), ([0-1]{1}), ([0-1]{1}), .*$");
                 while ((resultLine = resultReader.readLine()) != null) {

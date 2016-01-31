@@ -131,7 +131,7 @@ public class PggeAccessTool extends ResourceAccessTool {
     private HashSet<String> getAllGenes() {
         logger.info("* Get All PharmGKB Genes... ");
         HashSet<String> geneList = new HashSet<String>();
-        int nbAdded = 0;
+        int nbAdded;
         try {
             GetPgkbGeneList myClientLauncher = new GetPgkbGeneList();
             geneList = myClientLauncher.getList();

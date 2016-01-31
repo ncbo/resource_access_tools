@@ -45,9 +45,9 @@ class MicadReadCsv {
     public String[][] getLocalElementIds() {
 
         String[][] text = new String[2000][50];
-        URL url = null;
-        URLConnection urlConn = null;
-        InputStreamReader inStream = null;
+        URL url;
+        URLConnection urlConn;
+        InputStreamReader inStream;
 
         try {
 
@@ -56,7 +56,7 @@ class MicadReadCsv {
             inStream = new InputStreamReader(urlConn.getInputStream());
             BufferedReader bufRdr = new BufferedReader(inStream);
 
-            String line = null;
+            String line;
             int row = 0;
             int col = 0;
 

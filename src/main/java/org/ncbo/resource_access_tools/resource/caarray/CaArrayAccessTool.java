@@ -116,7 +116,7 @@ public class CaArrayAccessTool extends ResourceAccessTool {
     private HashSet<Element> getAllExperiments() {
         logger.info("* Get All Experiments for caArray ... ");
         HashSet<Element> elementList = new HashSet<Element>();
-        int nbAdded = 0;
+        int nbAdded;
         try {
             GetCaArrayData myExtractor = new GetCaArrayData(this.getToolResource());
             // Gets the elements already in the corresponding _ET

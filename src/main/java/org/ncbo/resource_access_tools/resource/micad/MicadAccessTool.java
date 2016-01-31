@@ -82,7 +82,7 @@ public class MicadAccessTool extends ResourceAccessTool {
     public int updateResourceContent() {
         int nbElement = 0;
         try {
-            Element myElement = null;
+            Element myElement;
 
             /************* variable part ****************/
             // get the list of elements present in the original resource (CSV file)
@@ -161,24 +161,24 @@ public class MicadAccessTool extends ResourceAccessTool {
      */
     private Element getElement(String elementID, String[][] csvElement) {
         Element element = null;
-        String[] parts = new String[8];
-        String[] data = new String[6];
+        String[] parts;
+        String[] data;
         ArrayList<String> contextNames = this.getToolResource().getResourceStructure().getContextNames();
         Structure eltStructure = new Structure(contextNames);
-        String Name = EMPTY_STRING;
-        String Abbreviated = EMPTY_STRING;
-        String Synonym = EMPTY_STRING;
-        String Agent_Category = EMPTY_STRING;
-        String Target = EMPTY_STRING;
-        String Target_Category = EMPTY_STRING;
-        String Detection_Method = EMPTY_STRING;
-        String Signal_Source = EMPTY_STRING;
-        String Background = EMPTY_STRING;
-        String Synthesis = EMPTY_STRING;
-        String In_Vitro = EMPTY_STRING;
-        String Animal_Studies = EMPTY_STRING;
-        String Human_Studies = EMPTY_STRING;
-        String References = EMPTY_STRING;
+        String Name;
+        String Abbreviated;
+        String Synonym;
+        String Agent_Category;
+        String Target;
+        String Target_Category;
+        String Detection_Method;
+        String Signal_Source;
+        String Background;
+        String Synthesis;
+        String In_Vitro;
+        String Animal_Studies;
+        String Human_Studies;
+        String References;
         //System.out.println("Get data for the Element "+elementID.toString()+" ... ");
         try {
             MicadReadCsv csvExtractor = new MicadReadCsv(this.getToolResource(), this);

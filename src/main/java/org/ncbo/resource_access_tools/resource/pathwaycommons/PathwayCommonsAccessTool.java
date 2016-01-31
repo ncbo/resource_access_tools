@@ -182,7 +182,7 @@ public class PathwayCommonsAccessTool extends ResourceAccessTool {
     private int parseOWL(File file) throws FileNotFoundException, BadElementStructureException {
         int nbElement = 0;
         JenaIOHandler jenaIOHandler = new JenaIOHandler(null, BioPAXLevel.L2);
-        Model model = null;
+        Model model;
         try {
             model = jenaIOHandler.convertFromOWL(new FileInputStream(file));
             Set<pathway> pathways = model.getObjects(pathway.class);

@@ -454,7 +454,7 @@ public class PubMedAccessTool extends AbstractNcbiResourceAccessTool {
      * @throws SAXException
      */
     private static void loadXML(MedlineDbLoader dbLoader, File file) {
-        String url = null;
+        String url;
         try {
             url = Files.fileToURLName(file);
             InputSource inSource = new InputSource(url);

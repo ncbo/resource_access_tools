@@ -43,14 +43,14 @@ class GetPgkbGeneList implements StringHelper {
     public HashSet<String> getList() {
         // TODO Auto-generated method stub
         Runtime runtime = Runtime.getRuntime();
-        Process process = null;
+        Process process;
         // GET GENE WITH pharmacokinetic significance
         try {
             process = runtime.exec(COMMAND_0);
             //InputStream results = process.getInputStream();
 
             BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String resultLine = EMPTY_STRING;
+            String resultLine;
             try {
                 Pattern genePattern = Pattern.compile("^(PA\\d*), Gene, (.*), ([0-1]{1}), ([0-1]{1}), ([0-1]{1}), .*$");
                 while ((resultLine = resultReader.readLine()) != null) {
@@ -101,7 +101,7 @@ class GetPgkbGeneList implements StringHelper {
             //InputStream results = process.getInputStream();
 
             BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String resultLine = EMPTY_STRING;
+            String resultLine;
             try {
                 Pattern genePattern = Pattern.compile("^(PA\\d*), Gene, (.*), ([0-1]{1}), ([0-1]{1}), ([0-1]{1}), .*$");
                 while ((resultLine = resultReader.readLine()) != null) {

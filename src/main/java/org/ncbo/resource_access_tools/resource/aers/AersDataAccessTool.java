@@ -205,13 +205,11 @@ public class AersDataAccessTool extends AbstractXmlResourceAccessTool {
             children = new File(file.getAbsolutePath() + SLASH_STRING + subDir).list();
         }
 
-        Document dom = null;
+        Document dom;
         //parsing all the files from the directory
         for (String fileName : children) {
             //check file extension .SGM and not equals to ADS_TEST.SGM
             if (fileName.endsWith(FILE_EXTENSION_) && !fileName.equals(TEST_FILE)) {
-                aersElement = null;
-                element = null;
                 //Add file path with main directory, '/', sgml, '/' and file name
                 String filePath = file.getAbsolutePath() + SLASH_STRING + subDir + SLASH_STRING + fileName;
 
@@ -319,7 +317,7 @@ public class AersDataAccessTool extends AbstractXmlResourceAccessTool {
         // do not execute queryOnline for phrase with space
         String regexp = "\\S+\\s.+";
         if (!query.matches(regexp)) {
-            String accnum = EMPTY_STRING;
+            String accnum;
             //parse using builder to get DOM representation of the XML file done with the query
             Document dom = AbstractXmlResourceAccessTool.parseXML(query);
             //get the root element

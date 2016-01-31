@@ -244,7 +244,7 @@ public class Messages {
     private ResourceBundle getBundle(Locale locale) {
 
         assert locale != null;
-        ResourceBundle rb = null;
+        ResourceBundle rb;
         ClassLoader rbcl = cl;
         if (rbcl == null) {
             rbcl = Thread.currentThread().getContextClassLoader();

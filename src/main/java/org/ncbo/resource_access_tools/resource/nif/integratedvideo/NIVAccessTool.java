@@ -131,7 +131,7 @@ public class NIVAccessTool extends AbstractNifResourceAccessTool {
     private HashSet<Element> getAllElements() {
         logger.info("* Get All Elements for NIF Integrated Videos... ");
         HashSet<Element> elementSet = new HashSet<Element>();
-        int nbAdded = 0;
+        int nbAdded;
         int offset = 0;
         int totalCount = 0;
 
@@ -188,7 +188,6 @@ public class NIVAccessTool extends AbstractNifResourceAccessTool {
                             } else if (name.equalsIgnoreCase(Runtime)) {
                                 elementAttributes.put(Structure.generateContextName(RESOURCE_ID, ITEMKEYS[6]), value);
                             } else if (name.equalsIgnoreCase(ele_database)) {
-                                String dataLink = value.substring(value.indexOf("http"), value.indexOf(endTag));
                                 elementAttributes.put(Structure.generateContextName(RESOURCE_ID, ITEMKEYS[3]), Jsoup.parse(value).text());
                             }
                         }
@@ -210,7 +209,7 @@ public class NIVAccessTool extends AbstractNifResourceAccessTool {
 
             // Second phase: creation of elements
             for (String localElementID : allRowsData.keySet()) {
-                Map<String, String> elementAttributes = new HashMap<String, String>();
+                Map<String, String> elementAttributes;
                 elementAttributes = allRowsData.get(localElementID);
 
                 // PUT DATA INTO A STRUCTURE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

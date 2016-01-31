@@ -182,7 +182,7 @@ public class SmdAccessTool extends ResourceAccessTool {
         String organismID;
         String resultLine;
         HashMap<String, String> experimentDetailTemp = null;
-        Process process = null;
+        Process process;
         int MAX_EXPERIMENTS_PROCESS = 30;
         int max;
         StringBuffer expIDlist;
@@ -330,11 +330,11 @@ public class SmdAccessTool extends ResourceAccessTool {
      */
     private HashMap<String, String> getOrganismsMap() {
         HashMap<String, String> organismMap = new HashMap<String, String>();
-        Process process = null;
+        Process process;
         try {
             process = executePerlCommand(ORGANISM_COMMAND);
             BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String resultLine = EMPTY_STRING;
+            String resultLine;
 
             // Tab separated string containing id and name of organism.
             while ((resultLine = resultReader.readLine()) != null) {

@@ -82,7 +82,7 @@ public class ReactomeAccessTool extends ResourceAccessTool {
     public int updateResourceContent() {
         int nbElement = 0;
         try {
-            Element myElement = null;
+            Element myElement;
 
             /************* variable part ****************/
             // get the list of element present in the original resource

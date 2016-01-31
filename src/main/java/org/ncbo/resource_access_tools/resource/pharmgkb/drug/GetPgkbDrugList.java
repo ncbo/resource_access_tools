@@ -43,13 +43,13 @@ class GetPgkbDrugList implements StringHelper {
     public HashSet<String> getList() {
         // TODO Auto-generated method stub
         Runtime runtime = Runtime.getRuntime();
-        Process process = null;
+        Process process;
         try {
             process = runtime.exec(COMMAND);
             //InputStream results = process.getInputStream();
 
             BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String resultLine = EMPTY_STRING;
+            String resultLine;
             try {
                 Pattern drugPattern = Pattern.compile("^(PA\\d*), Drug, (.*), ([0-1]{1}), ([0-1]{1}), ([0-1]{1}), .*$");
                 while ((resultLine = resultReader.readLine()) != null) {

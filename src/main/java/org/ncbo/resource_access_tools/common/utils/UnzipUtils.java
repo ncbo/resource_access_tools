@@ -33,7 +33,7 @@ public class UnzipUtils {
 
         //Separating zipFileName
         String[] fileName = (zipFileName.substring(zipFileName.lastIndexOf("/"))).replace("/", "").split("\\.");
-        String exten = "";
+        String exten;
         //checks filename extends is zip or not.
         if (fileName[1].equals("zip")) {
             exten = "txt";
@@ -108,7 +108,7 @@ public class UnzipUtils {
             extractedFileName = outFolder.getAbsolutePath();
             logger.info("Extracting " + extractedFileName + " folders and files locally.");
 
-            BufferedOutputStream out = null;
+            BufferedOutputStream out;
             ZipInputStream in = new ZipInputStream(new BufferedInputStream(connection.getInputStream()));
             ZipEntry entry;
             while ((entry = in.getNextEntry()) != null) {

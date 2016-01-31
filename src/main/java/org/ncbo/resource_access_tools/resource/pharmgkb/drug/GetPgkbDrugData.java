@@ -88,7 +88,7 @@ public class GetPgkbDrugData implements StringHelper {
                                 attributeValues = new Hashtable<Integer, String>();
 
                                 if (!dataMatcher.group(2).equals(EMPTY_STRING)) { // simple case in which we have atributeName: value on one line
-                                    String value = null;
+                                    String value;
                                     value = dataMatcher.group(2).replaceFirst(" ", EMPTY_STRING);
                                     attributeValues.put(1, value);
                                 } else {
@@ -99,7 +99,7 @@ public class GetPgkbDrugData implements StringHelper {
                         } else {
                             if (attributeName != null) {
                                 attributeNumber++;
-                                String value = null;
+                                String value;
                                 value = setMatcher.group(1);
                                 attributeValues.put(attributeNumber, value);
                             }
@@ -118,7 +118,7 @@ public class GetPgkbDrugData implements StringHelper {
                 // for each attribute
                 GetPgkbGeneData myGeneExtractor = new GetPgkbGeneData();
                 GetPgkbDiseaseData myDiseaseExtractor = new GetPgkbDiseaseData();
-                String attInString = EMPTY_STRING;
+                String attInString;
 
                 for (String contextName : elementStructure.getContextNames()) {
                     boolean attributeHasValue = false;

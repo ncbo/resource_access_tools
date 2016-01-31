@@ -57,7 +57,6 @@ public class InterNanoAccessTool extends AbstractXmlResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        Map<String, String> localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
     }
 
     @Override
@@ -146,9 +145,9 @@ public class InterNanoAccessTool extends AbstractXmlResourceAccessTool {
     private HashSet<Element> getAllElements() {
         logger.info("* Get All Elements for InerNano ... ");
         HashSet<Element> elementSet = new HashSet<Element>();
-        int nbAdded = 0;
+        int nbAdded;
         String localElementId = EMPTY_STRING;
-        Document dom = null;
+        Document dom;
 
         try {
             //get all elements from _ET table
@@ -181,7 +180,7 @@ public class InterNanoAccessTool extends AbstractXmlResourceAccessTool {
 
             // Second phase: creation of elements
             for (String localElementID : allRowsData.keySet()) {
-                Map<String, String> elementAttributes = new HashMap<String, String>();
+                Map<String, String> elementAttributes;
                 elementAttributes = allRowsData.get(localElementID);
 
                 // PUT DATA INTO A STRUCTURE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

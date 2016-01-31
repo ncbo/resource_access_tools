@@ -121,7 +121,7 @@ public class ElementDao extends AbstractObrDao {
 
     private String contextsForCreateQuery() {
         StringBuffer queryb = new StringBuffer();
-        String context = null;
+        String context;
         for (Iterator<String> it = this.contextNames.iterator(); it.hasNext(); ) {
             context = it.next().toLowerCase();
             queryb.append(context);

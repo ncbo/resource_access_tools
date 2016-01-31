@@ -114,13 +114,13 @@ public class BioSitemapsAccessTool extends ResourceAccessTool {
         ArrayList<String> contextNames = this.getToolResource().getResourceStructure().getContextNames();
         Element element;
         Structure eltStructure = new Structure(contextNames);
-        String name = EMPTY_STRING;
-        String description = EMPTY_STRING;
-        String keywords = EMPTY_STRING;
-        String resource_type = EMPTY_STRING;
-        String rdfID = EMPTY_STRING;
-        String localElementID = EMPTY_STRING;
-        String url = EMPTY_STRING;
+        String name;
+        String description;
+        String keywords;
+        String resource_type;
+        String rdfID;
+        String localElementID;
+        String url;
 
         File tempRDFFile = new File(BSM_TEMP_FILE);
 

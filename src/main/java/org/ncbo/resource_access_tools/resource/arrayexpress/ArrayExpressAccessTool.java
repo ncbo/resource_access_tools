@@ -111,7 +111,7 @@ public class ArrayExpressAccessTool extends AbstractXmlResourceAccessTool {
         // do not execute queryOnline for phrase with space
         String regexp = "\\S+\\s.+";
         if (!query.matches(regexp)) {
-            String accnum = EMPTY_STRING;
+            String accnum;
             //parse using builder to get DOM representation of the XML file done with the query
             Document dom = AbstractXmlResourceAccessTool.parseXML(this.getXMLForQuery(query));
             //get the root element
@@ -145,7 +145,7 @@ public class ArrayExpressAccessTool extends AbstractXmlResourceAccessTool {
         ArrayExpressElement(org.w3c.dom.Element experimentElt, ArrayExpressAccessTool aeTool) {
             this.eltAETool = aeTool;
             this.eltInfo = new HashMap<String, String>(3);
-            String nodeName = null;
+            String nodeName;
             String description = EMPTY_STRING;
             String experimentType = EMPTY_STRING;
             String species = EMPTY_STRING;

@@ -122,8 +122,8 @@ public class BIOAccessTool extends AbstractNifResourceAccessTool {
     private HashSet<Element> getAllElements() {
         logger.info("* Get All Elements for BioModels ... ");
         HashSet<Element> elementSet = new HashSet<Element>();
-        int nbAdded = 0;
-        String localElementId = EMPTY_STRING;
+        int nbAdded;
+        String localElementId;
 
         try {
             //get all elements from _ET table
@@ -246,7 +246,7 @@ public class BIOAccessTool extends AbstractNifResourceAccessTool {
 
             // Second phase: creation of elements
             for (String localElementID : allRowsData.keySet()) {
-                Map<String, String> protAnnotAttribute2 = new HashMap<String, String>();
+                Map<String, String> protAnnotAttribute2;
                 protAnnotAttribute2 = allRowsData.get(localElementID);
 
                 // PUT DATA INTO A STRUCTURE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -34,7 +34,7 @@ public class ProcessExecutor implements StringHelper {
      */
     public static HashMap<Integer, String> executeCommand(String baseCommand, String... parameters) throws Exception {
         Runtime runtime = Runtime.getRuntime();
-        Process process = null;
+        Process process;
 
         StringBuffer command = new StringBuffer();
         command.append(baseCommand);
@@ -48,7 +48,7 @@ public class ProcessExecutor implements StringHelper {
 
         BufferedReader resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
-        String resultLine = EMPTY_STRING;
+        String resultLine;
         HashMap<Integer, String> lines = new HashMap<Integer, String>();
         int line_nb = 0;
         // Tab separated string containing id and name of organism.
@@ -70,7 +70,7 @@ public class ProcessExecutor implements StringHelper {
      */
     public void executeShellScript(String scriptPath, boolean withSudo, boolean lowerCaseParameter, boolean replicateObsTables, String... parameters) {
         Runtime runtime = Runtime.getRuntime();
-        Process process = null;
+        Process process;
         BufferedReader resultReader = null;
         BufferedReader errorReader = null;
 
@@ -105,7 +105,7 @@ public class ProcessExecutor implements StringHelper {
             resultReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
 
-            String resultLine = EMPTY_STRING;
+            String resultLine;
 
             while ((resultLine = resultReader.readLine()) != null) {
                 logger.info(resultLine);

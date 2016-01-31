@@ -73,10 +73,10 @@ class GetUniprotGOAnnotations implements StringHelper {
 
                 protAnnotAttribute = new Hashtable<String, String>();
                 UniProtEntry up = entryIterator.next();
-                String localElementID = EMPTY_STRING;
+                String localElementID;
                 String proteinName = EMPTY_STRING;
                 String geneSymbol = EMPTY_STRING;
-                String organism = EMPTY_STRING;
+                String organism;
                 if (up != null) {
                     //Uniprot Identifier
                     localElementID = up.getPrimaryUniProtAccession().getValue();

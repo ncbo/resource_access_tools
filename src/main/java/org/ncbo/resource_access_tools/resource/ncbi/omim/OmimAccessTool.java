@@ -101,7 +101,7 @@ public class OmimAccessTool extends AbstractNcbiResourceAccessTool {
         String[] UIDsTab = new String[UIDs.size()];
         UIDsTab = UIDs.toArray(UIDsTab);
         int max;
-        String localElementId = null;
+        String localElementId;
 
         for (int step = 0; step < UIDsTab.length; step += EUTILS_MAX) {
             max = step + EUTILS_MAX;

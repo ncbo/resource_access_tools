@@ -67,7 +67,7 @@ class GetReactomeData implements StringHelper {
             int length = getMaxSizeInListObjects();
             for (String clsName : domainClsNames) {
                 int total = 0;
-                Object[] objects = null;
+                Object[] objects;
 
                 while (true) {
                     objects = (Object[]) call.invoke(new Object[]{clsName, total, length});
@@ -97,7 +97,7 @@ class GetReactomeData implements StringHelper {
         Structure elementStructure = basicStructure;
         Element element = null;
         try {
-            Call callQueryByID = null;
+            Call callQueryByID;
             callQueryByID = createCall("queryById");
 
             Object obj = callQueryByID.invoke(new Object[]{localElementID});
@@ -203,11 +203,11 @@ class GetReactomeData implements StringHelper {
     private HashSet<String> getParticipants(Long id) throws Exception {
         HashSet<String> participants = new HashSet<String>();
 
-        Call callForPathwayParticipants = null;
+        Call callForPathwayParticipants;
         callForPathwayParticipants = createCall("listPathwayParticipantsForId");
         Object[] rtn = (Object[]) callForPathwayParticipants.invoke(new Object[]{id});
 
-        Call callByObject = null;
+        Call callByObject;
         callByObject = createCall("queryByObjects");
         rtn = (Object[]) callByObject.invoke(new Object[]{rtn});
 

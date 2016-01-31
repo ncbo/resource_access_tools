@@ -133,7 +133,7 @@ public class PgdrAccessTool extends ResourceAccessTool {
     private HashSet<String> getAllDrugs() {
         logger.info("* Get All PharmGKB Drugs... ");
         HashSet<String> drugList = new HashSet<String>();
-        int nbAdded = 0;
+        int nbAdded;
         try {
             GetPgkbDrugList myClientLauncher = new GetPgkbDrugList();
             drugList = myClientLauncher.getList();

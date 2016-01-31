@@ -184,7 +184,7 @@ class AllPubMed {
         esearchRequest.setTool(EUTILS_TOOL);
         esearchRequest.setDb(this.getEutilsDB());
         esearchRequest.setTerm(this.getEutilsTerm());
-        String[] resultTab = null;
+        String[] resultTab;
 
 
         ESearchResult esearchResult;
@@ -193,8 +193,6 @@ class AllPubMed {
             esearchResult = this.toolEutils.run_eSearch(esearchRequest);
             int resultsCount = Integer.parseInt(esearchResult.getCount());
             mylogger.info("Nb of results: " + resultsCount + " for term: " + this.getEutilsTerm());
-
-            resultTab = esearchResult.getIdList();
 
             Integer max;
 
@@ -349,10 +347,8 @@ class AllPubMed {
 
                     addRecord(elementSet);
                     elementSet.clear();
-                    elementSet = null;
                     elementSet = new HashSet<PubMedElement>();
 
-                    ids = null;
                     ids = new StringBuffer();
                 }
                 if (ids.length() > 1) {

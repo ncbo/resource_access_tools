@@ -132,7 +132,7 @@ public class PgdiAccessTool extends ResourceAccessTool {
     private HashSet<String> getAllDiseases() {
         logger.info("* Get All PharmGKB Diseases... ");
         HashSet<String> diseaseList = new HashSet<String>();
-        int nbAdded = 0;
+        int nbAdded;
         try {
             GetPgkbDiseaseList myClientLauncher = new GetPgkbDiseaseList();
             diseaseList = myClientLauncher.getList();

@@ -58,7 +58,6 @@ public class AutDBAccessTool extends AbstractNifResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        Map<String, String> localOntologyIDMap = createLocalOntologyIDMap(AUTDB_STRUCTURE);
     }
 
     @Override
@@ -147,7 +146,7 @@ public class AutDBAccessTool extends AbstractNifResourceAccessTool {
     private HashSet<Element> getAllElements() {
         logger.info("* Get All Elements for AutDB... ");
         HashSet<Element> elementSet = new HashSet<Element>();
-        int nbAdded = 0;
+        int nbAdded;
         int offset = 0;
         int totalCount = 0;
 
@@ -228,7 +227,7 @@ public class AutDBAccessTool extends AbstractNifResourceAccessTool {
 
             // Second phase: creation of elements
             for (String localElementID : allRowsData.keySet()) {
-                Map<String, String> elementAttributes = new HashMap<String, String>();
+                Map<String, String> elementAttributes;
                 elementAttributes = allRowsData.get(localElementID);
 
                 // PUT DATA INTO A STRUCTURE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

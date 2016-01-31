@@ -122,7 +122,7 @@ public class UpkbAnnotAccessTool extends ResourceAccessTool {
     private HashSet<Element> getAllAnnotations() {
         logger.info("* Get All GO annotations of human proteins ... ");
         HashSet<Element> annotList = new HashSet<Element>();
-        int nbAdded = 0;
+        int nbAdded;
         try {
             GetUniprotGOAnnotations myExtractor = new GetUniprotGOAnnotations(this.getToolResource());
             // Gets the elements already in the corresponding _ET

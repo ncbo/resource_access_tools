@@ -135,7 +135,7 @@ class GetCaArrayData implements StringHelper {
 
             // Second phase: creation of elements
             for (String localElementID : allExperiments.keySet()) {
-                Map<String, String> elementAttributes = new HashMap<String, String>();
+                Map<String, String> elementAttributes;
                 elementAttributes = allExperiments.get(localElementID);
 
                 // PUT DATA INTO A STRUCTURE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

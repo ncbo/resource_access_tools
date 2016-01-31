@@ -320,7 +320,6 @@ public class DrugBankAccessTool extends ResourceAccessTool {
                                 //checks start with #END_DRUGCAR
                                 elementCompleteInfo[6] = targets_classfication;
                                 //replace targets_classfication to ""(empty string value)
-                                targets_classfication = EMPTY_STRING;
                                 break;
 
                             } else {

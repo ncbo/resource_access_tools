@@ -85,7 +85,7 @@ class SmdFtpUtils implements StringHelper {
 
             // Create publication map to put experiment set id's
             HashMap<String, List<String>> publicationMap = new HashMap<String, List<String>>();
-            List<String> expSetList = new ArrayList<String>();
+            List<String> expSetList;
             logger.info("Total number of publications : "
                     + publicationIDs.size());
 

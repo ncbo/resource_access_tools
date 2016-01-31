@@ -176,7 +176,7 @@ public class GeoAccessTool extends AbstractNcbiResourceAccessTool {
                     //	logger.info("result UID: " + resultDocSums[i].getId());
 
                     String localElementID = null;
-                    String entryType = null;
+                    String entryType;
 
                     for (ItemType docSumItem : docSumItems) {
 

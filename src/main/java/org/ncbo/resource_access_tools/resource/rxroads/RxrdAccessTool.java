@@ -354,7 +354,7 @@ public class RxrdAccessTool extends ResourceAccessTool {
     private Double getFundingAmountByGrantAndYear(int fiscalYear, int localElementID) {
 
         Double fundingAmount = 0d;
-        String currency = null;
+        String currency;
 
         try {
             getFundingAmountByGrantAndYearStatement.setInt(1, fiscalYear);

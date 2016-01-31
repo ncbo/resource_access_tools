@@ -55,7 +55,6 @@ public class CTDGPAccessTool extends AbstractNifResourceAccessTool {
         } catch (MalformedURLException e) {
             logger.error(EMPTY_STRING, e);
         }
-        Map<String, String> localOntologyIDMap = createLocalOntologyIDMap(STRUCTURE);
     }
 
     @Override
@@ -135,7 +134,7 @@ public class CTDGPAccessTool extends AbstractNifResourceAccessTool {
             BufferedReader fileReader = new BufferedReader(
                     new InputStreamReader(new GZIPInputStream(
                             csvFile.openStream())));
-            String headerRow = "";
+            String headerRow;
             int a = 1, b = 0;
             final String DELIMITER = "	";
             while ((headerRow = fileReader.readLine()) != null) {
@@ -188,7 +187,7 @@ public class CTDGPAccessTool extends AbstractNifResourceAccessTool {
 
                     HashSet<Element> elementSet = new HashSet<Element>();
                     for (String localElementID : allRowsData.keySet()) {
-                        Map<String, String> elementAttributes = new HashMap<String, String>();
+                        Map<String, String> elementAttributes;
                         elementAttributes = allRowsData.get(localElementID);
 
                         // PUT DATA INTO A
