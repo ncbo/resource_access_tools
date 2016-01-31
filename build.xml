@@ -124,26 +124,6 @@
                  ================================= -->
     <target name="dist" depends="build" description="Create exceution environment for project">
         <mkdir dir="${dist.dir}"/>
-        <!-- Create jar file  -->
-        <jar destfile="${dist.dir}/${app.name}.jar">
-            <fileset dir="target/classes">
-                <include name="**/*.*"/>
-            </fileset>
-            <!-- Copy all properties from src dierctories. -->
-            <fileset dir="${src.dir}">
-                <include name="**/*.properties"/>
-            </fileset>
-        </jar>
-
-        <!-- Copy shell scripts and bash script to dist directory -->
-        <copy file="${basedir}/run.sh" todir="${dist.dir}"/>
-
-        <!-- Copy all jar files required to lib directory -->
-        <mkdir dir="${dist.dir}/lib"/>
-        <copy todir="${dist.dir}/lib">
-            <fileset refid="shared.jars"/>
-            <fileset refid="lib.dir"/>
-        </copy>
 
         <!-- Copy properties folder containg all properties files to dist directory -->
         <mkdir dir="${dist.dir}/conf"/>
