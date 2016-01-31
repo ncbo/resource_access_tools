@@ -24,7 +24,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.HashSet;
 
 /**
  * PubMedAccessTool is responsible for getting data elements for
@@ -83,8 +82,6 @@ public class PubMedAccessTool extends AbstractNcbiResourceAccessTool {
 
     /**
      * Constructor with connection information as arguments.
-     *
-     * @param String[] obsConnectionInfo
      */
     public PubMedAccessTool() {
         super(PM_NAME, PM_RESOURCEID, PM_STRUCTURE);
