@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class OntologyService {
 
-    private static Map<String, String> virtToAcronym = new HashMap();
+    private static Map<String, String> virtToAcronym = new HashMap<String, String>();
     static {
         virtToAcronym.put("1000", "MA");
         virtToAcronym.put("1001", "GRO-CPGA");
