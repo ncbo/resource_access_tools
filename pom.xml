@@ -384,6 +384,11 @@
             <artifactId>xsom14</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.ncbo</groupId>
+            <artifactId>cabio43-beans</artifactId>
+            <version>1.0</version>
+        </dependency>
 
         <!-- Maven dependiencies -->
         <dependency>
