@@ -467,7 +467,11 @@
             <artifactId>guice</artifactId>
             <version>3.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-search</artifactId>
+            <version>3.4.2.Final</version>
+        </dependency>
     </dependencies>
 
     <repositories>
