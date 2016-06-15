@@ -99,7 +99,7 @@ public class AersDataAccessTool extends AbstractXmlResourceAccessTool {
     /**
      * Constructor for AersDataAccessTool
      */
-    private AersDataAccessTool() {
+    public AersDataAccessTool() {
         super(AERS_NAME, AERS_RESOURCEID, AERS_STRUCTURE);
         try {
             this.getToolResource().setResourceURL(new URL(AERS_URL));
