@@ -451,17 +451,14 @@ public class AersDataAccessTool extends AbstractXmlResourceAccessTool {
         }
     }
 
-    /**
-     * This method is used to load the SafetyReportsSpecification.properties file
-     */
     private static void loadSafetyReportsSpecificatonProperities() {
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        safetyReportsSpecification = new Properties();
+        InputStream inputStream = loader.getResourceAsStream("SafetyReportsSpecification.properties");
         try {
-            safetyReportsSpecification = new Properties();
-            //Initialize the InputStream
-            InputStream inputStream = AersDataAccessTool.class.getResourceAsStream("SafetyReportsSpecification.properties");
             safetyReportsSpecification.load(inputStream);
-        } catch (Exception ex) {
-            logger.error("Problem in loading safety reports specification properties", ex);
+        } catch (IOException e) {
+            logger.error("Failed to load SafetyReportsSpecification properties file", e);
         }
     }
 
