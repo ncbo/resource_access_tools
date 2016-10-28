@@ -7,7 +7,7 @@ Resource Access Tools (RATs) are used to generate data as the first step in the 
 
 When the code base was separated, we attempted to remove anything that didn't directly pertain to RATs from this repository. There are still some questions around where the source data for the RAT process lives, e.g., the SOAP services for data retrieval from NCBI and PharmGKB are retired.
 
-The PubMed RAT was reimplemented in October, 2016 and is now located in a separate repository ([pubmed_xml2rdbms](https://github.com/ncbo/pubmed_xml2rdbms)).
+The PubMed RAT was reimplemented in October, 2016 and is now located in a [separate repository](https://github.com/ncbo/pubmed_xml2rdbms)).
 
 ## Config
 
