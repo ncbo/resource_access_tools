@@ -1,8 +1,11 @@
 # Resource Access Tools
 
-**Update January 2016**: The RATs are used to generate data as the first step in the NCBO Resource Index Workflow. The code was originally written by Optra as a part of a larger [project](https://github.com/ncbo/resource_index_workflow) that contained both the RATs and the Population (Annotation) code. The Population code is now at [https://github.com/ncbo/resource_index](https://github.com/ncbo/resource_index) and the RAT code is at [https://github.com/ncbo/resource_access_tools](https://github.com/ncbo/resource_access_tools).
+Resource Access Tools (RATs) are used to generate data as the first step in the NCBO Resource Index Workflow. The code was originally written by Optra as a part of a larger [project](https://github.com/ncbo/resource_index_workflow) that contained both the RATs and the Population (Annotation) code.  The code base has since been split into two separate projects:
 
-The code was stripped out and we attempted to remove anything that didn't directly pertain to the RATs. There are still some questions around where the source data for the RAT process lives. For example, PubMed seems to have options for downloading from a Web API or using XML files but it isn't clear where to download them and the Web API is likely prohibitively slow.
+- Population code: [ncbo/resource_index](https://github.com/ncbo/resource_index)
+- RAT code: [ncbo/resource_access_tools](https://github.com/ncbo/resource_access_tools) (this repo)
+
+When the code base was separated, we attempted to remove anything that didn't directly pertain to RATs from this repository. There are still some questions around where the source data for the RAT process lives, e.g., PubMed has options for downloading from a Web API or using XML files but the Web API is likely prohibitively slow.
 
 ## Config
 
