@@ -5,7 +5,9 @@ Resource Access Tools (RATs) are used to generate data as the first step in the 
 - Population code: [ncbo/resource_index](https://github.com/ncbo/resource_index)
 - RAT code: [ncbo/resource_access_tools](https://github.com/ncbo/resource_access_tools) (this repo)
 
-When the code base was separated, we attempted to remove anything that didn't directly pertain to RATs from this repository. There are still some questions around where the source data for the RAT process lives, e.g., PubMed has options for downloading from a Web API or using XML files but the Web API is likely prohibitively slow.
+When the code base was separated, we attempted to remove anything that didn't directly pertain to RATs from this repository. There are still some questions around where the source data for the RAT process lives, e.g., the SOAP services for data retrieval from NCBI and PharmGKB are retired.
+
+The PubMed RAT was reimplemented in October, 2016 and is now located in a separate repository ([pubmed_xml2rdbms](https://github.com/ncbo/pubmed_xml2rdbms)).
 
 ## Config
 
